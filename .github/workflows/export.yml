@@ -22,10 +22,11 @@ jobs:
           sudo chown -R $USER:$USER /usr/local
           npm install -g resume-cli
           npm install -g jsonresume-theme-elegant
+          npm install -g jsonresume-theme-even
           npm install
           resume validate
           resume export index.html -t elegant
-          resume export resume.pdf -t elegant
+          resume export resume.pdf -t even
           git config --global user.name 'Tran Zha Github Actions'
           git config --global user.email 'trannzfsg@users.noreply.github.com'
           git add .
