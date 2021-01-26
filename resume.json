@@ -1,0 +1,225 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Xiaochuan Zha",
+    "label": "Software Engineer",
+    "image": "",
+    "email": "info@tranzha.com",
+    "phone": "0402 798 180",
+    "url": "https://www.linkedin.com/in/tran-zha-6a379813/",
+    "summary": "",
+    "location": {
+      "address": "24 Smith Crescent",
+      "postalCode": "4509",
+      "city": "Mango Hill",
+      "countryCode": "AU",
+      "region": "Queensland"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "trannzfsg",
+        "url": "https://github.com/trannzfsg"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Loan Market",
+      "location": "Brisbane, QLD",
+      "description": "Mortgage aggregator & financial services",
+      "position": "Software Architect",
+      "url": "http://www.loanmarket.com.au",
+      "startDate": "2019-07-08",
+      "summary": "Continued project MyCRM (V3), which is a cross country CRM and lending aggregation platform for mortgage advisers and other financial advisers",
+      "highlights": [
+        "Architecture design",
+        "Mentoring",
+        "End to end application development - ui, api, db, infrastructure, automation pipelines"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Auckland",
+      "url": "https://www.auckland.ac.nz",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2001-01-01",
+      "endDate": "2004-01-01",
+      "score": "A-"
+    },
+    {
+      "institution": "University of Auckland",
+      "url": "https://www.auckland.ac.nz",
+      "area": "Computer Science",
+      "studyType": "Postgraduate Diploma",
+      "startDate": "2005-07-01",
+      "endDate": "2006-07-01",
+      "score": "B+"
+    }
+  ],
+  "skills": [
+    {
+      "name": "API development",
+      "level": "Professional",
+      "keywords": [
+        "C#",
+        ".Net",
+        "NodeJS",
+        "REST",
+        "RPC"
+      ]
+    },
+    {
+      "name": "Web application development",
+      "level": "Professional",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React"
+      ]
+    },
+    {
+      "name": "Relational & NoSQL databases",
+      "level": "Adquate",
+      "keywords": [
+        "MS SQL Server",
+        "PostgreSQL",
+        "Martin",
+        "DynamoDB",
+        "Stored procedure",
+        "DbUp",
+        "Redgate"
+      ]
+    },
+    {
+      "name": "Containerisation & orchestration",
+      "level": "Adquate",
+      "keywords": [
+        "Docker",
+        "Container registries",
+        "Kubernetes",
+        "Ingress / egress",
+        "RBAC"
+      ]
+    },
+    {
+      "name": "Serverless architecture",
+      "level": "Adquate",
+      "keywords": [
+        "Serverless framework",
+        "Lambda",
+        "CDN / Edge computing",
+        "Static website hosting"
+      ]
+    },
+    {
+      "name": "Event driven architecture",
+      "level": "Adquate",
+      "keywords": [
+        "Pub/sub",
+        "CQRS",
+        "Queue / Notification services",
+        "Mass Transit"
+      ]
+    },
+    {
+      "name": "Infrastructure automation",
+      "level": "Adquate",
+      "keywords": [
+        "Terraform",
+        "Kubernetes",
+        "Amazon Web Services",
+        "Google Cloud Platform"
+      ]
+    },
+    {
+      "name": "Continues integration & continues delivery",
+      "level": "Adquate",
+      "keywords": [
+        "Bash scripting",
+        "Github actions / CircleCI / AppVeyor",
+        "Octopus / CodeDeploy",
+        "Sops"
+      ]
+    },
+    {
+      "name": "Tracing and monitoring",
+      "level": "Adquate",
+      "keywords": [
+        "OpenTelemetry",
+        "Instrumentation",
+        "SLA/SLO",
+        "Visualisation & alerting",
+        "Dynatrace",
+        "Honeycomb"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Mandarin",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Basketball & NBA",
+      "keywords": [
+        "Once a week casual games",
+        "Following NBA games"
+      ]
+    },
+    {
+      "name": "Reading & podcasts",
+      "keywords": [
+        "History",
+        "Personal development",
+        "Technology & science"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jakob Hojgaard",
+      "reference": ""
+    },
+    {
+      "name": "James Punnett",
+      "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "MyCRM",
+      "description": "A mapping engine that misguides you",
+      "highlights": [
+        "Won award at AIHacks 2016",
+        "Built by all women team of newbie programmers",
+        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+      ],
+      "keywords": [
+        "GoogleMaps",
+        "Chrome Extension",
+        "Javascript"
+      ],
+      "startDate": "2016-08-24",
+      "endDate": "2016-08-24",
+      "url": "https://missdirection.example.com",
+      "roles": [
+        "Team lead",
+        "Designer"
+      ],
+      "entity": "Smoogle",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "theme": "elegant",
+    "lastModified": "2021-01-25T12:50:00"
+  }
+}
