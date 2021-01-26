@@ -19,8 +19,8 @@ jobs:
       - name: Install resume cli & build & export
         run: |
           export PUPPETEER_SKIP_DOWNLOAD='true'
-          npm install -g puppeteer
-          npm install -g resume-cli
+          sudo npm install -g puppeteer
+          sudo npm install -g resume-cli
           npm install
           resume validate
           resume export index.html -t elegant
