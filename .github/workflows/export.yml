@@ -18,6 +18,7 @@ jobs:
 
       - name: Install resume cli & build & export
         run: |
+          set -x
           sudo chown -R $USER:$USER /usr/local
           npm install -g resume-cli
           npm install -g jsonresume-theme-elegant
@@ -27,5 +28,6 @@ jobs:
           resume export resume.pdf -t elegant
           git config --global user.name 'Tran Zha Github Actions'
           git config --global user.email 'trannzfsg@users.noreply.github.com'
-          git commit -am "Github actions build resume index.html and resume.pdf"
-          git push -q
+          git add .
+          git commit -m "Github actions build resume index.html and resume.pdf"
+          git push
