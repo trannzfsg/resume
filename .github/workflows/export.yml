@@ -17,9 +17,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install resume cli & build & export
-        env:
-          PUPPETEER_SKIP_DOWNLOAD: 'true'
         run: |
+          export PUPPETEER_SKIP_DOWNLOAD='true'
           sudo npm install -g resume-cli
           npm install
           resume export index.html -t elegant
