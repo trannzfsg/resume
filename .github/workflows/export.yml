@@ -19,8 +19,10 @@ jobs:
       - name: Install resume cli & build & export
         run: |
           export PUPPETEER_SKIP_DOWNLOAD='true'
-          sudo npm install -g resume-cli
+          npm install -g puppeteer
+          npm install -g resume-cli
           npm install
+          resume validate
           resume export index.html -t elegant
           git config --global user.name 'Tran Zha Github Actions'
           git config --global user.email 'trannzfsg@users.noreply.github.com'
