@@ -18,7 +18,6 @@ jobs:
 
       - name: Install resume cli & build & export
         run: |
-          export PUPPETEER_SKIP_DOWNLOAD='true'
           sudo chown -R $USER:$USER /usr/local
           npm install -g resume-cli
           npm install -g jsonresume-theme-elegant
