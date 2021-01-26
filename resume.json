@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Xiaochuan Zha",
+    "name": "Xiaochuan Zha (Tran)",
     "label": "Software Engineer",
     "image": "",
     "email": "info@tranzha.com",
     "phone": "0402 798 180",
-    "url": "https://www.linkedin.com/in/tran-zha-6a379813/",
+    "url": "https://trannzfsg.github.io/resume/",
     "summary": "",
     "location": {
       "address": "24 Smith Crescent",
@@ -20,6 +20,11 @@
         "network": "Github",
         "username": "trannzfsg",
         "url": "https://github.com/trannzfsg"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Tran Zha",
+        "url": "https://www.linkedin.com/in/tran-zha-6a379813/"
       }
     ]
   },

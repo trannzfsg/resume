@@ -1,0 +1,27 @@
+name: Export resume
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    brances:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install resume cli & build & export
+        run: |
+          sudo npm install -g resume-cli
+          npm install
+          resume export index.html
+          git config --global user.name 'Tran Zha Github Actions'
+          git config --global user.email 'trannzfsg@users.noreply.github.com'
+          git commit -am "Github actions build resume index.html"
+          git push
