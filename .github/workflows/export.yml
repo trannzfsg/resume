@@ -24,7 +24,8 @@ jobs:
           npm install
           resume validate
           resume export index.html -t elegant
+          resume export resume.pdf -t elegant
           git config --global user.name 'Tran Zha Github Actions'
           git config --global user.email 'trannzfsg@users.noreply.github.com'
-          git commit -am "Github actions build resume index.html"
-          git push
+          git commit -am "Github actions build resume index.html and resume.pdf"
+          git push -q
