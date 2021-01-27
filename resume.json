@@ -30,17 +30,64 @@
   },
   "work": [
     {
-      "name": "Loan Market",
+      "name": "Loan Market Group",
       "location": "Brisbane, QLD",
       "description": "Mortgage aggregator & financial services",
       "position": "Software Architect",
       "url": "http://www.loanmarket.com.au",
       "startDate": "2019-07-08",
-      "summary": "Continued project MyCRM (V3), which is a cross country CRM and lending aggregation platform for mortgage advisers and other financial advisers",
+      "summary": "Continue project MyCRM (V3), help to drive the migration into modern architecture and tech stacks",
       "highlights": [
-        "Architecture design",
-        "Mentoring",
-        "End to end application development - ui, api, db, infrastructure, automation pipelines"
+        "Re-platform to break down monolith",
+        "CI, CD and infrastruture/config/process as code",
+        "Observability and OpenTelemetry",
+        "Containerisation and Kubernetes cluster",
+        "Tech stack upgrade while continue to deliver features and improvements",
+        "Production incident management, assist to refine release process and branching strategy",
+        "Drive tech roadmap according to business roadmap",
+        "Assist onshore team expansion",
+        "Assist to transform from Scrums to Shape Up"
+      ]
+    },
+    {
+      "name": "New Zealand Financial Services Group",
+      "location": "Auckland, New Zealand",
+      "description": "Mostly owned by Loan Market Group",
+      "position": "Software Architect",
+      "url": "http://www.nzfsg.co.nz",
+      "startDate": "2016-04-01",
+      "summary": "Launched project MyCRM (V2 & V3), and support migration of AU and NZ users from previous systems",
+      "highlights": [
+        "API and database development",
+        "Cloud hosting with Amazon web services",
+        "System architect and landing of it",
+        "3rd party and toolset integrations",
+        "Data migrations",
+        "Enrich ecosystem by implementing serverless stack",
+        "Security audit by PWC",
+        "Offshore dev team expansion",
+        "Scrums and sprints"
+      ]
+    },
+    {
+      "name": "LifeDirect / Inform Holdings Limited / Trade Me",
+      "location": "Auckland, New Zealand",
+      "description": "Project LifeDirect and project MyCRM (V1)",
+      "position": "Web application develop to Software engineer",
+      "url": "http://www.lifedirect.co.nz",
+      "startDate": "2008-07-01",
+      "summary": "Risk insurance end-to-end online services; launched project MyCRM (V1), QuoteMonster, MortgageShield and satellite projects",
+      "highlights": [
+        "Web application development & SPA",
+        "Database and backend development",
+        "Google Analytics and conversion funnels",
+        "Custom built CRM system",
+        "Insurance/mortgage profiling/quoting/servicing engines",
+        "Online applications",
+        "Reporting solution & admin portals",
+        "Fullstack proficient",
+        "On-premise hosting solution and operations for small team",
+        "Products built kept expanding, after company merged and acquired multiple times"
       ]
     }
   ],
@@ -66,6 +113,15 @@
   ],
   "skills": [
     {
+      "name": "Architecture diagrams & documentation",
+      "level": "Adequate",
+      "keywords": [
+        "draw.io",
+        "confluence",
+        "pitch writing"
+      ]
+    },
+    {
       "name": "API development",
       "level": "Professional",
       "keywords": [
@@ -78,7 +134,7 @@
     },
     {
       "name": "Web application development",
-      "level": "Professional",
+      "level": "Adquate",
       "keywords": [
         "HTML",
         "CSS",
@@ -88,15 +144,21 @@
     },
     {
       "name": "Relational & NoSQL databases",
-      "level": "Adquate",
+      "level": "Professional",
       "keywords": [
         "MS SQL Server",
         "PostgreSQL",
-        "Martin",
-        "DynamoDB",
-        "Stored procedure",
-        "DbUp",
-        "Redgate"
+        "DynamoDB"
+      ]
+    },
+    {
+      "name": "Data lake & data warehouse",
+      "level": "Adequate",
+      "keywords": [
+        "Data lake - AWS S3 / Google cloud storage",
+        "ETL - AWS Glue / Spark / Google Jobs",
+        "Data warehouse - BigQuery / Redshift",
+        "Visualisation - Google data studio"
       ]
     },
     {
@@ -105,9 +167,7 @@
       "keywords": [
         "Docker",
         "Container registries",
-        "Kubernetes",
-        "Ingress / egress",
-        "RBAC"
+        "Kubernetes"
       ]
     },
     {
@@ -126,8 +186,7 @@
       "keywords": [
         "Pub/sub",
         "CQRS",
-        "Queue / Notification services",
-        "Mass Transit"
+        "Queue / Notification services"
       ]
     },
     {
@@ -147,7 +206,9 @@
         "Bash scripting",
         "Github actions / CircleCI / AppVeyor",
         "Octopus / CodeDeploy",
-        "Sops"
+        "Sops",
+        "DbUp",
+        "Redgate"
       ]
     },
     {
@@ -156,14 +217,29 @@
       "keywords": [
         "OpenTelemetry",
         "Instrumentation",
-        "SLA/SLO",
+        "SLA/SLO/SLI",
         "Visualisation & alerting",
         "Dynatrace",
         "Honeycomb"
       ]
+    },
+    {
+      "name": "Version control & branching strategy",
+      "level": "Adquate",
+      "keywords": [
+        "Git",
+        "Github",
+        "Trunk based development",
+        "Gitflow",
+        "Feature / release toggles"
+      ]
     }
   ],
   "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
     {
       "language": "Mandarin",
       "fluency": "Native speaker"
@@ -184,16 +260,23 @@
         "Personal development",
         "Technology & science"
       ]
+    },
+    {
+      "name": "Science fiction, fantacy, movies/series, games",
+      "keywords": [
+        "Star wars",
+        "Blizzard"
+      ]
     }
   ],
   "references": [
     {
       "name": "Jakob Hojgaard",
-      "reference": ""
+      "reference": "CTO of Loan Market Group - contact details are available on request"
     },
     {
       "name": "James Punnett",
-      "reference": ""
+      "reference": "Supervisor/boss from 2008~2019 - contact details are available on request"
     }
   ],
   "projects": [
