@@ -29,6 +29,7 @@ jobs:
           resume export resume.pdf -t even
           git config --global user.name 'Tran Zha Github Actions'
           git config --global user.email 'trannzfsg@users.noreply.github.com'
+          git checkout main
           git add .
           git commit -m "Github actions build resume index.html and resume.pdf"
-          git push
+          git push origin main
