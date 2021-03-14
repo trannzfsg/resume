@@ -118,77 +118,29 @@
       "name": "Architecture diagrams & documentation",
       "level": "Adequate",
       "keywords": [
-        "draw.io",
-        "confluence",
-        "pitch writing"
+        "User journey",
+        "Key user action request flow",
+        "Infrastructure architecture",
+        "Roadmap",
+        "Internal tech radar",
+        "Pitch writing"
       ]
     },
     {
-      "name": "API development",
+      "name": "Cloud services",
       "level": "Professional",
       "keywords": [
-        "C#",
-        ".Net",
-        "NodeJS",
-        "REST",
-        "RPC"
+        "Amazon Web Services",
+        "Google Cloud Platform"
       ]
     },
     {
-      "name": "Web application development",
+      "name": "Container orchestration",
       "level": "Adquate",
       "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "React"
-      ]
-    },
-    {
-      "name": "Relational & NoSQL databases",
-      "level": "Professional",
-      "keywords": [
-        "MS SQL Server",
-        "PostgreSQL",
-        "DynamoDB"
-      ]
-    },
-    {
-      "name": "Data lake & data warehouse",
-      "level": "Adequate",
-      "keywords": [
-        "Data lake - AWS S3 / Google cloud storage",
-        "ETL - AWS Glue / Spark / Google Jobs",
-        "Data warehouse - BigQuery / Redshift",
-        "Visualisation - Google data studio"
-      ]
-    },
-    {
-      "name": "Containerisation & orchestration",
-      "level": "Adquate",
-      "keywords": [
-        "Docker",
+        "Docker / docker-compose",
         "Container registries",
-        "Kubernetes"
-      ]
-    },
-    {
-      "name": "Serverless architecture",
-      "level": "Adquate",
-      "keywords": [
-        "Serverless framework",
-        "Lambda",
-        "CDN / Edge computing",
-        "Static website hosting"
-      ]
-    },
-    {
-      "name": "Event driven architecture",
-      "level": "Adquate",
-      "keywords": [
-        "Pub/sub",
-        "CQRS",
-        "Queue / Notification services"
+        "Kubernetes / EKS"
       ]
     },
     {
@@ -196,9 +148,22 @@
       "level": "Adquate",
       "keywords": [
         "Terraform",
-        "Kubernetes",
-        "Amazon Web Services",
-        "Google Cloud Platform"
+        "Cloudformation",
+        "Helm charts",
+        "Linux / bash scripting",
+        "Nginx, LB, Cloudfront, api-gateway, cert-manager, external-dns, auto scaling"
+      ]
+    },
+    {
+      "name": "Serverless architecture",
+      "level": "Adquate",
+      "keywords": [
+        "Serverless framework",
+        "Lambda / layers",
+        "Fargate",
+        "Google Functions",
+        "CDN / Edge computing",
+        "Static website hosting"
       ]
     },
     {
@@ -214,26 +179,92 @@
       ]
     },
     {
-      "name": "Tracing and monitoring",
+      "name": "API development",
+      "level": "Professional",
+      "keywords": [
+        "C# / .Net",
+        "Github packages",
+        "NodeJS",
+        "REST / RPC"
+      ]
+    },
+    {
+      "name": "Authentication services",
       "level": "Adquate",
       "keywords": [
+        "Auth0",
+        "Okta",
+        "Google CICP",
+        "Amazon Cognito"
+      ]
+    },
+    {
+      "name": "Web application development",
+      "level": "Adquate",
+      "keywords": [
+        "Javascript / React",
+        "npm / yarn"
+      ]
+    },
+    {
+      "name": "Relational & NoSQL databases",
+      "level": "Professional",
+      "keywords": [
+        "SQL Server",
+        "PostgreSQL",
+        "DynamoDB"
+      ]
+    },
+    {
+      "name": "Data lake & data warehouse",
+      "level": "Adequate",
+      "keywords": [
+        "AWS S3 / Google Cloud Storage",
+        "BigQuery / Athena / Redshift",
+        "AWS Glue / Spark / Google Jobs",
+        "Google Data Studio"
+      ]
+    },
+    {
+      "name": "Event driven architecture",
+      "level": "Adquate",
+      "keywords": [
+        "Pub/sub",
+        "CQRS",
+        "Queue / Notification services"
+      ]
+    },
+    {
+      "name": "Tracing and monitoring",
+      "level": "Professional",
+      "keywords": [
         "OpenTelemetry",
-        "Instrumentation",
+        "Custom instrumentation",
+        "Prometheus & Grafana",
         "SLA/SLO/SLI",
-        "Visualisation & alerting",
         "Dynatrace",
         "Honeycomb"
       ]
     },
     {
       "name": "Version control & branching strategy",
-      "level": "Adquate",
+      "level": "Professional",
       "keywords": [
-        "Git",
-        "Github",
+        "Git / Github",
         "Trunk based development",
         "Gitflow",
         "Feature / release toggles"
+      ]
+    },
+    {
+      "name": "Software development patterns",
+      "level": "Adquate",
+      "keywords": [
+        "Agile scrum",
+        "Shape Up",
+        "Test driven development",
+        "Domain driven design",
+        "Object-oriented & functional programming"
       ]
     }
   ],
@@ -266,7 +297,7 @@
     {
       "name": "Science fiction, fantacy, movies/series, games",
       "keywords": [
-        "Star wars",
+        "Star Wars",
         "Blizzard"
       ]
     }
