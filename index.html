@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Xiaochuan Zha (Tran)</title>
+      <meta name="description" content="Software engineer with 10+ years experience in architecting and developing web and cloud applications using cutting-edge technologies. Good at balancing between business &amp;amp; product requirements, development timeframes and software quality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+    <style>:root {
+  color-scheme: light dark;
+
+  /* Colors */
+  --backgroundColor: #ffffff;
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #181a1b;
+    --primaryColor: #d1cdc7;
+    --secondaryColor: #aaa398;
+    --mutedColor: #1e2021;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.4em;
+}
+
+li::marker,
+.network {
+  color: var(--secondaryColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+svg {
+  margin-right: 0.2em;
+  vertical-align: -0.2em;
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+        <div>
+            <h1>Xiaochuan Zha (Tran)</h1>
+            <h2>Software Engineer</h2>
+        </div>
+        <ul class="icon-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Mango Hill, Australia
+              </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:info@tranzha.com">info@tranzha.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0402798180">0402 798 180</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              <a href="http://gh.tranzha.com/resume/">gh.tranzha.com/resume</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <a href="https://github.com/trannzfsg">trannzfsg</a>
+                <span class="network">(Github)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <a href="https://www.linkedin.com/in/tran-zha-6a379813/">Tran Zha</a>
+                <span class="network">(LinkedIn)</span>
+            </li>
+        </ul>
+      </header>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Software engineer with 10+ years experience in architecting and developing web and cloud applications using cutting-edge technologies. Good at balancing between business &amp; product requirements, development timeframes and software quality.</p>
+          </article>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Loan Market Group</h4>
+                  <span>
+                    <time datetime="2019-07-08">Jul 2019</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior software engineer</strong>
+                    <a href="http://www.loanmarket.com.au">www.loanmarket.com.au</a>
+                </div>
+              </header>
+                <p>Continue project MyCRM, help to drive the migration into modern architecture and tech stacks</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Re-platform from monolith to multiple services</li>
+                    <li>CI, CD and infrastruture/config/process as code</li>
+                    <li>Observability and OpenTelemetry</li>
+                    <li>Containerisation and Kubernetes cluster</li>
+                    <li>Tech stack upgrade while continue to deliver features and improvements</li>
+                    <li>Production incident management, assist to refine release process and branching strategy</li>
+                    <li>Drive tech roadmap according to business roadmap</li>
+                    <li>Assist onshore team expansion</li>
+                    <li>Assist to transform from Scrums to Shape Up</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>New Zealand Financial Services Group</h4>
+                  <span>
+                    <time datetime="2016-04-01">Apr 2016</time> –
+                    <time datetime="2019-07-01">Jul 2019</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior software engineer</strong>
+                    <a href="http://www.nzfsg.co.nz">www.nzfsg.co.nz</a>
+                </div>
+              </header>
+                <p>Launched MyCRM, migration to cloud, migration of AU and NZ users from legacy systems</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>API and database development</li>
+                    <li>Cloud hosting with Amazon web services</li>
+                    <li>System architect and landing of it</li>
+                    <li>3rd party and toolset integrations</li>
+                    <li>Data migrations</li>
+                    <li>Enrich ecosystem by implementing serverless stack</li>
+                    <li>Security audit by PWC</li>
+                    <li>Offshore dev team expansion</li>
+                    <li>Scrums and sprints</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LifeDirect / Inform Holdings Limited / Trade Me</h4>
+                  <span>
+                    <time datetime="2008-07-01">Jul 2008</time> –
+                    <time datetime="2016-03-31">Mar 2016</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software engineer</strong>
+                    <a href="http://www.lifedirect.co.nz">www.lifedirect.co.nz</a>
+                </div>
+              </header>
+                <p>Risk insurance end-to-end online services; launched project MyCRM (legacy), QuoteMonster, MortgageShield and other satellite projects</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Web application development &amp; SPA</li>
+                    <li>Database and backend development</li>
+                    <li>Google Analytics and conversion funnels</li>
+                    <li>Custom built CRM system</li>
+                    <li>Insurance/mortgage profiling/quoting/servicing engines</li>
+                    <li>Online applications</li>
+                    <li>Reporting solution &amp; admin portals</li>
+                    <li>Fullstack proficient</li>
+                    <li>On-premise hosting solution and operations for small team</li>
+                    <li>Products built kept expanding, after company merged and acquired multiple times</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Auckland</h4>
+                  <span>
+                    <time datetime="2001-01-01">Jan 2001</time> –
+                    <time datetime="2004-01-01">Jan 2004</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                    <a href="https://www.auckland.ac.nz">www.auckland.ac.nz</a>
+                </div>
+              </header>
+                <p>Bachelor</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Auckland</h4>
+                  <span>
+                    <time datetime="2005-07-01">Jul 2005</time> –
+                    <time datetime="2006-07-01">Jul 2006</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                    <a href="https://www.auckland.ac.nz">www.auckland.ac.nz</a>
+                </div>
+              </header>
+                <p>Postgraduate Diploma</p>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>MyCRM</h4>
+                  <span>
+                    <time datetime="2016-04-01">Apr 2016</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Senior software engineer</strong>
+                      at <strong>Loan Market</strong>
+                  </span>
+                    <a href="https://mycrm.finance/">mycrm.finance</a>
+                </div>
+              </header>
+                <p>Grow your business and save time with MyCRM, a cloud-based, ready to plug in application. Track sales, nurture leads, and manage your secure database from anywhere.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Technology platform of the year (2019, 2020) - Australian Broking Awards</li>
+                    <li>Fully cloud based (AWS)</li>
+                    <li>Integrate with numerous external services</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LifeDirect</h4>
+                  <span>
+                    <time datetime="2008-07-01">Jul 2008</time> –
+                    <time datetime="2016-04-01">Apr 2016</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Software engineer</strong>
+                      at <strong>Inform Financial Services Ltd</strong>
+                  </span>
+                    <a href="https://www.lifedirect.co.nz/">www.lifedirect.co.nz</a>
+                </div>
+              </header>
+                <p>Compare insurance quotes with LifeDirect. Use our free online tool to build and compare insurance quotes and then apply online today!</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Being acquired twice</li>
+                    <li>Comprehensive quoting and application form engine</li>
+                    <li>Full end-to-end online risk insurance experience and after sale care</li>
+                    <li>Extensive backend reporting and administrative functionalities</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>MyCRM (legacy)</h4>
+                  <span>
+                    <time datetime="2010-01-01">Jan 2010</time> –
+                    <time datetime="2012-01-01">Jan 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Software engineer</strong>
+                      at <strong>New Zealand Financial Services Group</strong>
+                  </span>
+                    <a href="https://www.nzfsg.co.nz">www.nzfsg.co.nz</a>
+                </div>
+              </header>
+                <p>All-in-one platform for mortgage and insurance advisers</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Developed from scratch and sold out to NZFSG</li>
+                    <li>Operated efficiently for more than 10 years, until replaced by next generation of itself</li>
+                    <li>Multiple small projects inside, e.g. commission system, loan servicing engine, insurance quoting engine, loan/insurance profiling engine, document management engine, workflow automation engine, dashboard/reporting engine, mass email comms engin, etc.</li>
+                    <li>Done by a lean development team (1-2 devs only) over a relatively short period (2 years)</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Architecture diagrams &amp; documentation</h4>
+                <ul class="tag-list">
+                    <li>draw.io</li>
+                    <li>confluence</li>
+                    <li>pitch writing</li>
+                </ul>
+            </div>
+            <div>
+                <h4>API development</h4>
+                <ul class="tag-list">
+                    <li>C#</li>
+                    <li>.Net</li>
+                    <li>NodeJS</li>
+                    <li>REST</li>
+                    <li>RPC</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Web application development</h4>
+                <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Relational &amp; NoSQL databases</h4>
+                <ul class="tag-list">
+                    <li>MS SQL Server</li>
+                    <li>PostgreSQL</li>
+                    <li>DynamoDB</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Data lake &amp; data warehouse</h4>
+                <ul class="tag-list">
+                    <li>Data lake - AWS S3 / Google cloud storage</li>
+                    <li>ETL - AWS Glue / Spark / Google Jobs</li>
+                    <li>Data warehouse - BigQuery / Redshift</li>
+                    <li>Visualisation - Google data studio</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Containerisation &amp; orchestration</h4>
+                <ul class="tag-list">
+                    <li>Docker</li>
+                    <li>Container registries</li>
+                    <li>Kubernetes</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Serverless architecture</h4>
+                <ul class="tag-list">
+                    <li>Serverless framework</li>
+                    <li>Lambda</li>
+                    <li>CDN / Edge computing</li>
+                    <li>Static website hosting</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Event driven architecture</h4>
+                <ul class="tag-list">
+                    <li>Pub/sub</li>
+                    <li>CQRS</li>
+                    <li>Queue / Notification services</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Infrastructure automation</h4>
+                <ul class="tag-list">
+                    <li>Terraform</li>
+                    <li>Kubernetes</li>
+                    <li>Amazon Web Services</li>
+                    <li>Google Cloud Platform</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Continues integration &amp; continues delivery</h4>
+                <ul class="tag-list">
+                    <li>Bash scripting</li>
+                    <li>Github actions / CircleCI / AppVeyor</li>
+                    <li>Octopus / CodeDeploy</li>
+                    <li>Sops</li>
+                    <li>DbUp</li>
+                    <li>Redgate</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tracing and monitoring</h4>
+                <ul class="tag-list">
+                    <li>OpenTelemetry</li>
+                    <li>Instrumentation</li>
+                    <li>SLA/SLO/SLI</li>
+                    <li>Visualisation &amp; alerting</li>
+                    <li>Dynatrace</li>
+                    <li>Honeycomb</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Version control &amp; branching strategy</h4>
+                <ul class="tag-list">
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>Trunk based development</li>
+                    <li>Gitflow</li>
+                    <li>Feature / release toggles</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Fluent
+            </div>
+            <div>
+                <h4>Mandarin</h4>
+              Native speaker
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Basketball &amp; NBA</h4>
+                <ul class="tag-list">
+                    <li>Once a week casual games</li>
+                    <li>Following NBA games</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Reading &amp; podcasts</h4>
+                <ul class="tag-list">
+                    <li>History</li>
+                    <li>Personal development</li>
+                    <li>Technology &amp; science</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Science fiction, fantacy, movies/series, games</h4>
+                <ul class="tag-list">
+                    <li>Star wars</li>
+                    <li>Blizzard</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="references">
+        <h3>References</h3>
+        <div class="stack">
+              <blockquote>
+                <p>Technology director - contact details are available on request</p>
+                  <p>
+                    <cite>Andrew Brown</cite>
+                  </p>
+              </blockquote>
+              <blockquote>
+                <p>Supervisor from 2008~2019 - contact details are available on request</p>
+                  <p>
+                    <cite>James Punnett</cite>
+                  </p>
+              </blockquote>
+        </div>
+      </section>
+  </body>
+</html>
