@@ -32,13 +32,13 @@
     {
       "name": "Loan Market Group",
       "location": "Brisbane, QLD",
-      "description": "Mortgage aggregator & financial services",
-      "position": "Software Architect",
+      "description": "Number one mortgage aggregator in Australasia",
+      "position": "Senior software engineer",
       "url": "http://www.loanmarket.com.au",
       "startDate": "2019-07-08",
-      "summary": "Continue project MyCRM (V3), help to drive the migration into modern architecture and tech stacks",
+      "summary": "Continue project MyCRM, help to drive the migration into modern architecture and tech stacks",
       "highlights": [
-        "Re-platform to break down monolith",
+        "Re-platform from monolith to multiple services",
         "CI, CD and infrastruture/config/process as code",
         "Observability and OpenTelemetry",
         "Containerisation and Kubernetes cluster",
@@ -52,12 +52,12 @@
     {
       "name": "New Zealand Financial Services Group",
       "location": "Auckland, New Zealand",
-      "description": "Mostly owned by Loan Market Group",
-      "position": "Software Architect",
+      "description": "NZ number one mortgage and insurance aggregator",
+      "position": "Senior software engineer",
       "url": "http://www.nzfsg.co.nz",
       "startDate": "2016-04-01",
       "endDate": "2019-07-01",
-      "summary": "Launched project MyCRM (V2 & V3), and support migration of AU and NZ users from previous systems",
+      "summary": "Launched MyCRM, migration to cloud, migration of AU and NZ users from legacy systems",
       "highlights": [
         "API and database development",
         "Cloud hosting with Amazon web services",
@@ -74,11 +74,11 @@
       "name": "LifeDirect / Inform Holdings Limited / Trade Me",
       "location": "Auckland, New Zealand",
       "description": "Project LifeDirect and project MyCRM (V1)",
-      "position": "Web application developer - Software engineer",
+      "position": "Software engineer",
       "url": "http://www.lifedirect.co.nz",
       "startDate": "2008-07-01",
       "endDate": "2016-03-31",
-      "summary": "Risk insurance end-to-end online services; launched project MyCRM (V1), QuoteMonster, MortgageShield and satellite projects",
+      "summary": "Risk insurance end-to-end online services; launched project MyCRM (legacy), QuoteMonster, MortgageShield and other satellite projects",
       "highlights": [
         "Web application development & SPA",
         "Database and backend development",
@@ -273,37 +273,87 @@
   ],
   "references": [
     {
-      "name": "Jakob Hojgaard",
-      "reference": "CTO of Loan Market Group - contact details are available on request"
+      "name": "Andrew Brown",
+      "reference": "Technology director - contact details are available on request"
     },
     {
       "name": "James Punnett",
-      "reference": "Supervisor/boss from 2008~2019 - contact details are available on request"
+      "reference": "Supervisor from 2008~2019 - contact details are available on request"
     }
   ],
   "projects": [
     {
       "name": "MyCRM",
-      "description": "A mapping engine that misguides you",
+      "description": "Grow your business and save time with MyCRM, a cloud-based, ready to plug in application. Track sales, nurture leads, and manage your secure database from anywhere.",
       "highlights": [
-        "Won award at AIHacks 2016",
-        "Built by all women team of newbie programmers",
-        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+        "Technology platform of the year (2019, 2020) - Australian Broking Awards",
+        "Fully cloud based (AWS)",
+        "Integrate with numerous external services"
       ],
       "keywords": [
-        "GoogleMaps",
-        "Chrome Extension",
-        "Javascript"
+        "CRM",
+        "Integrations",
+        "Cloud"
       ],
-      "startDate": "2016-08-24",
-      "endDate": "2016-08-24",
-      "url": "https://missdirection.example.com",
+      "startDate": "2016-04-01",
+      "url": "https://mycrm.finance/",
       "roles": [
-        "Team lead",
-        "Designer"
+        "Senior software engineer"
       ],
-      "entity": "Smoogle",
-      "type": "application"
+      "entity": "Loan Market",
+      "type": "Cloud app"
+    },
+    {
+      "name": "LifeDirect",
+      "description": "Compare insurance quotes with LifeDirect. Use our free online tool to build and compare insurance quotes and then apply online today!",
+      "highlights": [
+        "Being acquired twice",
+        "Comprehensive quoting and application form engine",
+        "Full end-to-end online risk insurance experience and after sale care",
+        "Extensive backend reporting and administrative functionalities"
+      ],
+      "keywords": [
+        "Quote engine",
+        "Online application",
+        "Customer care",
+        "Reporting"
+      ],
+      "startDate": "2008-07-01",
+      "endDate": "2016-04-01",
+      "url": "https://www.lifedirect.co.nz/",
+      "roles": [
+        "Software engineer"
+      ],
+      "entity": "Inform Financial Services Ltd",
+      "type": "Web app"
+    },
+    {
+      "name": "MyCRM (legacy)",
+      "description": "All-in-one platform for mortgage and insurance advisers",
+      "highlights": [
+        "Developed from scratch and sold out to NZFSG",
+        "Operated efficiently for more than 10 years, until replaced by next generation of itself",
+        "Multiple small projects inside, e.g. commission system, loan servicing engine, insurance quoting engine, loan/insurance profiling engine, document management engine, workflow automation engine, dashboard/reporting engine, mass email comms engin, etc.",
+        "Done by a lean development team (1-2 devs only) over a relatively short period (2 years)"
+      ],
+      "keywords": [
+        "CRM",
+        "Commission",
+        "Document managment",
+        "Workflow automation",
+        "Single page application",
+        "SQL Server",
+        ".Net",
+        "jQuery"
+      ],
+      "startDate": "2010-01-01",
+      "endDate": "2012-01-01",
+      "url": "https://www.nzfsg.co.nz",
+      "roles": [
+        "Software engineer"
+      ],
+      "entity": "New Zealand Financial Services Group",
+      "type": "Single page application"
     }
   ],
   "meta": {
