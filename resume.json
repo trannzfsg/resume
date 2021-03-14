@@ -243,7 +243,8 @@
         "Prometheus & Grafana",
         "SLA/SLO/SLI",
         "Dynatrace",
-        "Honeycomb"
+        "Honeycomb",
+        "Seq"
       ]
     },
     {
