@@ -98,19 +98,28 @@
       "institution": "University of Auckland",
       "url": "https://www.auckland.ac.nz",
       "area": "Computer Science",
-      "studyType": "Bachelor",
+      "studyType": "Bachelor of Science",
       "startDate": "2001-01-01",
-      "endDate": "2004-01-01",
+      "endDate": "2003-12-31",
       "score": "A-"
     },
     {
       "institution": "University of Auckland",
       "url": "https://www.auckland.ac.nz",
       "area": "Computer Science",
-      "studyType": "Postgraduate Diploma",
+      "studyType": "Postgraduate Diploma in Science",
       "startDate": "2005-07-01",
-      "endDate": "2006-07-01",
+      "endDate": "2006-06-30",
       "score": "B+"
+    },
+    {
+      "institution": "University of Auckland",
+      "url": "https://www.auckland.ac.nz",
+      "area": "Finance and Economics",
+      "studyType": "Bachelor of Commerce",
+      "startDate": "2008-01-01",
+      "endDate": "2010-12-31",
+      "score": "A"
     }
   ],
   "skills": [
