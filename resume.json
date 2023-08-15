@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Xiaochuan Zha (Tran)",
-    "label": "Software Engineer",
+    "label": "Engineering Manager",
     "image": "https://trannzfsg.github.io/resume/photo.webp",
     "email": "info@tranzha.com",
     "phone": "0402 798 180",
     "url": "http://gh.tranzha.com/resume/",
-    "summary": "Software engineer with 10+ years experience in architecting and developing web and cloud applications using cutting-edge technologies. Good at balancing between business & product requirements, development timeframes and software quality.",
+    "summary": "Love to make things happen and make them work. Build, nurture and empower teams to deliver and own sofware applications. Balance between product lead and tech lead; pragmatic and disruptive thinking. Architect and develop web based and cloud hosted applications using modern technologies and patterns.",
     "location": {
       "address": "24 Smith Crescent",
       "postalCode": "4509",
@@ -30,66 +30,127 @@
   },
   "work": [
     {
-      "name": "Loan Market Group",
-      "location": "Brisbane, QLD",
-      "description": "Number one mortgage aggregator in Australasia",
-      "position": "Senior software engineer",
-      "url": "http://www.loanmarket.com.au",
-      "startDate": "2019-07-08",
-      "summary": "Continue project MyCRM, help to drive the migration into modern architecture and tech stacks",
+      "name": "LMG - replatform MyCRM core",
+      "position": "Engineering Manager",
+      "url": "http://www.lmg.broker",
+      "startDate": "2023-02-01",
+      "summary": "LMG is investing into new type of loans, with ambition to expand into all financial services in future too. MyCRM's current architecture and data schema is no longer fit for purpose. The team is in charge of building a new core with necessary new patterns to solve this problem.",
       "highlights": [
-        "Re-platform from monolith to multiple services",
-        "CI, CD and infrastruture/config/process as code",
-        "Observability and OpenTelemetry",
-        "Containerisation and Kubernetes cluster",
-        "Tech stack upgrade while continue to deliver features and improvements",
-        "Production incident management, assist to refine release process and branching strategy",
-        "Drive tech roadmap according to business roadmap",
-        "Assist onshore team expansion",
-        "Assist to transform from Scrums to Shape Up"
+        "Step into a non-performing team and turn it around",
+        "Dealing with conflicts and hugely different personalities",
+        "Driving cross department conversations and alignments",
+        "Re-aligning expectations, internal and external",
+        "Driving balance between tech lead and product lead",
+        "Building technical roadmap",
+        "Exploration in event-sourcing and tranistion required from tranditional data storages"
       ]
     },
     {
-      "name": "New Zealand Financial Services Group",
-      "location": "Auckland, New Zealand",
-      "description": "NZ number one mortgage and insurance aggregator",
-      "position": "Senior software engineer",
+      "name": "LMG - one commission system",
+      "position": "Engineering Manager",
+      "url": "http://www.lmg.broker",
+      "startDate": "2022-07-01",
+      "endDate": "2023-04-01",
+      "summary": "Not long after the acquisition of Podium, paying out broker commissions to all different types of arragements becomes a huge problem. The commissions processing team keeps expanding, but it is a not a long term solution. Time for 1 system to rule them all.",
+      "highlights": [
+        "Building a new tech team from sratch",
+        "Discovery of multiple decades old systems and processes",
+        "Making plans and business cases to drive for internal investments",
+        "Roadmap and capacity planning for the new system"
+      ]
+    },
+    {
+      "name": "LMG - business insights",
+      "position": "Engineering Manager",
+      "url": "http://www.lmg.broker",
+      "startDate": "2022-02-01",
+      "endDate": "2023-03-01",
+      "summary": "Reporting is always a short-fall of MyCRM, it never had enough focus because of other workarounds. It can't be overlooked any more, with the expanding user base LMG has now.",
+      "highlights": [
+        "Working with multiple external vendors - Snowflake, Starburst, ThoughtSpot, BigQuery, Sisence, etc.",
+        "Comparing vendors from various angles, including architecture pillars around them",
+        "Fail fast on quick POCs and MVPs",
+        "Separation of data lake and data warehouse for reporting",
+        "Building data extraction, ingestion and transformation pipelines, and accounts for multiple environments",
+        "Overnight processing and real-time processing of various data sources, from databases to spreadsheets"
+      ]
+    },
+    {
+      "name": "LMG - risk insurance uplift",
+      "position": "Engineering Manager",
+      "url": "http://www.lmg.broker",
+      "startDate": "2021-07-01",
+      "endDate": "2022-07-01",
+      "summary": "Risk insurance has been left out in the platform upgrades for a long time. This includes both the basic CRM stuff like pipelines and workflow automations, also the sales tools like profiling, quoting and online applications. To avoid making more patches and tweaks, an across the board uplift is required.",
+      "highlights": [
+        "Adopting Shape Up agile methodology",
+        "Individual career development",
+        "Empowering teams for ownership and encourage collaborations",
+        "Smooth user transitions and data migrations"
+      ]
+    },
+    {
+      "name": "LMG - the Podium acquisition",
+      "position": "Engineering Manager",
+      "url": "http://www.lmg.broker",
+      "startDate": "2021-03-01",
+      "endDate": "2022-02-01",
+      "summary": "LMG acquired a few other aggregators, along with their CRM system Podium. The decision has been made to migrate everyone from Podium to MyCRM, of course given that we can uplift the missing features and able to carry out the massive data migrations. This team is in charge of the data migrations, for both broker users and corporate users.",
+      "highlights": [
+        "Working with teams of different cultures",
+        "Building one-off and overnight deltas data migration pipeline",
+        "Combining different technologies and vendors, including SSIS, TaskFactory, Salesforce, Kubernetes jobs and variuos AWS services"
+      ]
+    },
+    {
+      "name": "LMG - replatform infrastructure",
+      "position": "Senior DevOps Engineer",
+      "url": "http://www.lmg.broker",
+      "startDate": "2019-07-01",
+      "endDate": "2021-04-01",
+      "summary": "MyCRM is fully in AWS, but we're still hosting using Windows servers and IIS in year 2019. To allow better scaling, and more importantly better supporting the transition from Monolith to multiple services, we need a better solution - namely Kubernetes or EKS in AWS. Also, the ability to trace issues in production, especially performance issues are unncessarily complex, can we make it better?",
+      "highlights": [
+        "Kubernetes with EKS, set up and transit existing applications to the cluster",
+        "OpenTelemetry ingestion for traces and metrics, contextual logging",
+        "Transition frontend, backend and database into a uniform CI/CD toolset - Github Actions and Octopus",
+        "Excessive amount of bash scripting",
+        "Local development F5 experience"
+      ]
+    },
+    {
+      "name": "NZFSG - launch MyCRM and migrations",
+      "position": "Senior engineer to Engineering Manager",
       "url": "http://www.nzfsg.co.nz",
       "startDate": "2016-04-01",
       "endDate": "2019-07-01",
-      "summary": "Launched MyCRM, migration to cloud, migration of AU and NZ users from legacy systems",
+      "summary": "NZFSG is a subsidiary company under LMG, but the in-house built CRM system, MyCRM, is getting attention in Australia. The project is to rebuild MyCRM into a modern system, account for Australian brokers and processes, also migrate everyone to it.",
       "highlights": [
-        "API and database development",
-        "Cloud hosting with Amazon web services",
-        "System architect and landing of it",
-        "3rd party and toolset integrations",
-        "Data migrations",
-        "Enrich ecosystem by implementing serverless stack",
-        "Security audit by PWC",
-        "Offshore dev team expansion",
-        "Scrums and sprints"
+        "Migration from on-prem to cloud (AWS)",
+        "Redesigning parts of application to fit for cloud services",
+        "Integrating various monitoring tools including Dynatrace, cloud watch, StatusCake, etc.",
+        "Implementing CI/CD combining 3rd party services (AppVeyor, CircleCI, RedGate) as well as cloud service",
+        "Data migrations across the board for multiple systems",
+        "Adopting NodeJS and Serverless stack for non user facing parts",
+        "Coordinating security audit by PWC",
+        "Assiting major off-shore development team expansion, 0 to 20+ in months",
+        "Agile methodology and Certified Scrum Master",
+        "Big launch date"
       ]
     },
     {
-      "name": "LifeDirect / Inform Holdings Limited / Trade Me",
-      "location": "Auckland, New Zealand",
-      "description": "Project LifeDirect and project MyCRM (V1)",
+      "name": "LifeDirect / Inform Holdings Ltd / Trade Me",
       "position": "Software engineer",
       "url": "http://www.lifedirect.co.nz",
       "startDate": "2008-07-01",
       "endDate": "2016-03-31",
-      "summary": "Risk insurance end-to-end online services; launched project MyCRM (legacy), QuoteMonster, MortgageShield and other satellite projects",
+      "summary": "Multiple rounds of being acquired, acquiring other companies and spin-offs. Expansion from 1-person team to leading a small team.",
       "highlights": [
-        "Web application development & SPA",
-        "Database and backend development",
-        "Google Analytics and conversion funnels",
-        "Custom built CRM system",
-        "Insurance/mortgage profiling/quoting/servicing engines",
-        "Online applications",
-        "Reporting solution & admin portals",
-        "Fullstack proficient",
-        "On-premise hosting solution and operations for small team",
-        "Products built kept expanding, after company merged and acquired multiple times"
+        "LifeDirect online risk insurance platform, from quoting to apply to underwriting",
+        "Admin portals and reporting system for internal usage",
+        "MyCRM project for NZFSG - company acquired, CRM built, then sold",
+        "Fullstack from HTML/CSS/Javascript to C# and SQL",
+        "On-premise hosting and operations",
+        "Onboarding new team member, mentoring and knowledge transfers"
       ]
     }
   ],
@@ -120,281 +181,73 @@
       "startDate": "2008-01-01",
       "endDate": "2010-12-31",
       "score": "A"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Architecture diagrams & documentation",
-      "level": "Adequate",
-      "keywords": [
-        "User journey",
-        "Key user action request flow",
-        "Infrastructure architecture",
-        "Roadmap",
-        "Internal tech radar",
-        "Pitch writing"
-      ]
     },
     {
-      "name": "Cloud services",
-      "level": "Professional",
-      "keywords": [
-        "Amazon Web Services",
-        "Google Cloud Platform"
-      ]
+      "institution": "Coursera & deeplearning.ai",
+      "studyType": "Machine Learning and Deep Learning",
+      "startDate": "2017-06-01",
+      "endDate": "2017-12-31"
     },
     {
-      "name": "Container orchestration",
-      "level": "Adquate",
-      "keywords": [
-        "Docker / docker-compose",
-        "Container registries",
-        "Kubernetes / EKS"
-      ]
+      "institution": "A Cloud Guru",
+      "studyType": "AWS Associate Solution Architect",
+      "startDate": "2020-01-01",
+      "endDate": "2020-06-31"
     },
     {
-      "name": "Infrastructure automation",
-      "level": "Adquate",
-      "keywords": [
-        "Terraform",
-        "Cloudformation",
-        "Helm charts",
-        "Linux / bash scripting",
-        "Nginx, LB, Cloudfront, api-gateway, cert-manager, external-dns, auto scaling"
-      ]
-    },
-    {
-      "name": "Serverless architecture",
-      "level": "Adquate",
-      "keywords": [
-        "Serverless framework",
-        "Lambda / layers",
-        "Fargate",
-        "Google Functions",
-        "CDN / Edge computing",
-        "Static website hosting"
-      ]
-    },
-    {
-      "name": "Continues integration & continues delivery",
-      "level": "Adquate",
-      "keywords": [
-        "Bash scripting",
-        "Github actions / CircleCI / AppVeyor",
-        "Octopus / CodeDeploy",
-        "Sops",
-        "DbUp",
-        "Redgate"
-      ]
-    },
-    {
-      "name": "API development",
-      "level": "Professional",
-      "keywords": [
-        "C# / .Net",
-        "Github packages",
-        "NodeJS",
-        "REST / RPC"
-      ]
-    },
-    {
-      "name": "Authentication services",
-      "level": "Adquate",
-      "keywords": [
-        "Auth0",
-        "Okta",
-        "Google CICP",
-        "Amazon Cognito"
-      ]
-    },
-    {
-      "name": "Web application development",
-      "level": "Adquate",
-      "keywords": [
-        "Javascript / React",
-        "npm / yarn"
-      ]
-    },
-    {
-      "name": "Relational & NoSQL databases",
-      "level": "Professional",
-      "keywords": [
-        "SQL Server",
-        "PostgreSQL",
-        "DynamoDB"
-      ]
-    },
-    {
-      "name": "Data lake & data warehouse",
-      "level": "Adequate",
-      "keywords": [
-        "AWS S3 / Google Cloud Storage",
-        "BigQuery / Athena / Redshift",
-        "AWS Glue / Spark / Google Jobs",
-        "Google Data Studio"
-      ]
-    },
-    {
-      "name": "Event driven architecture",
-      "level": "Adquate",
-      "keywords": [
-        "Pub/sub",
-        "CQRS",
-        "Queue / Notification services"
-      ]
-    },
-    {
-      "name": "Tracing and monitoring",
-      "level": "Professional",
-      "keywords": [
-        "OpenTelemetry",
-        "Custom instrumentation",
-        "Prometheus & Grafana",
-        "SLA/SLO/SLI",
-        "Dynatrace",
-        "Honeycomb",
-        "Seq"
-      ]
-    },
-    {
-      "name": "Version control & branching strategy",
-      "level": "Professional",
-      "keywords": [
-        "Git / Github",
-        "Trunk based development",
-        "Gitflow",
-        "Feature / release toggles"
-      ]
-    },
-    {
-      "name": "Software development patterns",
-      "level": "Adquate",
-      "keywords": [
-        "Agile scrum",
-        "Shape Up",
-        "Test driven development",
-        "Domain driven design",
-        "Object-oriented & functional programming"
-      ]
+      "institution": "Udemy",
+      "studyType": "Kubernetes Administrator",
+      "startDate": "2022-04-01",
+      "endDate": "2022-08-31"
     }
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Fluent"
+      "language": "English"
     },
     {
-      "language": "Mandarin",
-      "fluency": "Native speaker"
+      "language": "Mandarin"
     }
   ],
   "interests": [
     {
-      "name": "Basketball & NBA",
+      "name": "Readings & podcasts",
       "keywords": [
-        "Once a week casual games",
-        "Following NBA games"
-      ]
-    },
-    {
-      "name": "Reading & podcasts",
-      "keywords": [
-        "History",
+        "Leadership",
         "Personal development",
+        "History",
         "Technology & science"
       ]
     },
     {
-      "name": "Science fiction, fantacy, movies/series, games",
+      "name": "Basketball & football & running",
       "keywords": [
-        "Star Wars",
-        "Blizzard"
+        "Center",
+        "Goal keeper"
+      ]
+    },
+    {
+      "name": "Movies, TV shows & games",
+      "keywords": [
+        "Science fiction",
+        "Fantacy"
+      ]
+    },
+    {
+      "name": "ChatGPT",
+      "keywords": [
+        "All sorts of things"
       ]
     }
   ],
   "references": [
     {
       "name": "Andrew Brown",
-      "reference": "Technology director - contact details are available on request"
+      "reference": "CTO - 2020~2023 - contact details are available on request"
     },
     {
       "name": "James Punnett",
-      "reference": "Supervisor from 2008~2019 - contact details are available on request"
-    }
-  ],
-  "projects": [
-    {
-      "name": "MyCRM",
-      "description": "Grow your business and save time with MyCRM, a cloud-based, ready to plug in application. Track sales, nurture leads, and manage your secure database from anywhere.",
-      "highlights": [
-        "Technology platform of the year (2019, 2020) - Australian Broking Awards",
-        "Fully cloud based (AWS)",
-        "Integrate with numerous external services"
-      ],
-      "keywords": [
-        "CRM",
-        "Integrations",
-        "Cloud"
-      ],
-      "startDate": "2016-04-01",
-      "url": "https://mycrm.finance/",
-      "roles": [
-        "Senior software engineer"
-      ],
-      "entity": "Loan Market",
-      "type": "Cloud app"
-    },
-    {
-      "name": "LifeDirect",
-      "description": "Compare insurance quotes with LifeDirect. Use our free online tool to build and compare insurance quotes and then apply online today!",
-      "highlights": [
-        "Being acquired twice",
-        "Comprehensive quoting and application form engine",
-        "Full end-to-end online risk insurance experience and after sale care",
-        "Extensive backend reporting and administrative functionalities"
-      ],
-      "keywords": [
-        "Quote engine",
-        "Online application",
-        "Customer care",
-        "Reporting"
-      ],
-      "startDate": "2008-07-01",
-      "endDate": "2016-04-01",
-      "url": "https://www.lifedirect.co.nz/",
-      "roles": [
-        "Software engineer"
-      ],
-      "entity": "Inform Financial Services Ltd",
-      "type": "Web app"
-    },
-    {
-      "name": "MyCRM (legacy)",
-      "description": "All-in-one platform for mortgage and insurance advisers",
-      "highlights": [
-        "Developed from scratch and sold out to NZFSG",
-        "Operated efficiently for more than 10 years, until replaced by next generation of itself",
-        "Multiple small projects inside, e.g. commission system, loan servicing engine, insurance quoting engine, loan/insurance profiling engine, document management engine, workflow automation engine, dashboard/reporting engine, mass email comms engin, etc.",
-        "Done by a lean development team (1-2 devs only) over a relatively short period (2 years)"
-      ],
-      "keywords": [
-        "CRM",
-        "Commission",
-        "Document managment",
-        "Workflow automation",
-        "Single page application",
-        "SQL Server",
-        ".Net",
-        "jQuery"
-      ],
-      "startDate": "2010-01-01",
-      "endDate": "2012-01-01",
-      "url": "https://www.nzfsg.co.nz",
-      "roles": [
-        "Software engineer"
-      ],
-      "entity": "New Zealand Financial Services Group",
-      "type": "Single page application"
+      "reference": "Managing Director - 2008~2019 - contact details are available on request"
     }
   ],
   "meta": {
