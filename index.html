@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Xiaochuan Zha (Tran)</title>
+      <meta name="description" content="Love to make things happen and make them work. Build, nurture and empower teams to deliver and own sofware applications. Balance between product lead and tech lead; pragmatic and disruptive thinking. Architect and develop web based and cloud hosted applications using modern technologies and patterns.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+    <style>:root {
+  color-scheme: light dark;
+
+  /* Colors */
+  --backgroundColor: #ffffff;
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #181a1b;
+    --primaryColor: #d1cdc7;
+    --secondaryColor: #aaa398;
+    --mutedColor: #1e2021;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.4em;
+}
+
+li::marker,
+.network {
+  color: var(--secondaryColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+svg {
+  margin-right: 0.2em;
+  vertical-align: -0.2em;
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+        <div>
+            <h1>Xiaochuan Zha (Tran)</h1>
+            <h2>Engineering Manager</h2>
+        </div>
+        <ul class="icon-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Mango Hill, Australia
+              </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:info@tranzha.com">info@tranzha.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0402798180">0402 798 180</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              <a href="http://gh.tranzha.com/resume/">gh.tranzha.com/resume</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <a href="https://github.com/trannzfsg">trannzfsg</a>
+                <span class="network">(Github)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <a href="https://www.linkedin.com/in/tran-zha-6a379813/">Tran Zha</a>
+                <span class="network">(LinkedIn)</span>
+            </li>
+        </ul>
+      </header>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Love to make things happen and make them work. Build, nurture and empower teams to deliver and own sofware applications. Balance between product lead and tech lead; pragmatic and disruptive thinking. Architect and develop web based and cloud hosted applications using modern technologies and patterns.</p>
+          </article>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LMG - replatform MyCRM core</h4>
+                  <span>
+                    <time datetime="2023-02-01">Feb 2023</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineering Manager</strong>
+                    <a href="http://www.lmg.broker">www.lmg.broker</a>
+                </div>
+              </header>
+                <p>LMG is investing into new type of loans, with ambition to expand into all financial services in future too. MyCRM's current architecture and data schema is no longer fit for purpose. The team is in charge of building a new core with necessary new patterns to solve this problem.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Step into a non-performing team and turn it around</li>
+                    <li>Dealing with conflicts and hugely different personalities</li>
+                    <li>Driving cross department conversations and alignments</li>
+                    <li>Re-aligning expectations, internal and external</li>
+                    <li>Driving balance between tech lead and product lead</li>
+                    <li>Building technical roadmap</li>
+                    <li>Exploration in event-sourcing and tranistion required from tranditional data storages</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LMG - one commission system</h4>
+                  <span>
+                    <time datetime="2022-07-01">Jul 2022</time> –
+                    <time datetime="2023-04-01">Apr 2023</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineering Manager</strong>
+                    <a href="http://www.lmg.broker">www.lmg.broker</a>
+                </div>
+              </header>
+                <p>Not long after the acquisition of Podium, paying out broker commissions to all different types of arragements becomes a huge problem. The commissions processing team keeps expanding, but it is a not a long term solution. Time for 1 system to rule them all.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Building a new tech team from sratch</li>
+                    <li>Discovery of multiple decades old systems and processes</li>
+                    <li>Making plans and business cases to drive for internal investments</li>
+                    <li>Roadmap and capacity planning for the new system</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LMG - business insights</h4>
+                  <span>
+                    <time datetime="2022-02-01">Feb 2022</time> –
+                    <time datetime="2023-03-01">Mar 2023</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineering Manager</strong>
+                    <a href="http://www.lmg.broker">www.lmg.broker</a>
+                </div>
+              </header>
+                <p>Reporting is always a short-fall of MyCRM, it never had enough focus because of other workarounds. It can't be overlooked any more, with the expanding user base LMG has now.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Working with multiple external vendors - Snowflake, Starburst, ThoughtSpot, BigQuery, Sisence, etc.</li>
+                    <li>Comparing vendors from various angles, including architecture pillars around them</li>
+                    <li>Fail fast on quick POCs and MVPs</li>
+                    <li>Separation of data lake and data warehouse for reporting</li>
+                    <li>Building data extraction, ingestion and transformation pipelines, and accounts for multiple environments</li>
+                    <li>Overnight processing and real-time processing of various data sources, from databases to spreadsheets</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LMG - risk insurance uplift</h4>
+                  <span>
+                    <time datetime="2021-07-01">Jul 2021</time> –
+                    <time datetime="2022-07-01">Jul 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineering Manager</strong>
+                    <a href="http://www.lmg.broker">www.lmg.broker</a>
+                </div>
+              </header>
+                <p>Risk insurance has been left out in the platform upgrades for a long time. This includes both the basic CRM stuff like pipelines and workflow automations, also the sales tools like profiling, quoting and online applications. To avoid making more patches and tweaks, an across the board uplift is required.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Adopting Shape Up agile methodology</li>
+                    <li>Individual career development</li>
+                    <li>Empowering teams for ownership and encourage collaborations</li>
+                    <li>Smooth user transitions and data migrations</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LMG - the Podium acquisition</h4>
+                  <span>
+                    <time datetime="2021-03-01">Mar 2021</time> –
+                    <time datetime="2022-02-01">Feb 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineering Manager</strong>
+                    <a href="http://www.lmg.broker">www.lmg.broker</a>
+                </div>
+              </header>
+                <p>LMG acquired a few other aggregators, along with their CRM system Podium. The decision has been made to migrate everyone from Podium to MyCRM, of course given that we can uplift the missing features and able to carry out the massive data migrations. This team is in charge of the data migrations, for both broker users and corporate users.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Working with teams of different cultures</li>
+                    <li>Building one-off and overnight deltas data migration pipeline</li>
+                    <li>Combining different technologies and vendors, including SSIS, TaskFactory, Salesforce, Kubernetes jobs and variuos AWS services</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LMG - replatform infrastructure</h4>
+                  <span>
+                    <time datetime="2019-07-01">Jul 2019</time> –
+                    <time datetime="2021-04-01">Apr 2021</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior DevOps Engineer</strong>
+                    <a href="http://www.lmg.broker">www.lmg.broker</a>
+                </div>
+              </header>
+                <p>MyCRM is fully in AWS, but we're still hosting using Windows servers and IIS in year 2019. To allow better scaling, and more importantly better supporting the transition from Monolith to multiple services, we need a better solution - namely Kubernetes or EKS in AWS. Also, the ability to trace issues in production, especially performance issues are unncessarily complex, can we make it better?</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Kubernetes with EKS, set up and transit existing applications to the cluster</li>
+                    <li>OpenTelemetry ingestion for traces and metrics, contextual logging</li>
+                    <li>Transition frontend, backend and database into a uniform CI/CD toolset - Github Actions and Octopus</li>
+                    <li>Excessive amount of bash scripting</li>
+                    <li>Local development F5 experience</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>NZFSG - launch MyCRM and migrations</h4>
+                  <span>
+                    <time datetime="2016-04-01">Apr 2016</time> –
+                    <time datetime="2019-07-01">Jul 2019</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior engineer to Engineering Manager</strong>
+                    <a href="http://www.nzfsg.co.nz">www.nzfsg.co.nz</a>
+                </div>
+              </header>
+                <p>NZFSG is a subsidiary company under LMG, but the in-house built CRM system, MyCRM, is getting attention in Australia. The project is to rebuild MyCRM into a modern system, account for Australian brokers and processes, also migrate everyone to it.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Migration from on-prem to cloud (AWS)</li>
+                    <li>Redesigning parts of application to fit for cloud services</li>
+                    <li>Integrating various monitoring tools including Dynatrace, cloud watch, StatusCake, etc.</li>
+                    <li>Implementing CI/CD combining 3rd party services (AppVeyor, CircleCI, RedGate) as well as cloud service</li>
+                    <li>Data migrations across the board for multiple systems</li>
+                    <li>Adopting NodeJS and Serverless stack for non user facing parts</li>
+                    <li>Coordinating security audit by PWC</li>
+                    <li>Assiting major off-shore development team expansion, 0 to 20+ in months</li>
+                    <li>Agile methodology and Certified Scrum Master</li>
+                    <li>Big launch date</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>LifeDirect / Inform Holdings Ltd / Trade Me</h4>
+                  <span>
+                    <time datetime="2008-07-01">Jul 2008</time> –
+                    <time datetime="2016-03-31">Mar 2016</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software engineer</strong>
+                    <a href="http://www.lifedirect.co.nz">www.lifedirect.co.nz</a>
+                </div>
+              </header>
+                <p>Multiple rounds of being acquired, acquiring other companies and spin-offs. Expansion from 1-person team to leading a small team.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>LifeDirect online risk insurance platform, from quoting to apply to underwriting</li>
+                    <li>Admin portals and reporting system for internal usage</li>
+                    <li>MyCRM project for NZFSG - company acquired, CRM built, then sold</li>
+                    <li>Fullstack from HTML/CSS/Javascript to C# and SQL</li>
+                    <li>On-premise hosting and operations</li>
+                    <li>Onboarding new team member, mentoring and knowledge transfers</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Auckland</h4>
+                  <span>
+                    <time datetime="2001-01-01">Jan 2001</time> –
+                    <time datetime="2003-12-31">Dec 2003</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                    <a href="https://www.auckland.ac.nz">www.auckland.ac.nz</a>
+                </div>
+              </header>
+                <p>Bachelor of Science</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Auckland</h4>
+                  <span>
+                    <time datetime="2005-07-01">Jul 2005</time> –
+                    <time datetime="2006-06-30">Jun 2006</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                    <a href="https://www.auckland.ac.nz">www.auckland.ac.nz</a>
+                </div>
+              </header>
+                <p>Postgraduate Diploma in Science</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Auckland</h4>
+                  <span>
+                    <time datetime="2008-01-01">Jan 2008</time> –
+                    <time datetime="2010-12-31">Dec 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Finance and Economics</strong>
+                    <a href="https://www.auckland.ac.nz">www.auckland.ac.nz</a>
+                </div>
+              </header>
+                <p>Bachelor of Commerce</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Coursera &amp; deeplearning.ai</h4>
+                  <span>
+                    <time datetime="2017-06-01">Jun 2017</time> –
+                    <time datetime="2017-12-31">Dec 2017</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                </div>
+              </header>
+                <p>Machine Learning and Deep Learning</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>A Cloud Guru</h4>
+                  <span>
+                    <time datetime="2020-01-01">Jan 2020</time> –
+                    <time datetime="2020-06-31">Jul 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                </div>
+              </header>
+                <p>AWS Associate Solution Architect</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Udemy</h4>
+                  <span>
+                    <time datetime="2022-04-01">Apr 2022</time> –
+                    <time datetime="2022-08-31">Aug 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                </div>
+              </header>
+                <p>Kubernetes Administrator</p>
+            </article>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              
+            </div>
+            <div>
+                <h4>Mandarin</h4>
+              
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Readings &amp; podcasts</h4>
+                <ul class="tag-list">
+                    <li>Leadership</li>
+                    <li>Personal development</li>
+                    <li>History</li>
+                    <li>Technology &amp; science</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Basketball &amp; football &amp; running</h4>
+                <ul class="tag-list">
+                    <li>Center</li>
+                    <li>Goal keeper</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Movies, TV shows &amp; games</h4>
+                <ul class="tag-list">
+                    <li>Science fiction</li>
+                    <li>Fantacy</li>
+                </ul>
+            </div>
+            <div>
+                <h4>ChatGPT</h4>
+                <ul class="tag-list">
+                    <li>All sorts of things</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="references">
+        <h3>References</h3>
+        <div class="stack">
+              <blockquote>
+                <p>CTO - 2020~2023 - contact details are available on request</p>
+                  <p>
+                    <cite>Andrew Brown</cite>
+                  </p>
+              </blockquote>
+              <blockquote>
+                <p>Managing Director - 2008~2019 - contact details are available on request</p>
+                  <p>
+                    <cite>James Punnett</cite>
+                  </p>
+              </blockquote>
+        </div>
+      </section>
+  </body>
+</html>
