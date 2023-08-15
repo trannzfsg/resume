@@ -7,7 +7,7 @@
     "email": "info@tranzha.com",
     "phone": "0402 798 180",
     "url": "https://trannzfsg.github.io/resume/",
-    "summary": "Love to make things happen and make them work. Build, nurture and empower teams to deliver and own sofware applications. Balance between product lead and tech lead; pragmatic and disruptive thinking. Architect and develop web based and cloud hosted applications using modern technologies and patterns.",
+    "summary": "Love to make things happen and make them work. Build, nurture and empower teams to deliver and own software applications. Balance between product lead and tech lead; pragmatic and disruptive thinking. Architect and develop web based and cloud hosted applications using modern technologies and patterns.",
     "location": {
       "address": "24 Smith Crescent",
       "postalCode": "4509",
@@ -34,7 +34,7 @@
       "position": "Engineering Manager",
       "url": "http://www.lmg.broker",
       "startDate": "2023-02-01",
-      "summary": "LMG is investing into new type of loans, with ambition to expand into all financial services in future too. MyCRM's current architecture and data schema is no longer fit for purpose. The team is in charge of building a new core with necessary new patterns to solve this problem.",
+      "summary": "LMG is investing into new types of loans, with ambition to expand into all financial services in future too. MyCRM's current architecture and data schema is no longer fit for purpose. The team is in charge of building a new core with necessary new patterns to solve this problem.",
       "highlights": [
         "Step into a non-performing team and turn it around",
         "Dealing with conflicts and hugely different personalities",
@@ -42,7 +42,7 @@
         "Re-aligning expectations, internal and external",
         "Driving balance between tech lead and product lead",
         "Building technical roadmap",
-        "Exploration in event-sourcing and tranistion required from tranditional data storages"
+        "Exploration in event-sourcing and transition required from traditional data storages"
       ]
     },
     {
@@ -51,9 +51,9 @@
       "url": "http://www.lmg.broker",
       "startDate": "2022-07-01",
       "endDate": "2023-04-01",
-      "summary": "Not long after the acquisition of Podium, paying out broker commissions to all different types of arragements becomes a huge problem. The commissions processing team keeps expanding, but it is a not a long term solution. Time for 1 system to rule them all.",
+      "summary": "Not long after the acquisition of Podium, paying out broker commissions to all different types of arrangements became a huge problem. The commissions processing team keeps expanding, but it is a not a long term solution. Time for 1 system to rule them all.",
       "highlights": [
-        "Building a new tech team from sratch",
+        "Building a new tech team from scratch",
         "Discovery of multiple decades old systems and processes",
         "Making plans and business cases to drive for internal investments",
         "Roadmap and capacity planning for the new system"
@@ -67,7 +67,7 @@
       "endDate": "2023-03-01",
       "summary": "Reporting is always a short-fall of MyCRM, it never had enough focus because of other workarounds. It can't be overlooked any more, with the expanding user base LMG has now.",
       "highlights": [
-        "Working with multiple external vendors - Snowflake, Starburst, ThoughtSpot, BigQuery, Sisence, etc.",
+        "Working with multiple external vendors - Snowflake, Starburst, ThoughtSpot, BigQuery, Sisense, etc.",
         "Comparing vendors from various angles, including architecture pillars around them",
         "Fail fast on quick POCs and MVPs",
         "Separation of data lake and data warehouse for reporting",
@@ -95,11 +95,11 @@
       "url": "http://www.lmg.broker",
       "startDate": "2021-03-01",
       "endDate": "2022-02-01",
-      "summary": "LMG acquired a few other aggregators, along with their CRM system Podium. The decision has been made to migrate everyone from Podium to MyCRM, of course given that we can uplift the missing features and able to carry out the massive data migrations. This team is in charge of the data migrations, for both broker users and corporate users.",
+      "summary": "LMG acquired a few other aggregators, along with their CRM system Podium. The decision has been made to migrate everyone from Podium to MyCRM, of course, given that we can uplift the missing features and be able to carry out the massive data migrations. This team is in charge of the data migrations, for both broker users and corporate users.",
       "highlights": [
         "Working with teams of different cultures",
         "Building one-off and overnight deltas data migration pipeline",
-        "Combining different technologies and vendors, including SSIS, TaskFactory, Salesforce, Kubernetes jobs and variuos AWS services",
+        "Combining different technologies and vendors, including SSIS, TaskFactory, Salesforce, Kubernetes jobs and various AWS services",
         "Continued on-shore expansion, 10+ to 30+"
       ]
     },
@@ -109,7 +109,7 @@
       "url": "http://www.lmg.broker",
       "startDate": "2019-07-01",
       "endDate": "2021-04-01",
-      "summary": "MyCRM is fully in AWS, but we're still hosting using Windows servers and IIS in year 2019. To allow better scaling, and more importantly better supporting the transition from Monolith to multiple services, we need a better solution - namely Kubernetes or EKS in AWS. Also, the ability to trace issues in production, especially performance issues are unncessarily complex, can we make it better?",
+      "summary": "MyCRM is fully in AWS, but we're still hosting using Windows servers and IIS in year 2019. To allow better scaling, and more importantly better supporting the transition from Monolith to multiple services, we need a better solution - namely Kubernetes or EKS in AWS. Also, the ability to trace issues in production, especially performance issues, are unnecessarily complex. Can we make it better?",
       "highlights": [
         "Kubernetes with EKS, set up and transit existing applications to the cluster",
         "OpenTelemetry ingestion for traces and metrics, contextual logging",
@@ -121,11 +121,11 @@
     },
     {
       "name": "NZFSG - launch MyCRM and migrations",
-      "position": "Senior engineer to Engineering Manager",
+      "position": "Senior Engineer to Engineering Manager",
       "url": "http://www.nzfsg.co.nz",
       "startDate": "2016-04-01",
       "endDate": "2019-07-01",
-      "summary": "NZFSG is a subsidiary company under LMG, but the in-house built CRM system, MyCRM, is getting attention in Australia. The project is to rebuild MyCRM into a modern system, account for Australian brokers and processes, also migrate everyone to it.",
+      "summary": "NZFSG is a subsidiary company under LMG, but the in-house built CRM system, MyCRM, is getting attention in Australia. The project is to rebuild MyCRM into a modern system, account for Australian brokers and processes, and also migrate everyone to it.",
       "highlights": [
         "Migration from on-prem to cloud (AWS)",
         "Redesigning parts of application to fit for cloud services",
@@ -134,7 +134,7 @@
         "Data migrations across the board for multiple systems",
         "Adopting NodeJS and Serverless stack for non user facing parts",
         "Coordinating security audit by PWC",
-        "Assiting major off-shore development team expansion, 0 to 20+ in months",
+        "Assisting major off-shore development team expansion, 0 to 20+ in months",
         "Agile methodology and Certified Scrum Master",
         "Big launch date"
       ]
@@ -225,14 +225,14 @@
       "name": "Basketball & football & running",
       "keywords": [
         "Center",
-        "Goal keeper"
+        "Goalkeeper"
       ]
     },
     {
       "name": "Movies, TV shows & games",
       "keywords": [
         "Science fiction",
-        "Fantacy"
+        "Fantasy"
       ]
     },
     {
