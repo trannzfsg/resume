@@ -1,6 +1,0 @@
-# Workflow paused.
-#
-# The previous workflow rebuilt the resume from resume.json and committed the
-# generated HTML back to main. The repo now commits static files generated from
-# tranzha.md directly, so there is intentionally no active GitHub Actions
-# workflow for resume export.
