@@ -5,23 +5,23 @@ info@tranzha.com | 0402 798 180 | linkedin.com/in/tranzha | github.com/trannzfsg
 
 ## Professional Summary
 
-Engineering Manager with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality. Strong in technical judgement, stakeholder alignment, team coaching, delivery planning and long-term platform improvement. I also use AI/LLM tools in personal projects and day-to-day engineering work to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.
+Engineering Manager with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality. Strong in technical judgement, stakeholder alignment, team coaching, delivery planning and long-term platform improvement. I also utilise various LLM tools in both work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.
 
 ## Leadership & Technical Strengths
 
 - **Engineering leadership:** Team coaching, delivery ownership, expectation-setting, hiring support, career development and performance conversations.
 - **Platform modernisation:** Strangler Fig migration, monolith decomposition, backward compatibility, facade/service boundaries and legacy risk reduction.
-- **Architecture judgement:** CQRS, event-driven design, gRPC/internal APIs, clean architecture, VSA, domain modelling and integration patterns.
+- **Architecture judgement:** REST, CQRS, event-driven design, http/gRPC, clean architecture, VSA, domain modelling and integration patterns.
 - **Product & stakeholder alignment:** Discovery, roadmap trade-offs, executive communication and cross-team dependency management.
-- **Complex product domains:** CRM platforms, contacts, ownership, authorisation, reporting, migrations, workflow-heavy systems and sensitive data handling.
-- **AI-assisted engineering:** Uses LLMs for discovery, prototyping, test ideas, documentation, technical analysis and rapid product experimentation with human review.
+- **Complex product domains:** CRM platforms including contacts, ownership, authorisation, reporting, migrations, workflow-heavy systems and PII data handling.
+- **AI-assisted engineering:** Uses LLMs for discovery, prototyping, test ideas, documentation, technical analysis and rapid product experimentation.
 
-## Recent Platform Programs
+## Professional Experience
 
 ### LMG / Loan Market Group - Engineering Manager, MyCRM Replatforming
 **Feb 2023 - Present**
 
-**Contact Replatform - centralising contact ownership, mutation and retrieval | Jun 2025 - Present**
+**Contact Replatform - centralising contact mutation and retrieval | Jun 2025 - Present**
 
 - Leading the highest-complexity MyCRM replatform initiative: contacts are entangled across more than half of the monolith's business logic, with historical edge cases and patches spread across screens, workflows and services.
 - Building Contact v2 with backward compatibility and future-facing architecture, while untangling fragmented product logic into centralised mutation/retrieval paths and clearer ownership/auth boundaries.
@@ -31,23 +31,23 @@ Engineering Manager with 15+ years of experience building software products, lea
 
 **Diversified Deals Replatform - generic engagement model for financial deals | Feb 2023 - Jun 2025**
 
-- Led replatforming of residential-focused deal capability into a generic Engagement model that can support multiple product types and future residential migration.
+- Led replatforming of residential-focused deal capability into a generic Engagement model that can handle multiple product types to support business growth. 
 - Used the Engagement platform to launch asset finance, commercial and insurance deal journeys, expanding MyCRM beyond residential lending without duplicating core deal logic.
-- Drove domain modelling, transition planning, roadmap alignment and stakeholder trade-offs across product, engineering and business groups.
+- Dorove domain modelling, transition planning, radmap alignment and stakeholder trade-offs across product, engineering and business groups.
 - Reset expectations and delivery discipline in a struggling team, improving clarity, technical direction and execution focus across a long-running replatform program.
 
-### LMG / Loan Market Group - Engineering Manager, One Commission System / Business Insights / Risk Insurance / Podium Migration
+### LMG / Loan Market Group - Engineering Manager, Commission System / Business Insights / Podium Data Migration
 **Mar 2021 - Apr 2023**
 
-- Built and led teams across commissions, reporting/analytics, risk insurance uplift and acquisition migration programs; shaped business cases, roadmaps, discovery and delivery plans for complex domains.
+- Built and led teams across commissions, reporting/analytics and acquisition migration programs; shaped business cases, roadmaps, discovery and delivery plans for complex domains.
 - Evaluated Snowflake, Starburst, ThoughtSpot, BigQuery, Sisense and related platforms; separated data lake/warehouse concerns and delivered ingestion, transformation and reporting pipelines.
-- Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from 10+ to 30+ engineers.
+- Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from ~10 to 30+ engineers.
 
 ### LMG / NZFSG - Senior DevOps Engineer / Senior Engineer / Engineering Manager, MyCRM Launch and Cloud Modernisation
 **Apr 2016 - Apr 2021**
 
-- Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise patterns toward AWS, Kubernetes/EKS, CI/CD and improved operational observability.
-- Introduced OpenTelemetry, contextual logging, GitHub Actions, Octopus and improved local development workflows; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers.
+- Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise to AWS, containerisation and Kubernetes/EKS migrations, CI/CD and improved operational observability.
+- Introduced OpenTelemetry, contextual logging, GitHub Actions, Octopus and improved local development workflows; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers and QAs.
 
 ### LifeDirect / Inform Holdings / Trade Me - Software Engineer
 **Jul 2008 - Mar 2016**
@@ -56,7 +56,9 @@ Engineering Manager with 15+ years of experience building software products, lea
 
 ## Technical Toolkit
 
-C#/.NET, SQL Server, PostgreSQL, React, TypeScript, Material UI, Next.js, Node.js, Flutter, Firebase, Supabase, AWS, EKS/Kubernetes, Docker, GitHub Actions, Octopus, OpenTelemetry, Elasticsearch, Snowflake, BigQuery, ThoughtSpot, SSIS, Serverless, gRPC, CQRS, event-driven architecture.
+AWS, GCP, EKS/Kubernetes, Docker, GitHub Actions, Octopus, OpenTelemetry, Elasticsearch, Snowflake, BigQuery, ThoughtSpot, Firebase, Supabase, Serverless
+C#/.NET, SQL Server, PostgreSQL
+DDD, REST, CQRS, HTTP/gRPC, Event-driven architecture, Data lake/warehouse, ETL and Data migration pipelines
 
 ## AI/LLM-Assisted Personal Projects
 
