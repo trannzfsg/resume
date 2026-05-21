@@ -36,23 +36,6 @@ Engineering Manager with 15+ years of experience building software products, lea
 - Drove domain modelling, transition planning, roadmap alignment and stakeholder trade-offs across product, engineering and business groups.
 - Reset expectations and delivery discipline in a struggling team, improving clarity, technical direction and execution focus across a long-running replatform program.
 
-## AI/LLM-Assisted Personal Projects
-
-- **mqcyb.tranzha.com - Math Quiz / mqcyb:** Flutter learning app previously released on the App Store; used AI assistance for rapid feature iteration, UI refinement and content generation support.
-- **transtags.tranzha.com - Bank transaction categorisation and tax returns:** React/Node.js product experiment for importing bank transactions, categorising spending and preparing tax-return exports; explored Supabase before pausing the project.
-- **sports.tranzha.com - Community sports registration and mini CRM:** Next.js/Node.js/Firebase app for registrations, participants and lightweight community operations management.
-- **Roblox Autorun Obby:** Roblox game/prototype using AI-assisted scripting, level iteration and gameplay experimentation.
-
-## Engineering Management Evidence
-
-- Creates clarity in ambiguous programs by turning messy domains into decision points, delivery roadmaps, migration strategies and cross-team responsibilities.
-- Balances product pressure with technical risk, especially where legacy behaviour, backward compatibility, security, data ownership and stakeholder expectations compete.
-- Improves team operating rhythm through expectation-setting, coaching, scope control, dependency management and stronger engineering standards.
-- Communicates complex architecture and delivery trade-offs to engineers, product leaders and senior technology stakeholders in practical business terms.
-- Uses AI/LLMs pragmatically for discovery, prototyping, documentation and technical analysis while preserving human review, system understanding and quality guardrails.
-
-## Earlier Experience
-
 ### LMG / Loan Market Group - Engineering Manager, One Commission System / Business Insights / Risk Insurance / Podium Migration
 **Mar 2021 - Apr 2023**
 
@@ -74,6 +57,13 @@ Engineering Manager with 15+ years of experience building software products, lea
 ## Technical Toolkit
 
 C#/.NET, SQL Server, PostgreSQL, React, TypeScript, Material UI, Next.js, Node.js, Flutter, Firebase, Supabase, AWS, EKS/Kubernetes, Docker, GitHub Actions, Octopus, OpenTelemetry, Elasticsearch, Snowflake, BigQuery, ThoughtSpot, SSIS, Serverless, gRPC, CQRS, event-driven architecture.
+
+## AI/LLM-Assisted Personal Projects
+
+- **mqcyb.tranzha.com - Math Quiz / mqcyb:** Flutter learning app previously released on the App Store; used AI assistance for rapid feature iteration, UI refinement and content generation support.
+- **transtags.tranzha.com - Bank transaction categorisation and tax returns:** React/Node.js product experiment for importing bank transactions, categorising spending and preparing tax-return exports; explored Supabase before pausing the project.
+- **sports.tranzha.com - Community sports registration and mini CRM:** Next.js/Node.js/Firebase app for registrations, participants and lightweight community operations management.
+- **Roblox Autorun Obby:** Roblox game/prototype using AI-assisted scripting, level iteration and gameplay experimentation.
 
 ## Education, Coursework & Languages
 

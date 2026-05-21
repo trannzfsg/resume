@@ -221,6 +221,7 @@ From now on, any significant discussions or outcomes from chats in **any session
 - If blocked on one task, continue with other non-dependent tasks.
 - Do not stop until there is no forward path left.
 - Provide concise progress status updates at a maximum interval of 10 minutes while work is in progress.
+- For resume/site tasks, always check `https://trannzfsg.github.io/resume/` and any relevant published asset URLs before confirming the task is complete.
 
 ---
 
