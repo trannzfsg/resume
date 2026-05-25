@@ -1,6 +1,6 @@
-# Xiaochuan Zha (Tran)
+# Tran Zha
 
-**Engineering Manager | Platform Modernisation | Technical Leadership | Brisbane, Australia**  
+**Engineering Manager | Platform Modernisation | Technical Leadership | Brisbane, Australia | Australian permanent resident**  
 info@tranzha.com | 0402 798 180 | linkedin.com/in/tranzha | github.com/trannzfsg | trannzfsg.github.io/resume
 
 ## Professional Summary
