@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
-$docxPath = "C:\github\resume\Tran_Zha_CV.docx"
-$pdfPath = "C:\github\resume\docx_render\Tran_Zha_CV_word.pdf"
+$docxPath = "C:\github\resume\tranzha.docx"
+$pdfPath = "C:\github\resume\docx_render\tranzha_word.pdf"
 
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $pdfPath) | Out-Null
 

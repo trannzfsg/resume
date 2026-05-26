@@ -8,7 +8,7 @@ from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 
-OUT = Path(r"C:\github\resume\Tran_Zha_CV.docx")
+OUT = Path(r"C:\github\resume\tranzha.docx")
 
 
 BLUE = RGBColor(46, 116, 181)
@@ -195,7 +195,7 @@ def build():
         "Building Contact v2 with backward compatibility and future-facing architecture, while untangling fragmented product logic into centralised mutation/retrieval paths and clearer ownership/auth boundaries.",
         "Using a Strangler Fig approach: facade over the existing data store first, gradual migration of legacy consumers, then replacement of the underlying data model once behaviours are controlled.",
         "Positioning Contact as a reference architecture for future MyCRM work, applying CQRS, domain and integration events, gRPC internal communication, clean architecture, Vertical Slice Architecture and stronger service boundaries.",
-        "Partnering with product, architecture and frontend teams to introduce a new Material UI based design system while preserving legacy interoperability during migration.",
+        "Partnering with product, architecture and frontend teams to introduce a new Material UI-based design system while preserving legacy interoperability during migration.",
     ]:
         add_bullet(doc, item)
 
@@ -216,10 +216,17 @@ def build():
     ]:
         add_bullet(doc, item)
 
-    add_role(doc, "LMG / NZFSG - Senior DevOps Engineer / Senior Engineer / Engineering Manager, MyCRM Launch and Cloud Modernisation", "Apr 2016 - Apr 2021")
+    add_role(doc, "NZFSG - Senior DevOps Engineer / Senior Engineer, MyCRM Launch and Cloud Modernisation", "Apr 2016 - Jun 2019")
     for item in [
-        "Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise to AWS, containerisation and Kubernetes/EKS migrations, CI/CD and improved operational observability.",
-        "Introduced OpenTelemetry, contextual logging, GitHub Actions, Octopus and improved local development workflows; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers and QAs.",
+        "Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise to AWS, CI/CD and improved operational observability; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers and QA staff.",
+        "Managed cloud spend, software licensing and vendor cost inputs for the MyCRM platform, balancing operational needs with budget and delivery priorities.",
+        "Supported production operations, incident response and service reliability for business-critical CRM systems, using monitoring and support feedback to drive continuous improvement.",
+    ]:
+        add_bullet(doc, item)
+
+    add_role(doc, "LMG / Loan Market Group - Engineering Manager, MyCRM Platform Modernisation", "Jul 2019 - Apr 2021")
+    for item in [
+        "Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.",
     ]:
         add_bullet(doc, item)
 
