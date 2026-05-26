@@ -43,17 +43,17 @@ Engineering Manager with 15+ years of experience building software products, lea
 - Evaluated Snowflake, Starburst, ThoughtSpot, BigQuery, Sisense and related platforms; separated data lake/warehouse concerns and delivered ingestion, transformation and reporting pipelines.
 - Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from ~10 to 30+ engineers.
 
+### LMG / Loan Market Group - Engineering Manager, MyCRM Platform Modernisation
+**Jul 2019 - Apr 2021**
+
+- Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.
+
 ### NZFSG - Senior DevOps Engineer / Senior Engineer, MyCRM Launch and Cloud Modernisation
 **Apr 2016 - Jun 2019**
 
 - Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise to AWS, CI/CD and improved operational observability; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers and QA staff.
 - Managed cloud spend, software licensing and vendor cost inputs for the MyCRM platform, balancing operational needs with budget and delivery priorities.
 - Supported production operations, incident response and service reliability for business-critical CRM systems, using monitoring and support feedback to drive continuous improvement.
-
-### LMG / Loan Market Group - Engineering Manager, MyCRM Platform Modernisation
-**Jul 2019 - Apr 2021**
-
-- Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.
 
 ### LifeDirect / Inform Holdings / Trade Me - Software Engineer
 **Jul 2008 - Mar 2016**

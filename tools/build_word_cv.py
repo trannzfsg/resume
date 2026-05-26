@@ -216,17 +216,17 @@ def build():
     ]:
         add_bullet(doc, item)
 
+    add_role(doc, "LMG / Loan Market Group - Engineering Manager, MyCRM Platform Modernisation", "Jul 2019 - Apr 2021")
+    for item in [
+        "Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.",
+    ]:
+        add_bullet(doc, item)
+
     add_role(doc, "NZFSG - Senior DevOps Engineer / Senior Engineer, MyCRM Launch and Cloud Modernisation", "Apr 2016 - Jun 2019")
     for item in [
         "Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise to AWS, CI/CD and improved operational observability; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers and QA staff.",
         "Managed cloud spend, software licensing and vendor cost inputs for the MyCRM platform, balancing operational needs with budget and delivery priorities.",
         "Supported production operations, incident response and service reliability for business-critical CRM systems, using monitoring and support feedback to drive continuous improvement.",
-    ]:
-        add_bullet(doc, item)
-
-    add_role(doc, "LMG / Loan Market Group - Engineering Manager, MyCRM Platform Modernisation", "Jul 2019 - Apr 2021")
-    for item in [
-        "Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.",
     ]:
         add_bullet(doc, item)
 
