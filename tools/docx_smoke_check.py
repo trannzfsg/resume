@@ -6,10 +6,15 @@ texts = [p.text for p in doc.paragraphs if p.text.strip()]
 search_text = "\n".join(texts).lower()
 required = [
     "Tran Zha",
+    "tranzha83@gmail.com",
     "Australian permanent resident",
     "Technical Toolkit",
+    "scope/debt trade-offs",
     "Drove domain modelling",
     "roadmap alignment",
+    "~10 to 30+ engineers",
+    "0 to 30+ engineers",
+    "Scrum master",
     "Managed cloud spend",
     "incident response",
     "Jul 2019 - Apr 2021",

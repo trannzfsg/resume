@@ -126,6 +126,8 @@ async function buildPdf() {
   const result = spawnSync(chrome, [
     "--headless",
     "--disable-gpu",
+    "--no-pdf-header-footer",
+    "--print-to-pdf-no-header",
     `--print-to-pdf=${pdfPath}`,
     fileUrl,
   ], { stdio: "inherit" });

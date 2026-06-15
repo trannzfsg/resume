@@ -157,7 +157,7 @@ def build():
     set_spacing(contact, after=7, line=1.0)
     set_run(
         contact.add_run(
-            "info@tranzha.com | 0402 798 180 | linkedin.com/in/tranzha | github.com/trannzfsg | trannzfsg.github.io/resume"
+            "tranzha83@gmail.com | 0402 798 180 | linkedin.com/in/tranzha | github.com/trannzfsg | trannzfsg.github.io/resume"
         ),
         size=9.5,
         color=MUTED,
@@ -166,23 +166,24 @@ def build():
     add_section(doc, "Professional Summary")
     add_body_paragraph(
         doc,
-        "Engineering Manager with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality. Strong in technical judgement, stakeholder alignment, team coaching, delivery planning and long-term platform improvement.",
+        "Engineering Manager with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality.",
         after=4,
     )
     add_body_paragraph(
         doc,
-        "I also utilise various LLM tools in both work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.",
+        "My leadership style mirrors effective LLM engineering: clear intent, enough context, practical guardrails, measurable success and tight feedback loops. I use LLM tools in work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.",
         after=4,
     )
 
-    add_section(doc, "Leadership & Technical Strengths")
+    add_section(doc, "Leadership & AI-Aware Delivery Strengths")
     strengths = [
-        ("Engineering leadership:", " Team coaching, delivery ownership, expectation-setting, hiring support, career development and performance conversations."),
-        ("Platform modernisation:", " Strangler Fig migration, monolith decomposition, backward compatibility, facade/service boundaries and legacy risk reduction."),
-        ("Architecture judgement:", " REST, CQRS, event-driven design, HTTP/gRPC, clean architecture, VSA, domain modelling and integration patterns."),
-        ("Product & stakeholder alignment:", " Discovery, roadmap trade-offs, executive communication and cross-team dependency management."),
-        ("Complex product domains:", " CRM platforms including contacts, ownership, authorisation, reporting, migrations, workflow-heavy systems and PII data handling."),
-        ("AI-assisted engineering:", " Uses LLMs for discovery, prototyping, test ideas, documentation, technical analysis and rapid product experimentation."),
+        ("Prompt engineering / clear communication:", " Turns blurry requests into explicit intent, trade-offs, decisions and next steps so teams and stakeholders know what is actually being asked."),
+        ("Context engineering / shared why:", " Gives teams the background, constraints and business reasoning behind work, so implementation choices fit the problem instead of only the ticket."),
+        ("Spec and harness engineering / delivery guardrails:", " Defines goals, boundaries, operating agreements and measurable success criteria, making \"good\" concrete and reducing tangents."),
+        ("Loop engineering / autonomous improvement:", " Sets clear goals, then drives build-test-verify-deploy-feedback loops so teams can make local decisions without micromanagement."),
+        ("People leadership and coaching:", " Team coaching, expectation-setting, hiring support, career development, performance conversations and no-surprise feedback loops."),
+        ("Platform and architecture judgement:", " Strangler Fig migration, monolith decomposition, backward compatibility, REST, CQRS, event-driven design, clean architecture, VSA, domain modelling and service boundaries."),
+        ("Product, stakeholder and domain alignment:", " Discovery, roadmap and scope/debt trade-offs, BAU/CI, executive communication, vendors, third parties, cross-team dependencies, CRM/contact/ownership/authorisation/reporting/migration domains and PII data handling."),
     ]
     for prefix, rest in strengths:
         add_bullet(doc, prefix + rest, bold_prefix=prefix)
@@ -212,7 +213,7 @@ def build():
     for item in [
         "Built and led teams across commissions, reporting/analytics and acquisition migration programs; shaped business cases, roadmaps, discovery and delivery plans for complex domains.",
         "Evaluated Snowflake, Starburst, ThoughtSpot, BigQuery, Sisense and related platforms; separated data lake/warehouse concerns and delivered ingestion, transformation and reporting pipelines.",
-        "Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from 10 to 30+ engineers.",
+        "Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from ~10 to 30+ engineers.",
     ]:
         add_bullet(doc, item)
 
@@ -224,7 +225,8 @@ def build():
 
     add_role(doc, "NZFSG - Senior DevOps Engineer / Senior Engineer, MyCRM Launch and Cloud Modernisation", "Apr 2016 - Jun 2019")
     for item in [
-        "Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from Windows/IIS/on-premise to AWS, CI/CD and improved operational observability; coordinated security audit activity and supported offshore expansion from 0 to 20+ engineers and QA staff.",
+        "Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from on-premise to AWS, CI/CD and improved observability; coordinated security audit activity.",
+        "Supported offshore expansion from 0 to 30+ engineers and QA staff; team mentoring and culture building; Scrum master for multiple teams.",
         "Managed cloud spend, software licensing and vendor cost inputs for the MyCRM platform, balancing operational needs with budget and delivery priorities.",
         "Supported production operations, incident response and service reliability for business-critical CRM systems, using monitoring and support feedback to drive continuous improvement.",
     ]:

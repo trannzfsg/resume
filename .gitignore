@@ -1,5 +1,8 @@
 docx_render/
 memory/
+job-search/
+INTERVIEW*
+MEMORY*
 
 # macos file
 .DS_Store
