@@ -11,4 +11,5 @@
 - [x] Capture Tran's Arrow cover-letter refinements around candid gap-bridging, Flutter app proof point and warm closer.
 - [x] Record new daily job-search exclusions for Java hands-on roles, non-Brisbane hybrid/office roles, and data-specialist roles.
 - [x] Integrate four-part LLM engineering framing into Tran's resume leadership strengths.
+- [x] Tidy README with quick LLM workflow, regeneration and privacy instructions.
 - [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.
