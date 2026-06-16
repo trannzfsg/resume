@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from docx import Document
@@ -8,12 +9,17 @@ from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 
-OUT = Path(r"C:\github\resume\tranzha.docx")
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "tranzha.md"
+OUT = ROOT / "tranzha.docx"
 
 
 BLUE = RGBColor(46, 116, 181)
 CHARCOAL = RGBColor(34, 34, 34)
 MUTED = RGBColor(85, 85, 85)
+LINK_BLUE = RGBColor(5, 99, 193)
+
+LINK_RE = re.compile(r"(https?://[^\s|]+|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})", re.I)
 
 
 def set_spacing(paragraph, before=0, after=6, line=1.1):
@@ -23,12 +29,13 @@ def set_spacing(paragraph, before=0, after=6, line=1.1):
     fmt.line_spacing = line
 
 
-def set_run(run, size=10.5, bold=False, color=CHARCOAL):
+def set_run(run, size=10.5, bold=False, color=CHARCOAL, underline=False):
     run.font.name = "Calibri"
     run._element.rPr.rFonts.set(qn("w:eastAsia"), "Calibri")
     run.font.size = Pt(size)
     run.font.bold = bold
     run.font.color.rgb = color
+    run.font.underline = underline
 
 
 def add_border(paragraph, color="D9E2F3", size="6"):
@@ -45,6 +52,33 @@ def add_border(paragraph, color="D9E2F3", size="6"):
     borders.append(bottom)
 
 
+def strip_markdown(text):
+    return text.replace("**", "")
+
+
+def add_text_runs(paragraph, text, size=10.5, bold=False, color=CHARCOAL):
+    pos = 0
+    for match in LINK_RE.finditer(text):
+        if match.start() > pos:
+            set_run(paragraph.add_run(text[pos:match.start()]), size=size, bold=bold, color=color)
+        link_text = match.group(0)
+        set_run(paragraph.add_run(link_text), size=size, bold=bold, color=LINK_BLUE, underline=True)
+        pos = match.end()
+    if pos < len(text):
+        set_run(paragraph.add_run(text[pos:]), size=size, bold=bold, color=color)
+
+
+def add_markdown_runs(paragraph, text, size=10.5, color=CHARCOAL):
+    pos = 0
+    for match in re.finditer(r"\*\*([^*]+)\*\*", text):
+        if match.start() > pos:
+            add_text_runs(paragraph, text[pos:match.start()], size=size, color=color)
+        add_text_runs(paragraph, match.group(1), size=size, bold=True, color=color)
+        pos = match.end()
+    if pos < len(text):
+        add_text_runs(paragraph, text[pos:], size=size, color=color)
+
+
 def add_section(doc, title):
     p = doc.add_paragraph(style="Heading 1")
     set_spacing(p, before=10, after=5, line=1.0)
@@ -57,50 +91,85 @@ def add_section(doc, title):
 def add_body_paragraph(doc, text, after=6):
     p = doc.add_paragraph()
     set_spacing(p, after=after)
-    set_run(p.add_run(text), size=10.5)
+    add_markdown_runs(p, text, size=10.5)
     return p
 
 
-def add_bullet(doc, text, bold_prefix=None):
+def add_bullet(doc, text):
     p = doc.add_paragraph(style="List Bullet")
     p.paragraph_format.left_indent = Inches(0.25)
     p.paragraph_format.first_line_indent = Inches(-0.25)
     p.paragraph_format.space_after = Pt(3)
     p.paragraph_format.line_spacing = 1.08
-    if bold_prefix and text.startswith(bold_prefix):
-        set_run(p.add_run(bold_prefix), size=10, bold=True)
-        set_run(p.add_run(text[len(bold_prefix):]), size=10)
-    else:
-        set_run(p.add_run(text), size=10)
+    add_markdown_runs(p, text, size=10)
     return p
 
 
-def add_role(doc, title, dates):
+def add_role(doc, title):
     p = doc.add_paragraph(style="Heading 2")
     set_spacing(p, before=7, after=1, line=1.0)
-    set_run(p.add_run(title), size=10.5, bold=True, color=CHARCOAL)
-    p2 = doc.add_paragraph()
-    set_spacing(p2, before=0, after=4, line=1.0)
-    set_run(p2.add_run(dates), size=9.5, bold=True, color=MUTED)
+    add_markdown_runs(p, title, size=10.5)
+    for run in p.runs:
+        run.font.bold = True
+    return p
 
 
 def add_project(doc, title):
     p = doc.add_paragraph(style="Heading 3")
     set_spacing(p, before=3, after=2, line=1.0)
-    set_run(p.add_run(title), size=10, bold=True, color=CHARCOAL)
+    add_markdown_runs(p, title, size=10)
+    for run in p.runs:
+        run.font.bold = True
+    return p
 
 
-def set_core_properties(doc):
-    props = doc.core_properties
-    props.author = "Tran Zha"
-    props.title = "Tran Zha CV"
-    props.subject = "Engineering Manager, Platform Modernisation, Technical Leadership"
-    props.keywords = "Engineering Manager, Technical Project Manager, Platform Modernisation, Data Migration, Integration, AWS, Kubernetes, Salesforce"
-    props.comments = "Generated from trannzfsg.github.io/resume"
+def parse_markdown(markdown):
+    blocks = []
+    paragraph = []
+    bullets = []
+
+    def flush_paragraph():
+        nonlocal paragraph
+        if paragraph:
+            blocks.append(("p", paragraph))
+            paragraph = []
+
+    def flush_bullets():
+        nonlocal bullets
+        if bullets:
+            blocks.append(("ul", bullets))
+            bullets = []
+
+    for raw_line in markdown.splitlines():
+        line = raw_line.strip()
+        if not line:
+            flush_paragraph()
+            flush_bullets()
+            continue
+        if line.startswith("- "):
+            flush_paragraph()
+            bullets.append(line[2:].strip())
+            continue
+
+        flush_bullets()
+        if line.startswith("### "):
+            flush_paragraph()
+            blocks.append(("h3", line[4:].strip()))
+        elif line.startswith("## "):
+            flush_paragraph()
+            blocks.append(("h2", line[3:].strip()))
+        elif line.startswith("# "):
+            flush_paragraph()
+            blocks.append(("h1", line[2:].strip()))
+        else:
+            paragraph.append(line.removesuffix("  ").strip())
+
+    flush_paragraph()
+    flush_bullets()
+    return blocks
 
 
-def build():
-    doc = Document()
+def configure_document(doc):
     section = doc.sections[0]
     section.start_type = WD_SECTION.NEW_PAGE
     section.page_width = Inches(8.5)
@@ -135,140 +204,85 @@ def build():
     styles["List Bullet"].font.name = "Calibri"
     styles["List Bullet"].font.size = Pt(10)
 
+
+def set_core_properties(doc):
+    props = doc.core_properties
+    props.author = "Tran Zha"
+    props.title = "Tran Zha CV"
+    props.subject = "Software Engineering Manager, Platform Modernisation, Technical Leadership"
+    props.keywords = (
+        "Software Engineering Manager, Engineering Manager, Engineering Lead, "
+        "Technical Lead, Platform Modernisation, AWS, Kubernetes, C# .NET"
+    )
+    props.comments = "Generated from tranzha.md"
+
+
+def add_header_block(doc, blocks, index):
+    title = blocks[index][1]
     name = doc.add_paragraph(style="Title")
     name.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_spacing(name, after=1, line=1.0)
-    set_run(name.add_run("Tran Zha"), size=22, bold=True, color=RGBColor(31, 77, 120))
+    set_run(name.add_run(title), size=22, bold=True, color=RGBColor(31, 77, 120))
+
+    if index + 1 >= len(blocks) or blocks[index + 1][0] != "p":
+        return index + 1
+
+    lines = blocks[index + 1][1]
+    if not lines:
+        return index + 2
 
     subtitle = doc.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_spacing(subtitle, after=2, line=1.0)
-    set_run(
-        subtitle.add_run(
-            "Engineering Manager | Platform Modernisation | Technical Leadership | Brisbane, Australia | Australian permanent resident"
-        ),
-        size=10.5,
-        bold=True,
-        color=CHARCOAL,
-    )
+    add_markdown_runs(subtitle, lines[0], size=10.5, color=CHARCOAL)
+    for run in subtitle.runs:
+        run.font.bold = True
 
-    contact = doc.add_paragraph()
-    contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_spacing(contact, after=7, line=1.0)
-    set_run(
-        contact.add_run(
-            "tranzha83@gmail.com | 0402 798 180 | linkedin.com/in/tranzha | github.com/trannzfsg | trannzfsg.github.io/resume"
-        ),
-        size=9.5,
-        color=MUTED,
-    )
+    if len(lines) > 1:
+        contact = doc.add_paragraph()
+        contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        set_spacing(contact, after=7, line=1.0)
+        add_markdown_runs(contact, " ".join(lines[1:]), size=9.5, color=MUTED)
 
-    add_section(doc, "Professional Summary")
-    add_body_paragraph(
-        doc,
-        "Engineering Manager with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality.",
-        after=4,
-    )
-    add_body_paragraph(
-        doc,
-        "My leadership style mirrors effective LLM engineering: clear intent, enough context, practical guardrails, measurable success and tight feedback loops. I use LLM tools in work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.",
-        after=4,
-    )
+    return index + 2
 
-    add_section(doc, "Leadership & AI-Aware Delivery Strengths")
-    strengths = [
-        ("Prompt engineering / clear communication:", " Turns blurry requests into explicit intent, trade-offs, decisions and next steps so teams and stakeholders know what is actually being asked."),
-        ("Context engineering / shared why:", " Gives teams the background, constraints and business reasoning behind work, so implementation choices fit the problem instead of only the ticket."),
-        ("Spec and harness engineering / delivery guardrails:", " Defines goals, boundaries, operating agreements and measurable success criteria, making \"good\" concrete and reducing tangents."),
-        ("Loop engineering / autonomous improvement:", " Sets clear goals, then drives build-test-verify-deploy-feedback loops so teams can make local decisions without micromanagement."),
-        ("People leadership and coaching:", " Team coaching, expectation-setting, hiring support, career development, performance conversations and no-surprise feedback loops."),
-        ("Platform and architecture judgement:", " Strangler Fig migration, monolith decomposition, backward compatibility, REST, CQRS, event-driven design, clean architecture, VSA, domain modelling and service boundaries."),
-        ("Product, stakeholder and domain alignment:", " Discovery, roadmap and scope/debt trade-offs, BAU/CI, executive communication, vendors, third parties, cross-team dependencies, CRM/contact/ownership/authorisation/reporting/migration domains and PII data handling."),
-    ]
-    for prefix, rest in strengths:
-        add_bullet(doc, prefix + rest, bold_prefix=prefix)
 
-    add_section(doc, "Professional Experience")
-    add_role(doc, "LMG / Loan Market Group - Engineering Manager, MyCRM Replatforming", "Feb 2023 - Present")
-    add_project(doc, "Contact Replatform - centralising contact mutation and retrieval | Jun 2025 - Present")
-    for item in [
-        "Leading the highest-complexity MyCRM replatform initiative: contacts are entangled across more than half of the monolith's business logic, with historical edge cases and patches spread across screens, workflows and services.",
-        "Building Contact v2 with backward compatibility and future-facing architecture, while untangling fragmented product logic into centralised mutation/retrieval paths and clearer ownership/auth boundaries.",
-        "Using a Strangler Fig approach: facade over the existing data store first, gradual migration of legacy consumers, then replacement of the underlying data model once behaviours are controlled.",
-        "Positioning Contact as a reference architecture for future MyCRM work, applying CQRS, domain and integration events, gRPC internal communication, clean architecture, Vertical Slice Architecture and stronger service boundaries.",
-        "Partnering with product, architecture and frontend teams to introduce a new Material UI-based design system while preserving legacy interoperability during migration.",
-    ]:
-        add_bullet(doc, item)
+def build():
+    doc = Document()
+    configure_document(doc)
+    blocks = parse_markdown(SRC.read_text(encoding="utf-8"))
 
-    add_project(doc, "Diversified Deals Replatform - generic engagement model for financial deals | Feb 2023 - Jun 2025")
-    for item in [
-        "Led replatforming of residential-focused deal capability into a generic Engagement model that can handle multiple product types to support business growth.",
-        "Used the Engagement platform to launch asset finance, commercial and insurance deal journeys, expanding MyCRM beyond residential lending without duplicating core deal logic.",
-        "Drove domain modelling, transition planning, roadmap alignment and stakeholder trade-offs across product, engineering and business groups.",
-        "Reset expectations and delivery discipline in a struggling team, improving clarity, technical direction and execution focus across a long-running replatform program.",
-    ]:
-        add_bullet(doc, item)
+    index = 0
+    if blocks and blocks[0][0] == "h1":
+        index = add_header_block(doc, blocks, 0)
 
-    add_role(doc, "LMG / Loan Market Group - Engineering Manager, Commission System / Business Insights / Podium Data Migration", "Mar 2021 - Apr 2023")
-    for item in [
-        "Built and led teams across commissions, reporting/analytics and acquisition migration programs; shaped business cases, roadmaps, discovery and delivery plans for complex domains.",
-        "Evaluated Snowflake, Starburst, ThoughtSpot, BigQuery, Sisense and related platforms; separated data lake/warehouse concerns and delivered ingestion, transformation and reporting pipelines.",
-        "Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from ~10 to 30+ engineers.",
-    ]:
-        add_bullet(doc, item)
-
-    add_role(doc, "LMG / Loan Market Group - Engineering Manager, MyCRM Platform Modernisation", "Jul 2019 - Apr 2021")
-    for item in [
-        "Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.",
-    ]:
-        add_bullet(doc, item)
-
-    add_role(doc, "NZFSG - Senior DevOps Engineer / Senior Engineer, MyCRM Launch and Cloud Modernisation", "Apr 2016 - Jun 2019")
-    for item in [
-        "Helped rebuild, launch and modernise MyCRM across Australia/New Zealand; migrated from on-premise to AWS, CI/CD and improved observability; coordinated security audit activity.",
-        "Supported offshore expansion from 0 to 30+ engineers and QA staff; team mentoring and culture building; Scrum master for multiple teams.",
-        "Managed cloud spend, software licensing and vendor cost inputs for the MyCRM platform, balancing operational needs with budget and delivery priorities.",
-        "Supported production operations, incident response and service reliability for business-critical CRM systems, using monitoring and support feedback to drive continuous improvement.",
-    ]:
-        add_bullet(doc, item)
-
-    add_role(doc, "LifeDirect / Inform Holdings / Trade Me - Software Engineer", "Jul 2008 - Mar 2016")
-    add_bullet(
-        doc,
-        "Full-stack engineering across online insurance, internal admin, reporting, CRM and hosting operations; built quoting, application and underwriting workflows and mentored team members as the function grew.",
-    )
-
-    add_section(doc, "Technical Toolkit")
-    add_body_paragraph(
-        doc,
-        "AWS, GCP, EKS/Kubernetes, Docker, GitHub Actions, Octopus, OpenTelemetry, Elasticsearch, Snowflake, BigQuery, ThoughtSpot, Firebase, Supabase, Serverless, C#/.NET, SQL Server, PostgreSQL, DDD, REST, CQRS, HTTP/gRPC, event-driven architecture, data lake/warehouse, ETL and data migration pipelines",
-        after=4,
-    )
-
-    add_section(doc, "AI/LLM-Assisted Personal Projects")
-    projects = [
-        ("mqcyb.tranzha.com - Math Quiz / mqcyb:", " Flutter learning app previously released on the App Store; used AI assistance for rapid feature iteration, UI refinement and content generation support."),
-        ("transtags.tranzha.com - Bank transaction categorisation and tax returns:", " React/Node.js product experiment for importing bank transactions, categorising spending and preparing tax-return exports; explored Supabase before pausing the project."),
-        ("sports.tranzha.com - Community sports registration and mini CRM:", " Next.js/Node.js/Firebase app for registrations, participants and lightweight community operations management."),
-        ("Roblox Autorun Obby:", " Roblox game/prototype using AI-assisted scripting, level iteration and gameplay experimentation."),
-    ]
-    for prefix, rest in projects:
-        add_bullet(doc, prefix + rest, bold_prefix=prefix)
-
-    add_section(doc, "Education, Coursework & Languages")
-    add_body_paragraph(
-        doc,
-        "Postgraduate Diploma in Science, Computer Science - University of Auckland | Bachelor of Science, Computer Science - University of Auckland | Bachelor of Commerce, Finance and Economics - University of Auckland",
-        after=3,
-    )
-    add_body_paragraph(
-        doc,
-        "AWS Solutions Architect Associate coursework completed (A Cloud Guru); Kubernetes Administrator coursework completed (Udemy); Machine Learning and Deep Learning coursework completed (Coursera/deeplearning.ai); Certified Scrum Master | English, Mandarin | References available on request",
-        after=0,
-    )
+    while index < len(blocks):
+        kind, value = blocks[index]
+        if kind == "h1":
+            add_role(doc, value)
+        elif kind == "h2":
+            add_section(doc, value)
+        elif kind == "h3":
+            add_role(doc, value)
+        elif kind == "p":
+            text = " ".join(value)
+            plain = strip_markdown(text)
+            if re.fullmatch(r"[A-Z][a-z]{2} \d{4} to (Present|[A-Z][a-z]{2} \d{4})", plain):
+                p = doc.add_paragraph()
+                set_spacing(p, before=0, after=4, line=1.0)
+                set_run(p.add_run(plain), size=9.5, bold=True, color=MUTED)
+            elif plain.startswith("Selected initiative:"):
+                add_project(doc, plain)
+            else:
+                add_body_paragraph(doc, text, after=6)
+        elif kind == "ul":
+            for item in value:
+                add_bullet(doc, item)
+        index += 1
 
     set_core_properties(doc)
     doc.save(OUT)
+    print(OUT)
 
 
 if __name__ == "__main__":

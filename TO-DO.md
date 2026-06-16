@@ -12,4 +12,5 @@
 - [x] Record new daily job-search exclusions for Java hands-on roles, non-Brisbane hybrid/office roles, and data-specialist roles.
 - [x] Integrate four-part LLM engineering framing into Tran's resume leadership strengths.
 - [x] Tidy README with quick LLM workflow, regeneration and privacy instructions.
+- [x] Rework Markdown, HTML and PDF resume for Australian ATS parsing and ranking while preserving AI framing and hands-on projects.
 - [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.

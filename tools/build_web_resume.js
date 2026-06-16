@@ -17,8 +17,14 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;");
 }
 
+function linkifyEscaped(text) {
+  return text
+    .replace(/\bhttps?:\/\/[^\s<]+/g, (url) => `<a href="${url}">${url}</a>`)
+    .replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, (email) => `<a href="mailto:${email}">${email}</a>`);
+}
+
 function inlineMarkdown(text) {
-  return escapeHtml(text).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  return linkifyEscaped(escapeHtml(text)).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 }
 
 function renderBlocks(markdown) {
