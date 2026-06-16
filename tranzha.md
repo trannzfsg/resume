@@ -1,7 +1,8 @@
 # Tran Zha
 
-**Software Engineering Manager | Platform Modernisation | Technical Leadership | Brisbane, QLD | Full Australian working rights | Australian permanent resident**  
-tranzha83@gmail.com | +61 402 798 180 | https://www.linkedin.com/in/tranzha | https://github.com/trannzfsg | https://trannzfsg.github.io/resume
+**Software Engineering Manager | Platform Modernisation | Technical Leadership**  
+Brisbane, QLD | Full Australian working rights | Australian permanent resident  
+tranzha83@gmail.com | +61 402 798 180 | https://www.linkedin.com/in/tranzha | https://github.com/trannzfsg | https://trannzfsg.github.io/resume  
 
 ## Professional Summary
 
@@ -27,7 +28,7 @@ Engineering Manager and hands-on software engineering leader with 15+ years of e
 ### Engineering Manager, MyCRM Replatforming | Loan Market Group
 **Feb 2023 to Present**
 
-**Selected initiative: Contact Replatform, centralising contact mutation and retrieval (Jun 2025 to Present)**
+**Selected initiative: Contact Replatform, centralising contact mutation and retrieval**
 
 - Leading the highest-complexity MyCRM replatform initiative: contacts are entangled across more than half of the monolith's business logic, with historical edge cases and patches spread across screens, workflows and services.
 - Building Contact v2 with backward compatibility and future-facing architecture, while untangling fragmented product logic into centralised mutation and retrieval paths and clearer ownership and authorisation boundaries.
@@ -35,7 +36,7 @@ Engineering Manager and hands-on software engineering leader with 15+ years of e
 - Positioning Contact as a reference architecture for future MyCRM work, applying CQRS, domain and integration events, gRPC internal communication, clean architecture, Vertical Slice Architecture and stronger service boundaries.
 - Partnering with product, architecture and frontend teams to introduce a new Material UI-based design system while preserving legacy interoperability during migration.
 
-**Selected initiative: Diversified Deals Replatform, generic engagement model for financial deals (Feb 2023 to Jun 2025)**
+**Selected initiative: Diversified Deals Replatform, generic engagement model for financial deals**
 
 - Led replatforming of residential-focused deal capability into a generic Engagement model that can handle multiple product types to support business growth.
 - Used the Engagement platform to launch asset finance, commercial and insurance deal journeys, expanding MyCRM beyond residential lending without duplicating core deal logic.
@@ -54,7 +55,7 @@ Engineering Manager and hands-on software engineering leader with 15+ years of e
 
 - Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.
 
-### Senior DevOps Engineer and Senior Engineer, MyCRM Launch and Cloud Modernisation | NZFSG
+### Senior DevOps Engineer and Senior Engineer, MyCRM Launch and Cloud Modernisation | New Zealand Financial Services Group
 **Apr 2016 to Jun 2019**
 
 - Helped rebuild, launch and modernise MyCRM across Australia and New Zealand; migrated from on-premises to AWS, CI/CD and improved observability; coordinated security audit activity.
@@ -76,8 +77,8 @@ Engineering Manager and hands-on software engineering leader with 15+ years of e
 
 ## Education, Selected Coursework & Languages
 
-Postgraduate Diploma in Science, Computer Science - University of Auckland | Bachelor of Science, Computer Science - University of Auckland | Bachelor of Commerce, Finance and Economics - University of Auckland
+Postgraduate Diploma in Science, Computer Science - University of Auckland | Bachelor of Science, Computer Science - University of Auckland | Bachelor of Commerce, Finance and Economics - University of Auckland  
 
-Selected coursework: AWS Solutions Architect Associate coursework (A Cloud Guru); Kubernetes Administrator coursework (Udemy); Machine Learning and Deep Learning coursework (Coursera/deeplearning.ai); Scrum Master training. 
+Selected coursework: AWS Solutions Architect Associate coursework (A Cloud Guru); Kubernetes Administrator coursework (Udemy); Machine Learning and Deep Learning coursework (Coursera/deeplearning.ai); Scrum Master training  
 
 Languages: English, Mandarin.

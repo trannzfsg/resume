@@ -81,17 +81,18 @@ def add_markdown_runs(paragraph, text, size=10.5, color=CHARCOAL):
 
 def add_section(doc, title):
     p = doc.add_paragraph(style="Heading 1")
-    set_spacing(p, before=10, after=5, line=1.0)
+    set_spacing(p, before=8, after=3, line=1.0)
+    p.paragraph_format.keep_with_next = True
     run = p.add_run(title.upper())
-    set_run(run, size=11.5, bold=True, color=BLUE)
+    set_run(run, size=11.2, bold=True, color=BLUE)
     add_border(p)
     return p
 
 
-def add_body_paragraph(doc, text, after=6):
+def add_body_paragraph(doc, text, after=4):
     p = doc.add_paragraph()
     set_spacing(p, after=after)
-    add_markdown_runs(p, text, size=10.5)
+    add_markdown_runs(p, text, size=10.2)
     return p
 
 
@@ -99,16 +100,17 @@ def add_bullet(doc, text):
     p = doc.add_paragraph(style="List Bullet")
     p.paragraph_format.left_indent = Inches(0.25)
     p.paragraph_format.first_line_indent = Inches(-0.25)
-    p.paragraph_format.space_after = Pt(3)
-    p.paragraph_format.line_spacing = 1.08
-    add_markdown_runs(p, text, size=10)
+    p.paragraph_format.space_after = Pt(2)
+    p.paragraph_format.line_spacing = 1.03
+    add_markdown_runs(p, text, size=9.8)
     return p
 
 
 def add_role(doc, title):
     p = doc.add_paragraph(style="Heading 2")
-    set_spacing(p, before=7, after=1, line=1.0)
-    add_markdown_runs(p, title, size=10.5)
+    set_spacing(p, before=5, after=0, line=1.0)
+    p.paragraph_format.keep_with_next = True
+    add_markdown_runs(p, title, size=10.2)
     for run in p.runs:
         run.font.bold = True
     return p
@@ -116,8 +118,9 @@ def add_role(doc, title):
 
 def add_project(doc, title):
     p = doc.add_paragraph(style="Heading 3")
-    set_spacing(p, before=3, after=2, line=1.0)
-    add_markdown_runs(p, title, size=10)
+    set_spacing(p, before=2, after=1, line=1.0)
+    p.paragraph_format.keep_with_next = True
+    add_markdown_runs(p, title, size=9.8)
     for run in p.runs:
         run.font.bold = True
     return p
@@ -174,35 +177,35 @@ def configure_document(doc):
     section.start_type = WD_SECTION.NEW_PAGE
     section.page_width = Inches(8.5)
     section.page_height = Inches(11)
-    section.top_margin = Inches(0.55)
-    section.bottom_margin = Inches(0.55)
-    section.left_margin = Inches(0.65)
-    section.right_margin = Inches(0.65)
+    section.top_margin = Inches(0.5)
+    section.bottom_margin = Inches(0.5)
+    section.left_margin = Inches(0.55)
+    section.right_margin = Inches(0.55)
     section.header_distance = Inches(0.3)
     section.footer_distance = Inches(0.3)
 
     styles = doc.styles
     styles["Normal"].font.name = "Calibri"
-    styles["Normal"].font.size = Pt(10.5)
+    styles["Normal"].font.size = Pt(10.2)
     styles["Normal"].font.color.rgb = CHARCOAL
     styles["Title"].font.name = "Calibri"
-    styles["Title"].font.size = Pt(22)
+    styles["Title"].font.size = Pt(21)
     styles["Title"].font.bold = True
     styles["Title"].font.color.rgb = RGBColor(31, 77, 120)
     styles["Heading 1"].font.name = "Calibri"
-    styles["Heading 1"].font.size = Pt(11.5)
+    styles["Heading 1"].font.size = Pt(11.2)
     styles["Heading 1"].font.bold = True
     styles["Heading 1"].font.color.rgb = BLUE
     styles["Heading 2"].font.name = "Calibri"
-    styles["Heading 2"].font.size = Pt(10.5)
+    styles["Heading 2"].font.size = Pt(10.2)
     styles["Heading 2"].font.bold = True
     styles["Heading 2"].font.color.rgb = CHARCOAL
     styles["Heading 3"].font.name = "Calibri"
-    styles["Heading 3"].font.size = Pt(10)
+    styles["Heading 3"].font.size = Pt(9.8)
     styles["Heading 3"].font.bold = True
     styles["Heading 3"].font.color.rgb = CHARCOAL
     styles["List Bullet"].font.name = "Calibri"
-    styles["List Bullet"].font.size = Pt(10)
+    styles["List Bullet"].font.size = Pt(9.8)
 
 
 def set_core_properties(doc):
@@ -222,7 +225,7 @@ def add_header_block(doc, blocks, index):
     name = doc.add_paragraph(style="Title")
     name.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_spacing(name, after=1, line=1.0)
-    set_run(name.add_run(title), size=22, bold=True, color=RGBColor(31, 77, 120))
+    set_run(name.add_run(title), size=21, bold=True, color=RGBColor(31, 77, 120))
 
     if index + 1 >= len(blocks) or blocks[index + 1][0] != "p":
         return index + 1
@@ -233,16 +236,22 @@ def add_header_block(doc, blocks, index):
 
     subtitle = doc.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_spacing(subtitle, after=2, line=1.0)
-    add_markdown_runs(subtitle, lines[0], size=10.5, color=CHARCOAL)
+    set_spacing(subtitle, after=1, line=1.0)
+    add_markdown_runs(subtitle, lines[0], size=10.2, color=CHARCOAL)
     for run in subtitle.runs:
         run.font.bold = True
 
     if len(lines) > 1:
+        location = doc.add_paragraph()
+        location.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        set_spacing(location, after=1, line=1.0)
+        add_markdown_runs(location, lines[1], size=9.5, color=MUTED)
+
+    if len(lines) > 2:
         contact = doc.add_paragraph()
         contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        set_spacing(contact, after=7, line=1.0)
-        add_markdown_runs(contact, " ".join(lines[1:]), size=9.5, color=MUTED)
+        set_spacing(contact, after=5, line=1.0)
+        add_markdown_runs(contact, " ".join(lines[2:]), size=9.2, color=MUTED)
 
     return index + 2
 
@@ -270,6 +279,7 @@ def build():
             if re.fullmatch(r"[A-Z][a-z]{2} \d{4} to (Present|[A-Z][a-z]{2} \d{4})", plain):
                 p = doc.add_paragraph()
                 set_spacing(p, before=0, after=4, line=1.0)
+                p.paragraph_format.keep_with_next = True
                 set_run(p.add_run(plain), size=9.5, bold=True, color=MUTED)
             elif plain.startswith("Selected initiative:"):
                 add_project(doc, plain)
