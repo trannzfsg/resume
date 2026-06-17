@@ -23,4 +23,5 @@
 - [x] Refine daily job-search hard excludes and scoring criteria from recent applied/not-applying decisions.
 - [x] Create `software-em-job-search` Codex skill and update the daily automation to call it.
 - [x] Move job-search-specific skills into the repo-local `.codex/skills` folder.
+- [x] Remove the repo-local `.codegraph` index directory.
 - [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.
