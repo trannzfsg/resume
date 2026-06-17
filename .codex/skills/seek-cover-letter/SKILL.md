@@ -7,7 +7,15 @@ description: Prepare cover-letter source notes, application-question answers, ro
 
 ## Operating Rules
 
-Always read the live resume at `https://trannzfsg.github.io/resume/` and the given job ad before drafting or preparing notes. If the job ad cannot be accessed, ask the user to paste the ad text or key sections.
+Always read the given job ad before drafting or preparing notes. Also check the live resume at `https://trannzfsg.github.io/resume/` for the current public baseline, but use the best matching local resume source from `C:\github\resume` for the actual application content.
+
+Resume source priority:
+
+1. If the job has a platform id, first use a matching tailored resume such as `tranzha-linkedin4425586749.md`, `tranzha-seek92751565.md`, or another obvious `tranzha-<platform><id>.md` variant in the repository.
+2. If no exact tailored resume exists, use `C:\github\resume\tranzha.md`.
+3. Use the live resume as a public baseline/context check, not as the main drafting source when a tailored local resume exists.
+
+If the job ad cannot be accessed and no local detail file exists, ask the user to paste the ad text or key sections.
 
 Keep the response to the user short and direct:
 
@@ -26,7 +34,7 @@ Expect one of these:
 - A SEEK job ID.
 - Pasted job ad text.
 
-Use Tran's live resume as the profile source unless the user provides a different resume.
+Use the matching tailored local resume as the profile source when one exists. Use `tranzha.md` only when there is no tailored resume for the job, unless the user provides a different resume.
 
 ## Extract
 

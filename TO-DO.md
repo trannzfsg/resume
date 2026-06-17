@@ -20,6 +20,7 @@
 - [x] Remove Melbourne/Sydney hybrid roles from the to-be-applied queue and add them to Do Not Show.
 - [x] Reorder the to-be-applied queue by effective date descending, then fit score descending, and add the sorting rule for future daily updates.
 - [x] Record Canonical LinkedIn application `linkedin:4286648340` as applied on 2026-06-17.
+- [x] Record Halosoft SEEK application `seek:92644597` as applied on 2026-06-17.
 - [x] Refine daily job-search hard excludes and scoring criteria from recent applied/not-applying decisions.
 - [x] Create `software-em-job-search` Codex skill and update the daily automation to call it.
 - [x] Move job-search-specific skills into the repo-local `.codex/skills` folder.

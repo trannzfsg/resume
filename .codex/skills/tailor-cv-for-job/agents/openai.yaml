@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tailor CV For Job"
+  short_description: "Create truthful job-specific resume variants"
+  default_prompt: "Use $tailor-cv-for-job to tailor Tran's resume for a LinkedIn or SEEK job ad."

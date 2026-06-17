@@ -3,6 +3,8 @@ memory/
 job-search/
 INTERVIEW*
 MEMORY*
+tranzha-*.md
+tranzha-*.pdf
 
 # macos file
 .DS_Store
