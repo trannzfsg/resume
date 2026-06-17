@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software EM Job Search"
+  short_description: "Screen and track software leadership jobs"
+  default_prompt: "Use $software-em-job-search to run or update Tran's SEEK/LinkedIn software leadership job search."

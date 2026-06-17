@@ -13,4 +13,14 @@
 - [x] Integrate four-part LLM engineering framing into Tran's resume leadership strengths.
 - [x] Tidy README with quick LLM workflow, regeneration and privacy instructions.
 - [x] Rework Markdown, HTML and PDF resume for Australian ATS parsing and ranking while preserving AI framing and hands-on projects.
+- [x] Record Corpay LinkedIn application `linkedin:4405076746` as applied on 2026-06-16.
+- [x] Record Global Payments LinkedIn application `linkedin:4419872447` as applied on 2026-06-16.
+- [x] Record Talent SEEK role `seek:92711721` as not applying due to hands-on JavaScript requirement.
+- [x] Record Tennis Australia SEEK role `seek:92511476` as not applying due to Melbourne hybrid office requirement.
+- [x] Remove Melbourne/Sydney hybrid roles from the to-be-applied queue and add them to Do Not Show.
+- [x] Reorder the to-be-applied queue by effective date descending, then fit score descending, and add the sorting rule for future daily updates.
+- [x] Record Canonical LinkedIn application `linkedin:4286648340` as applied on 2026-06-17.
+- [x] Refine daily job-search hard excludes and scoring criteria from recent applied/not-applying decisions.
+- [x] Create `software-em-job-search` Codex skill and update the daily automation to call it.
+- [x] Move job-search-specific skills into the repo-local `.codex/skills` folder.
 - [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.

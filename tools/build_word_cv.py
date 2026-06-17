@@ -215,7 +215,8 @@ def set_core_properties(doc):
     props.subject = "Software Engineering Manager, Platform Modernisation, Technical Leadership"
     props.keywords = (
         "Software Engineering Manager, Engineering Manager, Engineering Lead, "
-        "Technical Lead, Platform Modernisation, AWS, Kubernetes, C# .NET"
+        "Technical Lead, Platform Modernisation, AWS, Kubernetes, C# .NET, "
+        "ISO 27001, ISO27001, SOC 2 Type II, SOC2 Type 2, PII data handling"
     )
     props.comments = "Generated from tranzha.md"
 

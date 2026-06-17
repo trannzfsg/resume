@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Notes"
+  short_description: "Application notes and concise letters matched to job ads"
+  default_prompt: "Use $seek-cover-letter to prepare application notes for https://au.seek.com/job/{job_id}."

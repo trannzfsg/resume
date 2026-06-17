@@ -12,16 +12,16 @@ Engineering Manager and hands-on software engineering leader with 15+ years of e
 
 - **Software engineering leadership:** Engineering Manager, Software Engineering Manager, Engineering Lead, Technical Lead, people leadership, team coaching, hiring support, career development, performance conversations and 1:1 feedback.
 - **Delivery and stakeholder management:** Agile delivery, software delivery lifecycle, SDLC, roadmap planning, delivery ownership, scope and debt tradeoffs, executive communication, vendor management and cross team dependency management.
-- **Platform modernisation and architecture:** Strangler Fig migration, monolith decomposition, service boundaries, backward compatibility, REST APIs, CQRS, event driven architecture, gRPC, clean architecture, Vertical Slice Architecture and domain modelling.
-- **Cloud, DevOps and data:** AWS, GCP, Kubernetes, EKS, Docker, GitHub Actions, Octopus, OpenTelemetry, observability, incident response, service reliability, SQL Server, PostgreSQL, Snowflake, BigQuery and data migration.
+- **Platform modernisation and architecture:** Strangler Fig migration, monolith decomposition, service boundaries, backward compatibility, REST APIs, CQRS, event-driven architecture, event sourcing, projection-based migrations, gRPC, clean architecture, Vertical Slice Architecture and domain modelling.
+- **Cloud, DevOps, security and data:** AWS, GCP, Kubernetes, EKS, Docker, GitHub Actions, Octopus, OpenTelemetry, observability, incident response, service reliability, PII data handling, ISO 27001 (ISO27001) and SOC 2 Type II (SOC2 Type 2)-aligned engineering practices, SQL Server, PostgreSQL, Snowflake, BigQuery and data migration.
 - **Hands-on engineering toolkit:** C# and .NET, REST APIs, SQL, React, Node.js, Next.js, Firebase, Supabase, Flutter, DevOps automation and AI-assisted prototyping.
 
 ## Leadership & AI-Aware Delivery Strengths
 
 - **Prompt engineering / clear communication:** Turns blurry requests into explicit intent, tradeoffs, decisions and next steps so teams and stakeholders know what is actually being asked.
 - **Context engineering / shared why:** Gives teams the background, constraints and business reasoning behind work, so implementation choices fit the problem instead of only the ticket.
-- **Harness engineering / delivery guardrails:** Defines goals, boundaries, operating agreements and measurable success criteria, making "good" concrete and reducing tangents.
-- **Loop engineering / autonomous improvement:** Sets clear goals, then drives build, test, verify, deploy and feedback loops so teams can make local decisions without micromanagement.
+- **Harness engineering / delivery guardrails:** Defines goals, boundaries, operating agreements, measurable success criteria, reusable skills and workflows, making "good" concrete so LLM harnesses and teams improve over iterations.
+- **Loop engineering / autonomous improvement:** Uplifts teams through effective delegation, mentoring, capacity building and tight build, test, verify, deploy and feedback loops, helping people make local decisions and working myself out of the job.
 
 ## Professional Experience
 
@@ -40,6 +40,7 @@ Engineering Manager and hands-on software engineering leader with 15+ years of e
 
 - Led replatforming of residential-focused deal capability into a generic Engagement model that can handle multiple product types to support business growth.
 - Used the Engagement platform to launch asset finance, commercial and insurance deal journeys, expanding MyCRM beyond residential lending without duplicating core deal logic.
+- Applied event-driven architecture and event-sourcing patterns with backward-compatible projections, allowing legacy and new deal journeys to evolve without breaking consumers.
 - Drove domain modelling, transition planning, roadmap alignment and stakeholder tradeoffs across product, engineering and business groups.
 - Reset expectations and delivery discipline in a struggling team, improving clarity, technical direction and execution focus across a long-running replatform program.
 
