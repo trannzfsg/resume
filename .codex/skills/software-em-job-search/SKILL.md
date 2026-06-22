@@ -27,7 +27,7 @@ Read `references/search-and-scoring.md` before running a daily search, doing a s
 ## Daily Search Workflow
 
 1. Load context from the core files and the scoring reference.
-2. Search SEEK and LinkedIn for software engineering leadership roles relevant to Brisbane, fully remote Australia/APAC, or 100% remote global/US/EU roles with a strong Engineering Manager title match.
+2. Search SEEK and LinkedIn for software engineering leadership roles relevant to Brisbane, fully remote Australia/APAC, or 100% remote global/US/EU roles with a strong Engineering Manager title match. Also open the signed-in LinkedIn Jobs home page at `https://www.linkedin.com/jobs/` when browser/session access is available and review the personalised job sections such as top picks, recommended jobs, still hiring, and similar-to-viewed jobs. Capture direct LinkedIn IDs from relevant cards because these recommendations can surface profile-matched roles that public board search misses. If only the logged-out generic jobs page is accessible, note the caveat and continue with public search.
 3. Open the full ad before scoring whenever possible. If the full ad is inaccessible, use public snippets only for conservative skip/review decisions.
 4. Apply hard excludes from `job-search/applied-jobs.md` before scoring. Do not add hard-excluded roles to the queue with low scores.
 5. Score surviving roles separately for `Fit`, `Location/work`, and `Employer review`.

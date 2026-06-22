@@ -17,6 +17,17 @@ Useful search terms:
 - Cloud Services Manager
 - Head of Technology
 - .NET delivery manager
+- Engineering Manager Product Experience
+- Product Engineering Manager
+- Engineering Manager Australia
+- Manager Solutions Engineering
+- Solutions Engineering Manager
+- Sales Engineering Manager
+
+Coverage note:
+
+- LinkedIn public search can miss Australia-listed Engineering Manager roles that are not tagged Brisbane or Remote and may not surface even with exact company/title keywords. Include at least one broad Australia LinkedIn Engineering Manager pass, use product-experience/product-engineering EM keywords, and check official company careers or roles pages surfaced by web search. Do not treat "Product Experience" in an EM title as product-owner-heavy unless the ad says product ownership dominates.
+- The signed-in LinkedIn Jobs home page at `https://www.linkedin.com/jobs/` is a separate discovery source, not just a search form. During daily runs, browse personalised sections such as top picks, recommended jobs, still hiring, and similar-to-viewed jobs when browser access is available; capture direct LinkedIn IDs and screen them normally. If only the logged-out generic page is accessible, record the caveat. Do not auto-add customer-facing sales/solutions engineering roles unless they survive the same fit, location, salary and hard-exclude screening.
 
 Good location/work arrangements:
 
@@ -31,16 +42,16 @@ Hard location exclude:
 - Sydney/Melbourne listings unless fully remote from Australia/Brisbane is explicit.
 - Non-Australian listings that are hybrid, onsite, office-first or require relocation/office attendance.
 - "Australia remote, or Sydney office" is acceptable only when remote is clearly a real option.
-- Do not hard-exclude a strong Engineering Manager role solely because the company or LinkedIn job location is outside Brisbane/Australia when the ad has a real 100% remote signal. If eligibility is country/state restricted or unclear, queue as `[ ] Review` with the risk called out.
+- Do not hard-exclude a strong Engineering Manager role solely because the company or LinkedIn job location is outside Brisbane/Australia when the ad has a real 100% remote signal and Australia/Brisbane eligibility is still genuinely open. If eligibility is unclear, queue as `[ ] Review` with the risk called out. If the company careers page or another authoritative employer source confirms the role is US-only, approved-US-states-only, US hybrid, or otherwise not available for Australia/Brisbane remote, hard-exclude it even if LinkedIn implies remote/worldwide.
 
 ## Hard Excludes
 
 Skip before scoring:
 
 - Already in `Applied`, `Do Not Show`, or a clear duplicate/repost.
-- Non-Brisbane role without explicit fully remote eligibility, except strong software Engineering Manager roles with a real 100% remote global/US/EU signal; those should be reviewed, not hard-excluded, even if work-rights or country/state eligibility needs confirmation.
+- Non-Brisbane role without explicit fully remote eligibility, except strong software Engineering Manager roles with a real 100% remote global/US/EU signal and unresolved Australia/Brisbane eligibility; those should be reviewed, not hard-excluded, while work-rights or country/state eligibility needs confirmation. Hard-exclude roles confirmed by the company careers page or another authoritative employer source as US-only, approved-US-states-only, US hybrid, or otherwise non-Australia-eligible remote roles.
 - Civil, mining, construction, hardware, physical-product, sales-only, support-only or non-software engineering.
-- Primary hands-on JavaScript/TypeScript/Node/React/Vue or Java backend delivery.
+- Roles where more than 50% of the work is hands-on development in a language/ecosystem Tran has little or no professional experience with. Hard-exclude heavy hands-on Elixir, Ruby, functional programming, JavaScript/TypeScript/Node/React/Vue, or Java backend roles unless the unfamiliar stack is clearly optional and the role is primarily leadership, .NET/object-oriented architecture, or DevOps/platform delivery.
 - Product-owner-heavy roles where Product strategy, discovery, pricing, packaging or commercial validation dominates.
 - Head of Data, BI, data warehouse, data lake or analytics-leadership roles unless software/platform engineering is dominant.
 - Salary clearly below Tran's practical AUD 200k baseline unless there is a strong reason to review.
@@ -58,6 +69,7 @@ Reduce or cap fit when:
 
 - The role is mostly individual contributor coding.
 - The stack is mandatory JavaScript/Java without leadership/platform transferability.
+- The role is hands-on in Elixir, Ruby, functional programming, JavaScript/TypeScript/Node/React/Vue, Java or another unfamiliar language ecosystem, but below the 50% hard-exclude threshold.
 - Product ownership or data/BI specialisation dominates.
 - It is generic project/program delivery without software engineering ownership.
 
@@ -91,7 +103,7 @@ Use `[ ] Review` for viable but uncertain candidates:
 - Fit around 7-8
 - A survivable gap or missing detail
 - Needs live re-check, salary check, office-cadence check or employer review check
-- Strong 100% remote Engineering Manager roles outside Australia where title/role fit is high but country/state eligibility, working hours, tax/payroll setup or visa/work rights need confirmation
+- Strong 100% remote Engineering Manager roles outside Australia where title/role fit is high but country/state eligibility, working hours, tax/payroll setup or visa/work rights need confirmation. Do not queue once the company careers page or another authoritative employer source confirms eligibility as US-only, US hybrid, approved-US-states-only, or unavailable for Australia remote.
 
 Do not queue jobs that fail hard excludes or have weak fit plus weak location/employer signals.
 
