@@ -25,4 +25,7 @@
 - [x] Create `software-em-job-search` Codex skill and update the daily automation to call it.
 - [x] Move job-search-specific skills into the repo-local `.codex/skills` folder.
 - [x] Remove the repo-local `.codegraph` index directory.
+- [x] Create .NET Clean Architecture hello-world study project for upcoming technical interview prep.
+- [x] Upgrade .NET Clean Architecture hello-world study project from .NET 8 to .NET 10.
+- [x] Refactor .NET Clean Architecture hello-world study project toward stricter SOLID principles.
 - [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.

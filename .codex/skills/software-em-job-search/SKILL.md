@@ -27,7 +27,7 @@ Read `references/search-and-scoring.md` before running a daily search, doing a s
 ## Daily Search Workflow
 
 1. Load context from the core files and the scoring reference.
-2. Search SEEK and LinkedIn for software engineering leadership roles relevant to Brisbane or fully remote Australia/APAC.
+2. Search SEEK and LinkedIn for software engineering leadership roles relevant to Brisbane, fully remote Australia/APAC, or 100% remote global/US/EU roles with a strong Engineering Manager title match.
 3. Open the full ad before scoring whenever possible. If the full ad is inaccessible, use public snippets only for conservative skip/review decisions.
 4. Apply hard excludes from `job-search/applied-jobs.md` before scoring. Do not add hard-excluded roles to the queue with low scores.
 5. Score surviving roles separately for `Fit`, `Location/work`, and `Employer review`.

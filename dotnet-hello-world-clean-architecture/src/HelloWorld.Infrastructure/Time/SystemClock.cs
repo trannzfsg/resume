@@ -1,0 +1,8 @@
+using HelloWorld.Application.Abstractions;
+
+namespace HelloWorld.Infrastructure.Time;
+
+public sealed class SystemClock : IClock
+{
+    public DateTimeOffset UtcNow => DateTimeOffset.UtcNow;
+}

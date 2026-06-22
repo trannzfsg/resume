@@ -2,7 +2,7 @@
 
 ## Search Scope
 
-Primary target: software Engineering Manager and adjacent software leadership roles for Tran in Australia.
+Primary target: software Engineering Manager and adjacent software leadership roles for Tran, prioritising Brisbane and Australia/APAC remote but also including strong 100% remote global/US/EU Engineering Manager roles.
 
 Useful search terms:
 
@@ -23,19 +23,22 @@ Good location/work arrangements:
 - Brisbane or Greater Brisbane remote/hybrid
 - Fully remote Australia/APAC
 - Australia remote where Brisbane is clearly eligible
+- 100% remote global/US/EU roles when the role title is a strong software Engineering Manager match and the ad does not require office attendance. Queue these even when LinkedIn's main location is not Brisbane/Australia, but flag time zone, tax, visa/work-rights and country/state eligibility as review risks.
 
 Hard location exclude:
 
 - Any non-Brisbane hybrid, onsite, office-first, regular-office-days or ambiguous-office role.
 - Sydney/Melbourne listings unless fully remote from Australia/Brisbane is explicit.
+- Non-Australian listings that are hybrid, onsite, office-first or require relocation/office attendance.
 - "Australia remote, or Sydney office" is acceptable only when remote is clearly a real option.
+- Do not hard-exclude a strong Engineering Manager role solely because the company or LinkedIn job location is outside Brisbane/Australia when the ad has a real 100% remote signal. If eligibility is country/state restricted or unclear, queue as `[ ] Review` with the risk called out.
 
 ## Hard Excludes
 
 Skip before scoring:
 
 - Already in `Applied`, `Do Not Show`, or a clear duplicate/repost.
-- Non-Brisbane role without explicit fully remote eligibility.
+- Non-Brisbane role without explicit fully remote eligibility, except strong software Engineering Manager roles with a real 100% remote global/US/EU signal; those should be reviewed, not hard-excluded, even if work-rights or country/state eligibility needs confirmation.
 - Civil, mining, construction, hardware, physical-product, sales-only, support-only or non-software engineering.
 - Primary hands-on JavaScript/TypeScript/Node/React/Vue or Java backend delivery.
 - Product-owner-heavy roles where Product strategy, discovery, pricing, packaging or commercial validation dominates.
@@ -61,6 +64,7 @@ Reduce or cap fit when:
 ## Location/Work Score
 
 - 9-10: Brisbane remote, fully remote Australia/APAC, or remote-first with Brisbane clearly eligible.
+- 8-9: 100% remote global/US/EU role with strong Engineering Manager fit and no office requirement, but time zone, tax, visa/work-rights or country/state eligibility may need checking.
 - 7.5-8.5: Brisbane hybrid with manageable cadence.
 - 6-7: Brisbane office-heavy, one WFH day, unclear cadence, or a commute/cadence concern.
 - 0/exclude: non-Brisbane hybrid, onsite, office-first, regular office days or remote ambiguity.
@@ -87,6 +91,7 @@ Use `[ ] Review` for viable but uncertain candidates:
 - Fit around 7-8
 - A survivable gap or missing detail
 - Needs live re-check, salary check, office-cadence check or employer review check
+- Strong 100% remote Engineering Manager roles outside Australia where title/role fit is high but country/state eligibility, working hours, tax/payroll setup or visa/work rights need confirmation
 
 Do not queue jobs that fail hard excludes or have weak fit plus weak location/employer signals.
 
