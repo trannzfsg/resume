@@ -27,13 +27,17 @@ const rows = lines.slice(headerIndex + 2, endIndex).filter((line) => line.trim()
 
 function parseRow(row, index) {
   const cells = row.split("|").map((cell) => cell.trim());
+  const status = cells[1] || "";
   const datePosted = cells[2] || "";
   const dateFound = cells[3] || "";
   const effectiveDate = /^\d{4}-\d{2}-\d{2}$/.test(datePosted) ? datePosted : dateFound;
   const fitMatch = (cells[6] || "").match(/Fit\s+([0-9.]+)\/10/);
+  const statusRank = status.includes("[ ] To apply") ? 0 : status.includes("[ ] Review") ? 1 : 2;
   return {
     row,
     index,
+    status,
+    statusRank,
     effectiveDate,
     fit: fitMatch ? Number(fitMatch[1]) : -1,
   };
@@ -41,6 +45,7 @@ function parseRow(row, index) {
 
 const parsed = rows.map(parseRow);
 const sorted = [...parsed].sort((a, b) => {
+  if (a.statusRank !== b.statusRank) return a.statusRank - b.statusRank;
   if (a.effectiveDate !== b.effectiveDate) return b.effectiveDate.localeCompare(a.effectiveDate);
   if (a.fit !== b.fit) return b.fit - a.fit;
   return a.index - b.index;
@@ -56,7 +61,7 @@ if (mismatches.length === 0) {
 if (!fix) {
   console.error(`SORT_FAIL rows=${rows.length} mismatches=${mismatches.length}`);
   mismatches.slice(0, 5).forEach((item) => {
-    console.error(`${item.effectiveDate} fit=${item.fit}: ${item.row}`);
+    console.error(`${item.status} ${item.effectiveDate} fit=${item.fit}: ${item.row}`);
   });
   process.exit(1);
 }

@@ -33,7 +33,7 @@ Read `references/search-and-scoring.md` before running a daily search, doing a s
 5. Score surviving roles separately for `Fit`, `Location/work`, and `Employer review`.
 6. Add suitable roles to `job-search/to-be-applied.md`, preserving the existing table format.
 7. Create or update the matching `job-search/job-details/<platform-id-company-title>.md` file for each queued role.
-8. Keep `job-search/to-be-applied.md` sorted by effective date descending, then fit score descending.
+8. Keep `job-search/to-be-applied.md` sorted by status priority (`[ ] To apply` first, then `[ ] Review`), then effective date descending, then fit score descending.
 9. Run `node C:\Users\USER\.codex\skills\software-em-job-search\scripts\check_queue_order.js C:\github\resume\job-search\to-be-applied.md`.
 10. Update today's memory with what changed, including added roles, skipped hard-exclude patterns, and any rule refinements.
 

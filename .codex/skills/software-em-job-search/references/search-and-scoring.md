@@ -128,7 +128,8 @@ For each queued role, include:
 
 Sort `job-search/to-be-applied.md` by:
 
-1. Effective date descending. Use `Date posted` only when it is a real `YYYY-MM-DD`; otherwise use `Date found`.
-2. Fit score descending when effective dates match.
+1. Status priority: `[ ] To apply` first, then `[ ] Review`.
+2. Effective date descending. Use `Date posted` only when it is a real `YYYY-MM-DD`; otherwise use `Date found`.
+3. Fit score descending when status and effective date match.
 
 Run the queue-order script after edits.
