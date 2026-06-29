@@ -1,41 +1,28 @@
 # To-Do
 
-- [x] Create `seek-cover-letter` Codex skill for concise SEEK cover letters based on Tran's live resume and job ad URLs.
-- [x] Add HR-style critical review and revision loop to `seek-cover-letter`, including optional CV change plan.
-- [x] Generate Word-format CV for SEEK applications from Tran's resume.
-- [x] Create daily 9am Codex automation to search SEEK and LinkedIn for software Engineering Manager and related roles, shortlist suitable jobs, and draft cover letters.
-- [x] Add applied-job dedupe register and update the daily software EM job-search automation to exclude already-applied SEEK/LinkedIn jobs.
-- [x] Update daily job-search output to score employer reviews separately and provide cover-letter source notes instead of full drafts.
-- [x] Replace dated daily job-search reports with a persistent `job-search/to-be-applied.md` queue and per-job detail files.
-- [x] Capture Tran's Refactor cover-letter style sample in memory and update the application-note skill.
-- [x] Capture Tran's Arrow cover-letter refinements around candid gap-bridging, Flutter app proof point and warm closer.
-- [x] Record new daily job-search exclusions for Java hands-on roles, non-Brisbane hybrid/office roles, and data-specialist roles.
-- [x] Integrate four-part LLM engineering framing into Tran's resume leadership strengths.
-- [x] Tidy README with quick LLM workflow, regeneration and privacy instructions.
-- [x] Rework Markdown, HTML and PDF resume for Australian ATS parsing and ranking while preserving AI framing and hands-on projects.
-- [x] Record Corpay LinkedIn application `linkedin:4405076746` as applied on 2026-06-16.
-- [x] Record Global Payments LinkedIn application `linkedin:4419872447` as applied on 2026-06-16.
-- [x] Record Talent SEEK role `seek:92711721` as not applying due to hands-on JavaScript requirement.
-- [x] Record Tennis Australia SEEK role `seek:92511476` as not applying due to Melbourne hybrid office requirement.
-- [x] Remove Melbourne/Sydney hybrid roles from the to-be-applied queue and add them to Do Not Show.
-- [x] Reorder the to-be-applied queue by effective date descending, then fit score descending, and add the sorting rule for future daily updates.
-- [x] Record Canonical LinkedIn application `linkedin:4286648340` as applied on 2026-06-17.
-- [x] Record Halosoft SEEK application `seek:92644597` as applied on 2026-06-17.
-- [x] Refine daily job-search hard excludes and scoring criteria from recent applied/not-applying decisions.
-- [x] Create `software-em-job-search` Codex skill and update the daily automation to call it.
-- [x] Move job-search-specific skills into the repo-local `.codex/skills` folder.
-- [x] Remove the repo-local `.codegraph` index directory.
-- [x] Create .NET Clean Architecture hello-world study project for upcoming technical interview prep.
-- [x] Upgrade .NET Clean Architecture hello-world study project from .NET 8 to .NET 10.
-- [x] Refactor .NET Clean Architecture hello-world study project toward stricter SOLID principles.
-- [x] Record City of Sydney TDM first-round interview debrief in the interview bank and memory.
-- [x] Add City of Sydney second-round .NET live-coding prep notes plus LINQ/EF Core practice tests.
-- [x] Add and verify unit tests for the `TopWordsStartWithA` LINQ live-coding exercise.
-- [x] Remove four closed Canva Engineering Manager roles from the application queue and record them under Do Not Show.
-- [x] Tailor the resume for Canva's Engineering Manager (BE/ML) - AI Help Platform role after confirming missing AI/ML evidence.
-- [x] Merge overlapping skills and delivery-strength sections in the Canva-tailored resume and codify the LLM-metaphor rule in the tailoring skill.
-- [x] Tailor the resume for Ventus/Opengear's Mgr, Software Engineering role after confirming flow-based delivery, multi-squad, backlog-readiness and support-rotation evidence.
-- [ ] Send current CV to Xero recruiter March/Margarita if not already sent.
-- [ ] Prepare for Xero Karat 50-60 minute technical system design interview; invite/prep expected Tuesday 2026-06-30 with a five-day booking window.
-- [ ] In future Xero interviews, emphasise practical AI curiosity and AI-assisted engineering examples more strongly.
-- [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.
+## Completed
+
+- [x] Create and refine Codex skills for concise, evidence-based job application materials.
+- [x] Add critical review, candid gap analysis and revision guidance to the application workflow.
+- [x] Generate a Word-format CV from the source resume.
+- [x] Improve the Markdown, HTML and PDF resumes for Australian ATS parsing while preserving accurate leadership and technical framing.
+- [x] Document resume regeneration, AI-assisted workflows and privacy guidance.
+- [x] Establish a permanent public-safe wording rule for the repository to-do list.
+- [x] Streamline repository instructions to retain only active, project-specific guidance.
+- [x] Create an automated daily search for suitable software engineering leadership roles.
+- [x] Add persistent application tracking, duplicate detection, employer-review scoring and reusable role-detail notes.
+- [x] Replace dated search reports with a prioritised application queue and consistent sorting rules.
+- [x] Refine screening rules for location, work arrangements, role scope and technology fit.
+- [x] Record representative writing preferences for warm, concise and candid application materials.
+- [x] Move job-search skills into the repository and remove the local code index.
+- [x] Create and upgrade a Clean Architecture study project using the current .NET release and stricter SOLID principles.
+- [x] Build and verify practical .NET, LINQ and data-access interview exercises.
+- [x] Maintain application records as roles are shortlisted, applied for, declined or closed.
+- [x] Create truthful role-tailored resumes and cover-letter notes after confirming relevant evidence and gaps.
+
+## Next
+
+- [ ] Send the current CV to any recruiter awaiting it.
+- [ ] Prepare for upcoming technical and system-design interviews.
+- [ ] Emphasise practical AI curiosity and AI-assisted engineering examples in future interviews.
+- [ ] Expand the engineering-management interview story bank with stronger technical depth.
