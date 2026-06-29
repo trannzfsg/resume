@@ -31,6 +31,10 @@
 - [x] Record City of Sydney TDM first-round interview debrief in the interview bank and memory.
 - [x] Add City of Sydney second-round .NET live-coding prep notes plus LINQ/EF Core practice tests.
 - [x] Add and verify unit tests for the `TopWordsStartWithA` LINQ live-coding exercise.
+- [x] Remove four closed Canva Engineering Manager roles from the application queue and record them under Do Not Show.
+- [x] Tailor the resume for Canva's Engineering Manager (BE/ML) - AI Help Platform role after confirming missing AI/ML evidence.
+- [x] Merge overlapping skills and delivery-strength sections in the Canva-tailored resume and codify the LLM-metaphor rule in the tailoring skill.
+- [x] Tailor the resume for Ventus/Opengear's Mgr, Software Engineering role after confirming flow-based delivery, multi-squad, backlog-readiness and support-rotation evidence.
 - [ ] Send current CV to Xero recruiter March/Margarita if not already sent.
 - [ ] Prepare for Xero Karat 50-60 minute technical system design interview; invite/prep expected Tuesday 2026-06-30 with a five-day booking window.
 - [ ] In future Xero interviews, emphasise practical AI curiosity and AI-assisted engineering examples more strongly.

@@ -60,6 +60,7 @@ Before editing:
 5. Tailor conservatively:
    - Rewrite the headline and professional summary to match the role shape.
    - Reorder and reword Key Skills so job-critical keywords appear naturally near the top.
+   - Preserve the reason behind the master resume's section structure: `Key Skills` provides conventional skill evidence, while `Leadership & AI-Aware Delivery Strengths` deliberately uses LLM engineering as a metaphor for Engineering Manager leadership. Keep them separate only when the tailored resume still uses that metaphor deliberately. Otherwise, merge their relevant content into one concise skills/strengths section to avoid repetition; merging is the default when the metaphor is removed.
    - Emphasise matching experience in the most relevant roles; reduce emphasis on less relevant sections without deleting useful seniority evidence.
    - Bridge title mismatch plainly when useful, for example Engineering Manager to Technical Delivery Manager, by focusing on the technical delivery work behind the title.
    - Prefer concrete resume evidence over generic claims.
