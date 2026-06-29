@@ -1,13 +1,13 @@
 ---
 name: tailor-cv-for-job
-description: Tailor Tran's main resume for a specific SEEK or LinkedIn job while staying truthful to the source resume. Use when Codex needs to analyse a job ad, compare it with C:\github\resume\tranzha.md, identify missing keywords or unsupported requirements, ask for clarification on material gaps, and create a separate job-specific Markdown resume such as tranzha-linkedin4425586749.md without overwriting the main resume or generating PDF/DOCX unless explicitly requested.
+description: Tailor Tran's main resume for a specific SEEK or LinkedIn job while staying truthful to the source resume. Use when Codex needs to analyse a job ad, compare it with C:\github\resume\tranzha.md, confirm any job-critical skills or experience not evidenced in the master resume, and create a separate job-specific Markdown resume such as tranzha-linkedin4425586749.md without overwriting the main resume or generating PDF/DOCX unless explicitly requested.
 ---
 
 # Tailor CV For Job
 
 ## Overview
 
-Create a job-specific Markdown resume variant from `C:\github\resume\tranzha.md`. Keep the resume accurate, improve keyword and evidence alignment with the job ad, and preserve `tranzha.md` as the reusable source resume.
+Create a job-specific Markdown resume variant from `C:\github\resume\tranzha.md`. Keep the resume accurate, improve keyword and evidence alignment with the job ad, confirm rather than assume whether missing job-critical evidence exists, and preserve `tranzha.md` as the reusable source resume.
 
 ## Inputs
 
@@ -37,12 +37,16 @@ Before editing:
    - The real role shape, especially whether it is people management, technical delivery, solution architecture, hands-on coding, project delivery, vendor management or stakeholder-facing work.
 
 2. Compare the job with `tranzha.md`:
-   - Mark each important requirement as `strong evidence`, `adjacent evidence`, `weak evidence`, or `unsupported`.
+   - Mark each important requirement as `strong evidence`, `adjacent evidence`, `weak evidence`, or `not evidenced in the master resume`.
    - Capture missing keywords where the underlying experience exists but the wording is not prominent enough.
-   - Capture material gaps where the ad appears to require something not supported by the resume.
+   - Capture every key skill or experience from the ad that is not explicitly evidenced in the master resume. Treat this as unknown until Tran confirms it; do not assume he lacks it.
 
-3. Decide whether to ask before editing:
-   - Ask the user to confirm only when a requirement is both important to the ad and unsupported by the resume, such as a must-have certification, clearance, named platform, domain, framework, daily coding language, or commercial responsibility.
+3. Apply a mandatory confirmation gate before editing:
+   - Always ask Tran to confirm whenever any key skill or experience from the ad is not explicitly evidenced in the master resume. This includes important required, preferred or repeatedly emphasised capabilities.
+   - Group missing items into a short, concrete question list. For each item, ask whether Tran has the experience and, if so, request enough detail to support an accurate resume statement.
+   - Pause tailoring until Tran answers. Do not silently classify missing evidence as a gap, omit it as though it is absent, or proceed using an assumption.
+   - After confirmation, mark each item as `confirmed evidence` or `confirmed gap`. Add only confirmed evidence; keep confirmed gaps out of the resume and mention material ones in the final response.
+   - Typical confirmation items include certifications, clearances, named platforms, domains, frameworks, daily coding languages, manager-of-managers experience, production AI/LLM ownership, commercial responsibility and quantified outcomes.
    - Do not ask for confirmation for wording changes that are already supported by the resume.
    - Do not invent experience, dates, employers, certifications, titles, clearances, tools, team sizes or delivery outcomes.
 
@@ -63,6 +67,7 @@ Before editing:
 
 6. Validate the tailored resume:
    - Confirm the new file exists and `tranzha.md` is unchanged.
+   - Confirm every job-critical item that was initially not evidenced has a recorded user answer before finalising.
    - Check for unsupported claims introduced during editing.
    - Check the tailored resume still reads as a coherent senior software engineering profile, not a keyword dump.
 

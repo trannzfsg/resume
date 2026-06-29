@@ -1,7 +1,8 @@
 $ErrorActionPreference = "Stop"
 
-$docxPath = "C:\github\resume\tranzha.docx"
-$pdfPath = "C:\github\resume\docx_render\tranzha_word.pdf"
+$repoRoot = Split-Path -Parent $PSScriptRoot
+$docxPath = Join-Path $repoRoot "tranzha.docx"
+$pdfPath = Join-Path $repoRoot "tmp\docx-render\tranzha_word.pdf"
 
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $pdfPath) | Out-Null
 

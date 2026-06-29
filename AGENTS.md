@@ -215,6 +215,14 @@ From now on, any chats from future sessions that lead to actions (once confirmed
 
 From now on, any significant discussions or outcomes from chats in **any session** (including this one) will be documented in the corresponding long-term memory files (`memory/YYYY-MM-DD.md`) or `MEMORY.md` within the workspace. This ensures that contextual and actionable insights are preserved systematically.
 
+## Document Output Verification
+
+- Keep all render intermediates under `tmp/`: use `tmp/docx-render/` for DOCX-to-PDF conversion artifacts and `tmp/pdfs/` for PDFium-rendered PDF pages. Do not create a root-level `docx_render/` directory.
+- When a workflow produces PDF and Word/DOCX outputs, use the final PDF as the only visual/output verification target.
+- Render every page of the final PDF with the bundled workspace runtime's PDFium renderer (`pypdfium2`) and inspect those rendered pages.
+- Do not render, open, inspect, or otherwise verify the Word/DOCX output. Word/DOCX files may still be generated and delivered when requested, but verification must be based only on the final PDF.
+- This repository-specific rule overrides generic document-skill instructions that require DOCX render verification.
+
 ## Execution Cadence
 
 - Always continue implementation where possible; do not pause to ask for confirmation unless blocked.

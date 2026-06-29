@@ -1,10 +1,10 @@
-docx_render/
 memory/
 job-search/
 INTERVIEW*
 MEMORY*
 tranzha-*.md
 tranzha-*.pdf
+tmp/
 
 # macos file
 .DS_Store

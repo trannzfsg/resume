@@ -6,7 +6,9 @@ tranzha83@gmail.com | +61 402 798 180 | https://www.linkedin.com/in/tranzha | ht
 
 ## Professional Summary
 
-Engineering Manager and hands-on software engineering leader with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality. My leadership style mirrors effective LLM engineering: clear intent, enough context, practical guardrails, measurable success and tight feedback loops. I use LLM tools in work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.
+Engineering Manager and hands-on software engineering leader with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality.
+
+My leadership style mirrors effective LLM engineering: clear intent, enough context, practical guardrails, measurable success and tight feedback loops. I use LLM tools in work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.
 
 ## Key Skills
 

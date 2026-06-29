@@ -30,4 +30,8 @@
 - [x] Refactor .NET Clean Architecture hello-world study project toward stricter SOLID principles.
 - [x] Record City of Sydney TDM first-round interview debrief in the interview bank and memory.
 - [x] Add City of Sydney second-round .NET live-coding prep notes plus LINQ/EF Core practice tests.
+- [x] Add and verify unit tests for the `TopWordsStartWithA` LINQ live-coding exercise.
+- [ ] Send current CV to Xero recruiter March/Margarita if not already sent.
+- [ ] Prepare for Xero Karat 50-60 minute technical system design interview; invite/prep expected Tuesday 2026-06-30 with a five-day booking window.
+- [ ] In future Xero interviews, emphasise practical AI curiosity and AI-assisted engineering examples more strongly.
 - [ ] Flesh out PartsCheck interview story with Tran's answers and add more EM story-bank entries.
