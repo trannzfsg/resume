@@ -1,87 +1,87 @@
 # Tran Zha
 
-**Software Engineering Manager | Platform Modernisation | Technical Leadership**  
+**Engineering Manager | Platform Modernisation | Technical Leadership**  
 Brisbane, QLD | Full Australian working rights | Australian permanent resident  
-tranzha83@gmail.com | +61 402 798 180 | https://www.linkedin.com/in/tranzha | https://github.com/trannzfsg | https://trannzfsg.github.io/resume  
+tranzha83@gmail.com | +61 402 798 180 | https://www.linkedin.com/in/tranzha | https://github.com/trannzfsg | https://trannzfsg.github.io/resume
 
-## Professional Summary
+## Summary
 
-Engineering Manager and hands-on software engineering leader with 15+ years of experience building software products, leading teams and modernising complex platforms. I help teams make sense of messy legacy systems, turn unclear problems into practical delivery plans, and keep business-critical work moving without losing sight of quality.
+Engineering Manager with 15+ years of experience building software products, leading teams and modernising complex platforms. I have recently led 8 to 10 direct reports across typically 2 concurrent projects, with responsibility for hiring, 1:1s, performance reviews and delivery. My strength is making sense of messy legacy systems, turning unclear problems into practical plans and keeping business-critical work moving. My leadership style borrows from effective LLM engineering: clear prompts, rich context, practical harnesses and tight feedback loops.
 
-My leadership style mirrors effective LLM engineering: clear intent, enough context, practical guardrails, measurable success and tight feedback loops. I use LLM tools in work and personal projects to speed up research, prototyping, documentation and analysis, while keeping human review and engineering judgement at the centre.
+## How I Lead: Prompt, Context, Harness and Loop Engineering
 
-## Key Skills
+- **Prompt engineering / clear intent:** Turn blurry requests into explicit goals, trade-offs, decisions and next steps.
+- **Context engineering / shared why:** Give teams the business reasoning and constraints needed to make sound local decisions.
+- **Harness engineering / practical guardrails:** Define boundaries, operating agreements, success measures and reusable workflows that make good delivery concrete.
+- **Loop engineering / autonomous teams:** Build tight delivery and learning loops, aiming to work myself out of the critical path.
+- **Human-centred leadership / individual growth:** Understand each person's goals, invest in their career and align development opportunities with meaningful project outcomes.
 
-- **Software engineering leadership:** Engineering Manager, Software Engineering Manager, Engineering Lead, Technical Lead, people leadership, team coaching, hiring support, career development, performance conversations and 1:1 feedback.
-- **Delivery and stakeholder management:** Agile delivery, software delivery lifecycle, SDLC, roadmap planning, delivery ownership, scope and debt tradeoffs, executive communication, vendor management and cross team dependency management.
-- **Platform modernisation and architecture:** Strangler Fig migration, monolith decomposition, service boundaries, backward compatibility, REST APIs, CQRS, event-driven architecture, event sourcing, projection-based migrations, gRPC, clean architecture, Vertical Slice Architecture and domain modelling.
-- **Cloud, DevOps, security and data:** AWS, GCP, Kubernetes, EKS, Docker, GitHub Actions, Octopus, OpenTelemetry, observability, incident response, service reliability, PII data handling, ISO 27001 (ISO27001) and SOC 2 Type II (SOC2 Type 2)-aligned engineering practices, SQL Server, PostgreSQL, Snowflake, BigQuery and data migration.
-- **Hands-on engineering toolkit:** C# and .NET, REST APIs, SQL, React, Node.js, Next.js, Firebase, Supabase, Flutter, DevOps automation and AI-assisted prototyping.
+## Experience
 
-## Leadership & AI-Aware Delivery Strengths
+### Loan Market Group | Jul 2019 to Jul 2026
 
-- **Prompt engineering / clear communication:** Turns blurry requests into explicit intent, tradeoffs, decisions and next steps so teams and stakeholders know what is actually being asked.
-- **Context engineering / shared why:** Gives teams the background, constraints and business reasoning behind work, so implementation choices fit the problem instead of only the ticket.
-- **Harness engineering / delivery guardrails:** Defines goals, boundaries, operating agreements, measurable success criteria, reusable skills and workflows, making "good" concrete so LLM harnesses and teams improve over iterations.
-- **Loop engineering / autonomous improvement:** Uplifts teams through effective delegation, mentoring, capacity building and tight build, test, verify, deploy and feedback loops, helping people make local decisions and working myself out of the job.
+#### Engineering Manager, MyCRM Replatforming | Feb 2023 to Jul 2026
 
-## Professional Experience
+**Stack:** C#, .NET, gRPC, CQRS, event-driven architecture, event sourcing, Vertical Slice Architecture, Material UI, AWS and Kubernetes
 
-### Engineering Manager, MyCRM Replatforming | Loan Market Group
-**Feb 2023 to Present**
+- Led 8 to 10 direct reports across typically 2 concurrent replatforming projects, owning hiring, 1:1s, performance reviews and delivery direction.
+- Led Contact v2 from discovery and architecture through partial production release, with further rollout continuing at the end of my tenure. Contact logic touched more than half of the monolith's business logic and carried years of fragmented edge cases.
+- Used a Strangler Fig transition, first controlling legacy behaviour behind a facade before migrating consumers and replacing the underlying data model.
+- Established CQRS, domain events, integration events, gRPC, clean architecture and stronger service boundaries. Patterns from the design became reference approaches and were adopted by other replatforming projects.
+- Delivered Diversified Deals to production across Australia and New Zealand. Its generic Engagement model supported all Loan Market Group diversified brokers and New Zealand insurance brokers across residential, asset finance, commercial and insurance journeys.
+- Reset expectations and delivery discipline in a struggling team while coordinating product, architecture, frontend and business stakeholders through complex trade-offs.
 
-**Selected initiative: Contact Replatform, centralising contact mutation and retrieval**
+#### Engineering Manager, Commission System, Business Insights and Podium Data Migration | Mar 2021 to Apr 2023
 
-- Leading the highest-complexity MyCRM replatform initiative: contacts are entangled across more than half of the monolith's business logic, with historical edge cases and patches spread across screens, workflows and services.
-- Building Contact v2 with backward compatibility and future-facing architecture, while untangling fragmented product logic into centralised mutation and retrieval paths and clearer ownership and authorisation boundaries.
-- Using a Strangler Fig approach: facade over the existing data store first, gradual migration of legacy consumers, then replacement of the underlying data model once behaviours are controlled.
-- Positioning Contact as a reference architecture for future MyCRM work, applying CQRS, domain and integration events, gRPC internal communication, clean architecture, Vertical Slice Architecture and stronger service boundaries.
-- Partnering with product, architecture and frontend teams to introduce a new Material UI-based design system while preserving legacy interoperability during migration.
+**Stack:** SQL Server, SSIS, TaskFactory, Salesforce, AWS, Kubernetes, Snowflake, BigQuery, Starburst, ThoughtSpot and Sisense
 
-**Selected initiative: Diversified Deals Replatform, generic engagement model for financial deals**
+- Led 8 to 10 direct reports across commissions, business insights and acquisition migration, typically spanning 2 concurrent projects.
+- Owned hiring, 1:1s and performance reviews while shaping business cases, discovery, roadmaps and delivery plans for complex domains.
+- Evaluated Snowflake, BigQuery, Starburst, ThoughtSpot and Sisense, separating data lake and warehouse concerns before delivering ingestion, transformation and reporting pipelines.
+- Delivered one-off and overnight delta migration pipelines after acquisitions using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services.
+- Supported growth of the onshore engineering group from around 10 to more than 30 engineers while delivering across the programs.
 
-- Led replatforming of residential-focused deal capability into a generic Engagement model that can handle multiple product types to support business growth.
-- Used the Engagement platform to launch asset finance, commercial and insurance deal journeys, expanding MyCRM beyond residential lending without duplicating core deal logic.
-- Applied event-driven architecture and event-sourcing patterns with backward-compatible projections, allowing legacy and new deal journeys to evolve without breaking consumers.
-- Drove domain modelling, transition planning, roadmap alignment and stakeholder tradeoffs across product, engineering and business groups.
-- Reset expectations and delivery discipline in a struggling team, improving clarity, technical direction and execution focus across a long-running replatform program.
+#### Senior DevOps Engineer, MyCRM Platform Modernisation | Jul 2019 to Apr 2021
 
-### Engineering Manager, Commission System, Business Insights and Podium Data Migration | Loan Market Group
-**Mar 2021 to Apr 2023**
+**Stack:** AWS, Kubernetes, EKS, Docker, GitHub Actions, Octopus Deploy, OpenTelemetry and contextual logging
 
-- Built and led teams across commissions, reporting and analytics and acquisition migration programs; shaped business cases, roadmaps, discovery and delivery plans for complex domains.
-- Evaluated Snowflake, Starburst, ThoughtSpot, BigQuery, Sisense and related platforms; separated data lake and warehouse concerns and delivered ingestion, transformation and reporting pipelines.
-- Led migration work after acquisitions, including one-off and overnight delta pipelines using SSIS, TaskFactory, Salesforce, Kubernetes jobs and AWS services; supported onshore growth from ~10 to 30+ engineers.
+- Held a hands-on platform modernisation remit focused on developer experience, observability, deployment and cloud infrastructure.
+- Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus Deploy across the MyCRM platform.
+- Led containerisation and Kubernetes/EKS migrations, improving local development workflows and modernising deployment infrastructure.
 
-### Engineering Manager, MyCRM Platform Modernisation | Loan Market Group
-**Jul 2019 to Apr 2021**
+### New Zealand Financial Services Group | Senior DevOps Engineer and Senior Software Engineer | Apr 2016 to Jun 2019
 
-- Introduced OpenTelemetry, contextual logging, GitHub Actions and Octopus, improved local development workflows, and led containerisation and Kubernetes/EKS migrations.
+**Stack:** C#, .NET, AWS, CI/CD, Docker, SQL Server, monitoring and observability
 
-### Senior DevOps Engineer and Senior Engineer, MyCRM Launch and Cloud Modernisation | New Zealand Financial Services Group
-**Apr 2016 to Jun 2019**
+- Helped rebuild, launch and modernise MyCRM across Australia and New Zealand, including migration from on-premises infrastructure to AWS.
+- Introduced CI/CD and improved observability while supporting production operations, incident response and service reliability for a business-critical CRM.
+- Supported offshore expansion from 0 to more than 30 engineers and QA staff through mentoring, culture building and Scrum facilitation.
+- Coordinated security audit activity and managed cloud spend, software licensing and vendor cost inputs for the platform.
 
-- Helped rebuild, launch and modernise MyCRM across Australia and New Zealand; migrated from on-premises to AWS, CI/CD and improved observability; coordinated security audit activity.
-- Supported offshore expansion from 0 to 30+ engineers and QA staff; team mentoring and culture building; Scrum master for multiple teams.
-- Managed cloud spend, software licensing and vendor cost inputs for the MyCRM platform, balancing operational needs with budget and delivery priorities.
-- Supported production operations, incident response and service reliability for business-critical CRM systems, using monitoring and support feedback to drive continuous improvement.
+### LifeDirect / Inform Holdings / Trade Me | Software Engineer | Jul 2008 to Mar 2016
 
-### Software Engineer | LifeDirect / Inform Holdings / Trade Me
-**Jul 2008 to Mar 2016**
+**Stack:** C#, .NET, SQL Server and web application infrastructure
 
-- Full-stack engineering across online insurance, internal admin, reporting, CRM and hosting operations; built quoting, application and underwriting workflows and mentored team members as the function grew.
+Delivered full-stack engineering across online insurance, internal administration, reporting, CRM and hosting operations. Built quoting, application and underwriting workflows and mentored team members as the engineering function grew.
 
-## Hands-On AI and LLM-Assisted Personal Projects
+## Leadership and Technical Skills
 
-- **mqcyb.tranzha.com - Math Quiz / mqcyb:** Flutter learning app previously released on the App Store; used AI assistance for rapid feature iteration, UI refinement and content generation support.
-- **transtags.tranzha.com - Bank transaction categorisation and tax returns:** React and Node.js product experiment for importing bank transactions, categorising spending and preparing tax return exports; explored Supabase before pausing the project.
-- **sports.tranzha.com - Community sports registration and mini CRM:** Next.js, Node.js and Firebase app for registrations, participants and lightweight community operations management.
-- **Roblox Autorun Obby:** Roblox game/prototype using AI-assisted scripting, level iteration and gameplay experimentation.
+- **Engineering leadership:** Engineering Manager, Software Engineering Manager, people leadership, hiring, coaching, career development, performance reviews, 1:1s and team delivery.
+- **Delivery and stakeholders:** Agile delivery, SDLC, discovery, roadmap planning, scope and technical debt trade-offs, executive communication, vendor management and cross-team dependencies.
+- **Architecture and modernisation:** Strangler Fig migration, monolith decomposition, service boundaries, backward compatibility, REST APIs, gRPC, CQRS, event-driven architecture, event sourcing, clean architecture, Vertical Slice Architecture and domain modelling.
+- **Cloud, DevOps and reliability:** AWS, GCP, Kubernetes, EKS, Docker, GitHub Actions, Octopus Deploy, OpenTelemetry, observability, incident response, CI/CD and service reliability.
+- **Engineering and data:** C#, .NET, SQL, React, Node.js, Next.js, Flutter, SQL Server, PostgreSQL, Snowflake, BigQuery, Firebase, Supabase and data migration.
+- **Security and compliance:** PII data handling and engineering practices aligned with ISO 27001 and SOC 2 Type II controls.
 
-## Education, Selected Coursework & Languages
+## Hands-On AI and LLM-Assisted Projects
 
-Postgraduate Diploma in Science, Computer Science - University of Auckland | Bachelor of Science, Computer Science - University of Auckland | Bachelor of Commerce, Finance and Economics - University of Auckland  
+- **mqcyb.tranzha.com:** Flutter learning app previously released on the App Store, using AI assistance for feature iteration, UI refinement and content generation.
+- **transtags.tranzha.com:** React and Node.js experiment for importing bank transactions, categorising spending and preparing tax return exports, with Supabase exploration.
+- **sports.tranzha.com:** Next.js, Node.js and Firebase application for community sports registration, participant management and lightweight CRM operations.
+- **Roblox Autorun Obby:** Roblox game prototype using AI-assisted scripting, level iteration and gameplay experimentation.
 
-Selected coursework: AWS Solutions Architect Associate coursework (A Cloud Guru); Kubernetes Administrator coursework (Udemy); Machine Learning and Deep Learning coursework (Coursera/deeplearning.ai); Scrum Master training  
+## Education, Training and Languages
 
-Languages: English, Mandarin.
+Postgraduate Diploma in Science, Computer Science - University of Auckland | Bachelor of Science, Computer Science - University of Auckland | Bachelor of Commerce, Finance and Economics - University of Auckland
+
+Selected training: AWS Solutions Architect Associate coursework (A Cloud Guru), Kubernetes Administrator coursework (Udemy), Machine Learning and Deep Learning coursework (Coursera/deeplearning.ai) and Scrum Master training | Languages: English and Mandarin

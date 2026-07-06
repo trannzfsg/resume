@@ -5,6 +5,7 @@ MEMORY*
 tranzha-*.md
 tranzha-*.pdf
 tmp/
+backup/
 
 # macos file
 .DS_Store

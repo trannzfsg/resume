@@ -25,7 +25,13 @@ const mdPath = resolveOutput(argValue("--input", "tranzha.md"));
 const htmlPath = resolveOutput(argValue("--html-output", "index.html"));
 const pdfPath = resolveOutput(argValue("--pdf-output", "tranzha.pdf"));
 
-const css = `:root{color-scheme:light;--page:#f7f8f5;--paper:#fff;--ink:#202124;--muted:#5f6368;--line:#d8ddd2;--accent:#0f766e}*{box-sizing:border-box}html{font-size:16px}body{margin:0;background:var(--page);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.48}.page{max-width:920px;margin:0 auto;padding:30px 20px 44px}.resume{background:var(--paper);border:1px solid var(--line);padding:44px}.actions{display:flex;justify-content:flex-end;margin-bottom:14px}.download{color:#fff;background:var(--accent);border-radius:6px;display:inline-block;font-size:.92rem;font-weight:700;padding:9px 13px;text-decoration:none}h1,h2,h3{line-height:1.16;margin:0}h1{border-bottom:3px solid var(--accent);font-size:2.08rem;padding-bottom:10px}h2{border-top:1px solid var(--line);color:var(--accent);font-size:1.16rem;margin-top:24px;padding-top:14px}h3{font-size:1rem;margin-top:16px}p{margin:7px 0 0}.project-heading{font-weight:700}h1+p{color:var(--muted);font-size:.95rem;line-height:1.36}ul{margin:7px 0 0;padding-left:1.15rem}li{margin:4px 0}strong{color:var(--ink)}a{color:var(--accent)}@media(max-width:700px){.page{padding:18px 12px 32px}.resume{padding:28px 20px}h1{font-size:1.75rem}}@media print{html{font-size:14.5px}body{background:#fff;line-height:1.42}.page{max-width:none;padding:0}.actions{display:none}.resume{border:0;padding:0}h1{font-size:2rem;padding-bottom:8px}h2{font-size:1.13rem;margin-top:18px;padding-top:11px}h3{font-size:.99rem;margin-top:12px}p{margin-top:5px}h1+p{font-size:.94rem;line-height:1.3}ul{margin-top:5px}li{margin:2.5px 0}h2,h3,.date-line,.project-heading{break-after:avoid;page-break-after:avoid}h3,li{break-inside:avoid;page-break-inside:avoid}}@page{margin:12mm;size:A4}`;
+const css = `:root{color-scheme:light;--page:#f7f8f5;--paper:#fff;--ink:#202124;--muted:#5f6368;--line:#d8ddd2;--accent:#0f766e}*{box-sizing:border-box}html{font-size:16px}body{margin:0;background:var(--page);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.42}.page{max-width:920px;margin:0 auto;padding:30px 20px 44px}.resume{background:var(--paper);border:1px solid var(--line);padding:44px}.actions{display:flex;justify-content:flex-end;margin-bottom:14px}.download{color:#fff;background:var(--accent);border-radius:6px;display:inline-block;font-size:.92rem;font-weight:700;padding:9px 13px;text-decoration:none}h1,h2,h3,h4{line-height:1.16;margin:0}h1{border-bottom:3px solid var(--accent);font-size:2.08rem;padding-bottom:10px}h2{border-top:1px solid var(--line);color:var(--accent);font-size:1.16rem;margin-top:20px;padding-top:11px}h3{font-size:1.02rem;margin-top:13px}h4{font-size:.98rem;margin-top:9px}p{margin:6px 0 0}.project-heading{font-weight:700}h1+p{color:var(--muted);font-size:.95rem;line-height:1.32}ul{margin:5px 0 0;padding-left:1.12rem}li{margin:3px 0}strong{color:var(--ink)}a{color:var(--accent)}@media(max-width:700px){.page{padding:18px 12px 32px}.resume{padding:28px 20px}h1{font-size:1.75rem}}@media print{html{font-size:13px}body{background:#fff;line-height:1.3}.page{max-width:none;padding:0}.actions{display:none}.resume{border:0;padding:0}h1{font-size:2rem;padding-bottom:6px}h2{font-size:1.13rem;margin-top:10px;padding-top:7px}h3{font-size:1.01rem;margin-top:8px}h4{font-size:.97rem;margin-top:6px}p{margin-top:3px}h1+p{font-size:.94rem;line-height:1.22}ul{margin-top:3px}li{margin:1.4px 0}h2,h3,h4,.date-line,.project-heading{break-after:avoid;page-break-after:avoid}h3,h4,li{break-inside:avoid;page-break-inside:avoid}}@page{margin:10mm;size:A4}`;
+const defaultCss = `:root{color-scheme:light;--page:#f7f8f5;--paper:#fff;--ink:#202124;--muted:#5f6368;--line:#d8ddd2;--accent:#0f766e}*{box-sizing:border-box}html{font-size:16px}body{margin:0;background:var(--page);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.48}.page{max-width:920px;margin:0 auto;padding:30px 20px 44px}.resume{background:var(--paper);border:1px solid var(--line);padding:44px}.actions{display:flex;justify-content:flex-end;margin-bottom:14px}.download{color:#fff;background:var(--accent);border-radius:6px;display:inline-block;font-size:.92rem;font-weight:700;padding:9px 13px;text-decoration:none}h1,h2,h3{line-height:1.16;margin:0}h1{border-bottom:3px solid var(--accent);font-size:2.08rem;padding-bottom:10px}h2{border-top:1px solid var(--line);color:var(--accent);font-size:1.16rem;margin-top:24px;padding-top:14px}h3{font-size:1rem;margin-top:16px}p{margin:7px 0 0}.project-heading{font-weight:700}h1+p{color:var(--muted);font-size:.95rem;line-height:1.36}ul{margin:7px 0 0;padding-left:1.15rem}li{margin:4px 0}strong{color:var(--ink)}a{color:var(--accent)}@media(max-width:700px){.page{padding:18px 12px 32px}.resume{padding:28px 20px}h1{font-size:1.75rem}}@media print{html{font-size:14.5px}body{background:#fff;line-height:1.42}.page{max-width:none;padding:0}.actions{display:none}.resume{border:0;padding:0}h1{font-size:2rem;padding-bottom:8px}h2{font-size:1.13rem;margin-top:18px;padding-top:11px}h3{font-size:.99rem;margin-top:12px}p{margin-top:5px}h1+p{font-size:.94rem;line-height:1.3}ul{margin-top:5px}li{margin:2.5px 0}h2,h3,.date-line,.project-heading{break-after:avoid;page-break-after:avoid}h3,li{break-inside:avoid;page-break-inside:avoid}}@page{margin:12mm;size:A4}`;
+const rebuiltMode = args.includes("--rebuilt");
+const selectedCss = rebuiltMode ? css : defaultCss;
+const paginationCss = rebuiltMode
+  ? `@media print{.stack-line{break-after:avoid;page-break-after:avoid}}`
+  : "";
 
 function escapeHtml(text) {
   return text
@@ -55,9 +61,11 @@ function renderBlocks(markdown) {
       const plain = paragraph.join(" ").replace(/\*\*/g, "").trim();
       const className = plain.startsWith("Selected initiative:")
         ? " class=\"project-heading\""
-        : /^[A-Z][a-z]{2} \d{4} to (Present|[A-Z][a-z]{2} \d{4})$/.test(plain)
-          ? " class=\"date-line\""
-          : "";
+        : plain.startsWith("Stack:")
+          ? " class=\"stack-line\""
+          : /^[A-Z][a-z]{2} \d{4} to (Present|[A-Z][a-z]{2} \d{4})$/.test(plain)
+            ? " class=\"date-line\""
+            : "";
       const content = paragraph
         .map((line) => inlineMarkdown(line.replace(/\s+/g, " ").trim()))
         .join("<br>");
@@ -88,7 +96,10 @@ function renderBlocks(markdown) {
     }
 
     flushList();
-    if (line.startsWith("### ")) {
+    if (line.startsWith("#### ")) {
+      flushParagraph();
+      blocks.push(`<h4>${inlineMarkdown(line.slice(5))}</h4>`);
+    } else if (line.startsWith("### ")) {
       flushParagraph();
       blocks.push(`<h3>${inlineMarkdown(line.slice(4))}</h3>`);
     } else if (line.startsWith("## ")) {
@@ -119,7 +130,8 @@ function buildHtml() {
 <title>Tran Zha</title>
 <meta name="description" content="Tran Zha resume">
 <style>
-${css}
+${selectedCss}
+${paginationCss}
 </style>
 </head>
 <body><main class="page"><div class="actions"><a class="download" href="${downloadHref}">Download PDF</a></div><article class="resume">${body}</article></main></body>
@@ -141,7 +153,12 @@ async function buildPdf() {
       path: pdfPath,
       format: "A4",
       printBackground: true,
-      margin: { top: "12mm", right: "12mm", bottom: "12mm", left: "12mm" },
+      margin: {
+        top: rebuiltMode ? "10mm" : "12mm",
+        right: rebuiltMode ? "10mm" : "12mm",
+        bottom: rebuiltMode ? "10mm" : "12mm",
+        left: rebuiltMode ? "10mm" : "12mm",
+      },
     });
     await browser.close();
     return;

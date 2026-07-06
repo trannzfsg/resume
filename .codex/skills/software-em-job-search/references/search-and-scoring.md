@@ -54,7 +54,7 @@ Skip before scoring:
 - Roles where more than 50% of the work is hands-on development in a language/ecosystem Tran has little or no professional experience with. Hard-exclude heavy hands-on Elixir, Ruby, functional programming, JavaScript/TypeScript/Node/React/Vue, or Java backend roles unless the unfamiliar stack is clearly optional and the role is primarily leadership, .NET/object-oriented architecture, or DevOps/platform delivery.
 - Product-owner-heavy roles where Product strategy, discovery, pricing, packaging or commercial validation dominates.
 - Head of Data, BI, data warehouse, data lake or analytics-leadership roles unless software/platform engineering is dominant.
-- Salary clearly below Tran's practical AUD 200k baseline unless there is a strong reason to review.
+- Confirmed maximum advertised annual remuneration of AUD 180,000 or less. Use the highest guaranteed annual figure shown and annualise disclosed hourly or daily rates when practical. Do not infer a low ceiling from hidden salary, and do not hard-exclude a range that extends above AUD 180,000.
 
 ## Fit Score
 
