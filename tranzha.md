@@ -2,7 +2,7 @@
 
 **Engineering Manager | Platform Modernisation | Technical Leadership**  
 Brisbane, QLD | Full Australian working rights | Australian permanent resident  
-tranzha83@gmail.com | +61 402 798 180 | https://www.linkedin.com/in/tranzha | https://github.com/trannzfsg | https://trannzfsg.github.io/resume
+tranzha83@gmail.com | +61 402 798 180 | www.linkedin.com/in/tran-zha | github.com/trannzfsg | trannzfsg.github.io/resume
 
 ## Summary
 

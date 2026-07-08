@@ -155,7 +155,10 @@ def parse_markdown(markdown):
             continue
 
         flush_bullets()
-        if line.startswith("### "):
+        if line.startswith("#### "):
+            flush_paragraph()
+            blocks.append(("h4", line[5:].strip()))
+        elif line.startswith("### "):
             flush_paragraph()
             blocks.append(("h3", line[4:].strip()))
         elif line.startswith("## "):
@@ -274,6 +277,8 @@ def build():
             add_section(doc, value)
         elif kind == "h3":
             add_role(doc, value)
+        elif kind == "h4":
+            add_project(doc, value)
         elif kind == "p":
             text = " ".join(value)
             plain = strip_markdown(text)
