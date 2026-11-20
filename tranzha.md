@@ -65,7 +65,7 @@ LifeDirect / Inform Holdings / Trade Me | Jul 2008 to Mar 2016
 
 ## Applied AI
 
-- Designed and trialled a multi-agent Codex workflow for software delivery, with separate planning, implementation, testing and review. Used acceptance tests, automated evaluations and human approval before merging.
+- Designed and trialled a multi-agent Codex workflow on playable game builds, using automated acceptance tests, independent review and desktop and mobile browser testing.
 - Built a scheduled AI workflow that turns conversations into a searchable knowledge base, with source links, duplicate checks, validation and human review of uncertain classifications.
 
 ## Education
