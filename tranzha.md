@@ -1,13 +1,13 @@
 # Tran Zha
 
-**Technical Delivery Manager | Software Engineering Leader**  
+**Engineering Manager**  
 Brisbane, QLD | Full Australian working rights  
 tranzha83@gmail.com | +61 402 798 180  
 [linkedin.com/in/tran-zha](https://www.linkedin.com/in/tran-zha/) | [github.com/trannzfsg](https://github.com/trannzfsg) | [trannzfsg.github.io/resume](https://trannzfsg.github.io/resume/)
 
 ## Professional Summary
 
-Technical Delivery Manager with 15+ years in software engineering across local government and financial services. Combines project and budget planning with hands-on experience modernising .NET and AWS platforms. As an Engineering Manager, led 8 to 10 engineers and delivered broker software across Australia and New Zealand.
+Engineering Manager with 15+ years in software engineering. Led 8 to 10 engineers delivering broker software across Australia and New Zealand, with responsibility for hiring, coaching and performance reviews. Combines hands-on .NET and AWS modernisation with budget and team capacity planning at the City of Sydney.
 
 ## Professional Experience
 
@@ -63,6 +63,11 @@ LifeDirect / Inform Holdings / Trade Me | Jul 2008 to Mar 2016
 - **Cloud and operations** | AWS, GCP, Kubernetes, Terraform, Docker, CI/CD, GitHub Actions, OpenTelemetry, observability and incident response.
 - **Data and governance** | Snowflake, BigQuery, data migration, PII handling and engineering practices aligned with ISO 27001 and SOC 2 Type II controls.
 
+## Applied AI
+
+- Designed and trialled a multi-agent Codex workflow for software delivery, with separate planning, implementation, testing and review. Used acceptance tests, automated evaluations and human approval before merging.
+- Built a scheduled AI workflow that turns conversations into a searchable knowledge base, with source links, duplicate checks, validation and human review of uncertain classifications.
+
 ## Education
 
 **University of Auckland**  
@@ -72,7 +77,3 @@ Bachelor of Commerce (Finance and Economics)
 
 **Selected training** | AWS Solutions Architect Associate coursework, Kubernetes Administrator coursework and Scrum Master training  
 **Languages** | English and Mandarin
-
-## Selected Project
-
-Built [Community Sports](https://github.com/trannzfsg/community-sports), a Next.js and Firebase web app for managing recurring sports sessions and registrations.

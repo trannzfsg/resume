@@ -225,7 +225,7 @@ def set_core_properties(doc):
     props = doc.core_properties
     props.author = "Tran Zha"
     props.title = "Tran Zha CV"
-    props.subject = "Technical Delivery Manager and Software Engineering Leader"
+    props.subject = "Engineering Manager"
     props.comments = "Generated from tranzha.md"
 
 

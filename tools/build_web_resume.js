@@ -56,12 +56,12 @@ a { color: var(--accent); text-underline-offset: .17em; }
 }
 @media print {
   html { font-size: 15px; }
-  body { background: #fff; line-height: 1.45; }
+  body { background: #fff; line-height: 1.4; }
   .page { max-width: none; padding: 0; }
   .resume { border: 0; padding: 0; }
   .actions { display: none; }
   h1 { font-size: 2.2rem; }
-  h2 { margin-top: 18px; padding-top: 10px; }
+  h2 { margin-top: 16px; padding-top: 8px; }
   h3 { margin-top: 13px; }
   h4 { margin-top: 9px; }
   p, ul { margin-top: 5px; }
@@ -187,8 +187,8 @@ function buildHtml() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tran Zha | Résumé</title>
-<meta name="description" content="Résumé for Tran Zha, Technical Delivery Manager and Software Engineering Leader.">
+<title>Tran Zha | Engineering Manager</title>
+<meta name="description" content="Résumé for Tran Zha, Engineering Manager with experience in software delivery and platform modernisation.">
 <style>
 ${selectedCss}
 ${paginationCss}
