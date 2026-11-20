@@ -3,10 +3,10 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.section import WD_SECTION
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.opc.constants import RELATIONSHIP_TYPE
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Inches, Pt, RGBColor
+from docx.shared import Inches, Mm, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,12 +14,15 @@ SRC = ROOT / "tranzha.md"
 OUT = ROOT / "tranzha.docx"
 
 
-BLUE = RGBColor(46, 116, 181)
+ACCENT = RGBColor(18, 94, 88)
 CHARCOAL = RGBColor(34, 34, 34)
 MUTED = RGBColor(85, 85, 85)
-LINK_BLUE = RGBColor(5, 99, 193)
 
-LINK_RE = re.compile(r"(https?://[^\s|]+|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})", re.I)
+INLINE_RE = re.compile(
+    r"\[([^\]]+)\]\((https?://[^\s)]+)\)|\*\*([^*]+)\*\*|"
+    r"(https?://[^\s|]+|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})",
+    re.I,
+)
 
 
 def set_spacing(paragraph, before=0, after=6, line=1.1):
@@ -38,7 +41,7 @@ def set_run(run, size=10.5, bold=False, color=CHARCOAL, underline=False):
     run.font.underline = underline
 
 
-def add_border(paragraph, color="D9E2F3", size="6"):
+def add_border(paragraph, color="D8E1DF", size="6"):
     p_pr = paragraph._p.get_or_add_pPr()
     borders = p_pr.find(qn("w:pBdr"))
     if borders is None:
@@ -56,27 +59,34 @@ def strip_markdown(text):
     return text.replace("**", "")
 
 
-def add_text_runs(paragraph, text, size=10.5, bold=False, color=CHARCOAL):
-    pos = 0
-    for match in LINK_RE.finditer(text):
-        if match.start() > pos:
-            set_run(paragraph.add_run(text[pos:match.start()]), size=size, bold=bold, color=color)
-        link_text = match.group(0)
-        set_run(paragraph.add_run(link_text), size=size, bold=bold, color=LINK_BLUE, underline=True)
-        pos = match.end()
-    if pos < len(text):
-        set_run(paragraph.add_run(text[pos:]), size=size, bold=bold, color=color)
+def add_link(paragraph, label, url, size):
+    hyperlink = OxmlElement("w:hyperlink")
+    link_id = paragraph.part.relate_to(url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
+    hyperlink.set(qn("r:id"), link_id)
+    run = paragraph.add_run(label)
+    set_run(run, size=size, color=ACCENT, underline=True)
+    hyperlink.append(run._r)
+    paragraph._p.append(hyperlink)
 
 
 def add_markdown_runs(paragraph, text, size=10.5, color=CHARCOAL):
     pos = 0
-    for match in re.finditer(r"\*\*([^*]+)\*\*", text):
+    for match in INLINE_RE.finditer(text):
         if match.start() > pos:
-            add_text_runs(paragraph, text[pos:match.start()], size=size, color=color)
-        add_text_runs(paragraph, match.group(1), size=size, bold=True, color=color)
+            set_run(paragraph.add_run(text[pos:match.start()]), size=size, color=color)
+        label, url, strong_text, autolink = match.groups()
+        if label is not None:
+            add_link(paragraph, label, url, size)
+        elif strong_text is not None:
+            set_run(paragraph.add_run(strong_text), size=size, bold=True, color=color)
+        else:
+            destination = autolink
+            if not autolink.lower().startswith(("https://", "http://")):
+                destination = f"mailto:{autolink}"
+            add_link(paragraph, autolink, destination, size)
         pos = match.end()
     if pos < len(text):
-        add_text_runs(paragraph, text[pos:], size=size, color=color)
+        set_run(paragraph.add_run(text[pos:]), size=size, color=color)
 
 
 def add_section(doc, title):
@@ -84,7 +94,7 @@ def add_section(doc, title):
     set_spacing(p, before=8, after=3, line=1.0)
     p.paragraph_format.keep_with_next = True
     run = p.add_run(title.upper())
-    set_run(run, size=11.2, bold=True, color=BLUE)
+    set_run(run, size=11.2, bold=True, color=ACCENT)
     add_border(p)
     return p
 
@@ -178,12 +188,12 @@ def parse_markdown(markdown):
 def configure_document(doc):
     section = doc.sections[0]
     section.start_type = WD_SECTION.NEW_PAGE
-    section.page_width = Inches(8.5)
-    section.page_height = Inches(11)
-    section.top_margin = Inches(0.5)
-    section.bottom_margin = Inches(0.5)
-    section.left_margin = Inches(0.55)
-    section.right_margin = Inches(0.55)
+    section.page_width = Mm(210)
+    section.page_height = Mm(297)
+    section.top_margin = Mm(16)
+    section.bottom_margin = Mm(16)
+    section.left_margin = Mm(16)
+    section.right_margin = Mm(16)
     section.header_distance = Inches(0.3)
     section.footer_distance = Inches(0.3)
 
@@ -194,11 +204,11 @@ def configure_document(doc):
     styles["Title"].font.name = "Calibri"
     styles["Title"].font.size = Pt(21)
     styles["Title"].font.bold = True
-    styles["Title"].font.color.rgb = RGBColor(31, 77, 120)
+    styles["Title"].font.color.rgb = CHARCOAL
     styles["Heading 1"].font.name = "Calibri"
     styles["Heading 1"].font.size = Pt(11.2)
     styles["Heading 1"].font.bold = True
-    styles["Heading 1"].font.color.rgb = BLUE
+    styles["Heading 1"].font.color.rgb = ACCENT
     styles["Heading 2"].font.name = "Calibri"
     styles["Heading 2"].font.size = Pt(10.2)
     styles["Heading 2"].font.bold = True
@@ -215,21 +225,15 @@ def set_core_properties(doc):
     props = doc.core_properties
     props.author = "Tran Zha"
     props.title = "Tran Zha CV"
-    props.subject = "Software Engineering Manager, Platform Modernisation, Technical Leadership"
-    props.keywords = (
-        "Software Engineering Manager, Engineering Manager, Engineering Lead, "
-        "Technical Lead, Platform Modernisation, AWS, Kubernetes, C# .NET, "
-        "ISO 27001, ISO27001, SOC 2 Type II, SOC2 Type 2, PII data handling"
-    )
+    props.subject = "Technical Delivery Manager and Software Engineering Leader"
     props.comments = "Generated from tranzha.md"
 
 
 def add_header_block(doc, blocks, index):
     title = blocks[index][1]
     name = doc.add_paragraph(style="Title")
-    name.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_spacing(name, after=1, line=1.0)
-    set_run(name.add_run(title), size=21, bold=True, color=RGBColor(31, 77, 120))
+    set_run(name.add_run(title), size=21, bold=True)
 
     if index + 1 >= len(blocks) or blocks[index + 1][0] != "p":
         return index + 1
@@ -239,7 +243,6 @@ def add_header_block(doc, blocks, index):
         return index + 2
 
     subtitle = doc.add_paragraph()
-    subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_spacing(subtitle, after=1, line=1.0)
     add_markdown_runs(subtitle, lines[0], size=10.2, color=CHARCOAL)
     for run in subtitle.runs:
@@ -247,15 +250,13 @@ def add_header_block(doc, blocks, index):
 
     if len(lines) > 1:
         location = doc.add_paragraph()
-        location.alignment = WD_ALIGN_PARAGRAPH.CENTER
         set_spacing(location, after=1, line=1.0)
         add_markdown_runs(location, lines[1], size=9.5, color=MUTED)
 
     if len(lines) > 2:
         contact = doc.add_paragraph()
-        contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
         set_spacing(contact, after=5, line=1.0)
-        add_markdown_runs(contact, " ".join(lines[2:]), size=9.2, color=MUTED)
+        add_markdown_runs(contact, "\n".join(lines[2:]), size=9.5, color=MUTED)
 
     return index + 2
 
@@ -280,9 +281,9 @@ def build():
         elif kind == "h4":
             add_project(doc, value)
         elif kind == "p":
-            text = " ".join(value)
+            text = "\n".join(value)
             plain = strip_markdown(text)
-            if re.fullmatch(r"[A-Z][a-z]{2} \d{4} to (Present|[A-Z][a-z]{2} \d{4})", plain):
+            if re.fullmatch(r"(?:.+ \| )?[A-Z][a-z]{2} \d{4} to (Present|[A-Z][a-z]{2} \d{4})", plain):
                 p = doc.add_paragraph()
                 set_spacing(p, before=0, after=4, line=1.0)
                 p.paragraph_format.keep_with_next = True

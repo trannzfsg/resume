@@ -27,7 +27,7 @@ python tools/build_word_cv.py
 python tools/docx_smoke_check.py
 ```
 
-After regenerating, visually check the PDF/Word output before publishing.
+Render and visually check every page of the PDF before publishing. After the push, verify the live résumé and both downloads.
 
 ## Privacy
 
